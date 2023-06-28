@@ -1,10 +1,8 @@
 
-# jagoda-jam
-
-Beginning of jagoda-jam project!
+# Jagoda Jam
 
 Game-jam: https://itch.io/jam/hauntaku-2023-summer-jam
 
 Using:
-* Godot 4.0.3 (Compatibility renderer)
-* Blender 3.6.0
+* Godot (https://godotengine.org/) 4.0.3 (Compatibility renderer)
+* Blender (https://www.blender.org/) 3.6.0
