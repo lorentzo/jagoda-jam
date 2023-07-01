@@ -1,6 +1,9 @@
 extends Control
 
+const GAME_SCENE: String = "res://Scenes/Game.tscn"
+
 @onready var loading = get_node("/root/Loading")
 
 func _on_play_button_pressed():
-	loading.load_scene("res://Scenes/Game.tscn")
+	self.hide()
+	loading.load_scene(GAME_SCENE)
