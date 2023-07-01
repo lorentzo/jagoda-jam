@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuc5wxxi13lfv"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_kmuym"]
+[ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="2_xgybe"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kmuym")
+
+[node name="MainVBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = -179.0
+offset_right = 149.5
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+
+[node name="Title" type="Label" parent="MainVBox"]
+layout_mode = 2
+theme = ExtResource("2_xgybe")
+text = "Jagoda Jam"
+horizontal_alignment = 1
+
+[node name="MenuVBox" type="VBoxContainer" parent="MainVBox"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="PlayButton" type="Button" parent="MainVBox/MenuVBox"]
+layout_mode = 2
+theme = ExtResource("2_xgybe")
+text = "Play"
+
+[node name="ExitButton" type="Button" parent="MainVBox/MenuVBox"]
+layout_mode = 2
+theme = ExtResource("2_xgybe")
+text = "Exit"
+
+[connection signal="pressed" from="MainVBox/MenuVBox/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainVBox/MenuVBox/ExitButton" to="." method="_on_exit_button_pressed"]
