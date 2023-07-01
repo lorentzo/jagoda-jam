@@ -48,3 +48,4 @@ theme = ExtResource("2_xgybe")
 text = "Exit"
 
 [connection signal="pressed" from="MainVBox/MenuVBox/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainVBox/MenuVBox/ExitButton" to="." method="_on_exit_button_pressed"]
