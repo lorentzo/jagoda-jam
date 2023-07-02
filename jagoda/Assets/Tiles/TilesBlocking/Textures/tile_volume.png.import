@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j35r8uk3b8vv"
-path="res://.godot/imported/tile1.png-bc8e9d657ccb8846a5f27a474438f282.ctex"
+uid="uid://bn83tmu6q2dht"
+path="res://.godot/imported/tile_volume.png-336b888d503e0db5f4e3c404c52d0927.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BaseIslandTiles/Textures/tile1.png"
-dest_files=["res://.godot/imported/tile1.png-bc8e9d657ccb8846a5f27a474438f282.ctex"]
+source_file="res://Assets/Tiles/TilesBlocking/Textures/tile_volume.png"
+dest_files=["res://.godot/imported/tile_volume.png-336b888d503e0db5f4e3c404c52d0927.ctex"]
 
 [params]
 
