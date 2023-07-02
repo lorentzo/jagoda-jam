@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://dh2skylq4em3t"]
+
+[ext_resource type="FontFile" uid="uid://bjonvamqyjdmv" path="res://Fonts/RussoOne.ttf" id="1_5bfrd"]
+[ext_resource type="StyleBox" uid="uid://b71r3omrm3ctb" path="res://Styles/MainMenuButtonNormal.tres" id="1_reqjd"]
+[ext_resource type="StyleBox" uid="uid://cwgkh8oc82s32" path="res://Styles/MainMenuButtonHover.tres" id="2_t66il"]
+
+[resource]
+default_font = ExtResource("1_5bfrd")
+default_font_size = 32
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 2
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 28
+Button/styles/disabled = ExtResource("1_reqjd")
+Button/styles/focus = ExtResource("1_reqjd")
+Button/styles/hover = ExtResource("2_t66il")
+Button/styles/normal = ExtResource("1_reqjd")
+Button/styles/pressed = ExtResource("1_reqjd")
