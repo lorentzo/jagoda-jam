@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=3 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="TileSet" uid="uid://w0c2ecnn5xx8" path="res://Assets/Tiles/TilesBlocking/TilesBlockingTileMap.tres" id="1_0fixn"]
+[ext_resource type="TileSet" uid="uid://dmq0717soltvq" path="res://Assets/Tiles/BaseIslandTiles/BaseIslandTileMap.tres" id="2_jve5p"]
 
 [node name="Game" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMapBlocking" type="TileMap" parent="."]
 y_sort_enabled = true
 tile_set = ExtResource("1_0fixn")
 format = 2
@@ -18,3 +19,10 @@ offset_right = 654.0
 offset_bottom = 385.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="TileMapIslandBase" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("2_jve5p")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(327685, 0, 0, 262150, 0, 0, 262148, 2, 0, 196612, 2, 0, 131077, 2, 0, 393221, 0, 0, 196613, 1, 0, 262149, 1, 0, 327684, 1, 0, 327683, 2, 0, 65540, 3, 0, 131076, 3, 0, 196611, 3, 0, -65532, 4, 0, 4, 4, 0, 65539, 4, 0, -131068, 5, 0, -65533, 5, 0, 3, 5, 0, -196605, 6, 0, -131069, 6, 0, -262140, 6, 0)
