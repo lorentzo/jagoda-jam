@@ -10,7 +10,18 @@ const LUMINANCE_RANGE: float = MAX_LUMINANCE - MIN_LUMINANCE
 
 var time_passed = 0
 
+signal sun_intensity_changed(sun_intensity)
+signal day_changed
+
+func _ready():
+	for plant in get_tree().get_nodes_in_group("plant"):
+		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
+		day_changed.connect(plant.on_day_changed)
+
+	day_changed.emit()
+
 func _process(delta):
 	var sun_intensity = sin(time_passed / DAY_LENGTH_SECONDS * PI)
+	sun_intensity_changed.emit(sun_intensity)
 	canvas_modulate.color.v = sun_intensity * LUMINANCE_RANGE + MIN_LUMINANCE
 	time_passed += delta
