@@ -25,8 +25,8 @@ func _ready():
 	day_changed.emit()
 
 func _process(delta):
-	var day_progress = time_passed / DAY_LENGTH_SECONDS
-	var sun_intensity = sin(day_progress * PI)
+	var day_progress: float = min(time_passed / DAY_LENGTH_SECONDS, 1)
+	var sun_intensity: float = sin(day_progress * PI)
 	sun_intensity_changed.emit(sun_intensity)
 	
 	sun.position.x = day_progress * screen_width
