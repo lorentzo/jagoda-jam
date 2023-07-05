@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=3 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="TileSet" uid="uid://w0c2ecnn5xx8" path="res://Assets/Tiles/TilesBlocking/TilesBlockingTileMap.tres" id="1_0fixn"]
+[ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_fxwml")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -18,3 +20,5 @@ offset_right = 654.0
 offset_bottom = 385.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
