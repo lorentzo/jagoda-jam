@@ -1,6 +1,74 @@
-[gd_scene load_steps=2 format=3 uid="uid://k4too3rmr2kk"]
+[gd_scene load_steps=19 format=3 uid="uid://k4too3rmr2kk"]
 
 [ext_resource type="TileSet" uid="uid://w0c2ecnn5xx8" path="res://Assets/Tiles/TilesBlocking/TilesBlockingTileMap.tres" id="1_57s0s"]
+[ext_resource type="Texture2D" uid="uid://bk6v4pkgow8jv" path="res://Assets/Tiles/TilesBlocking/Textures/seaB.png" id="2_uiu5m"]
+[ext_resource type="Texture2D" uid="uid://cay1eo3270rki" path="res://Assets/Tiles/TilesBlocking/Textures/seaBL.png" id="3_hly7y"]
+[ext_resource type="Texture2D" uid="uid://dndua42cbm8dp" path="res://Assets/Tiles/TilesBlocking/Textures/seaBR.png" id="4_wjp1w"]
+[ext_resource type="Texture2D" uid="uid://cnp675iofmfd4" path="res://Assets/Tiles/TilesBlocking/Textures/seaL.png" id="5_echjk"]
+[ext_resource type="Texture2D" uid="uid://28c84215br65" path="res://Assets/Tiles/TilesBlocking/Textures/seaR.png" id="6_nsc1k"]
+[ext_resource type="Texture2D" uid="uid://bwofaovxrs200" path="res://Assets/Tiles/TilesBlocking/Textures/seaT.png" id="7_awg3w"]
+[ext_resource type="Texture2D" uid="uid://dealu8lpv6ive" path="res://Assets/Tiles/TilesBlocking/Textures/seaTL.png" id="8_nat3r"]
+[ext_resource type="Texture2D" uid="uid://dev0wf452wmgu" path="res://Assets/Tiles/TilesBlocking/Textures/seaTR.png" id="9_dqsmw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6a2xk"]
+resource_name = "seaB"
+texture = ExtResource("2_uiu5m")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqly0"]
+resource_name = "seaBL"
+texture = ExtResource("3_hly7y")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfoi5"]
+resource_name = "seaBR"
+texture = ExtResource("4_wjp1w")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m48ax"]
+resource_name = "seaL"
+texture = ExtResource("5_echjk")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_155n5"]
+resource_name = "seaR"
+texture = ExtResource("6_nsc1k")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bw8u"]
+resource_name = "seaT"
+texture = ExtResource("7_awg3w")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_on5u1"]
+resource_name = "seaTL"
+texture = ExtResource("8_nat3r")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqifw"]
+resource_name = "seaTR"
+texture = ExtResource("9_dqsmw")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_f4ra4"]
+tile_shape = 1
+tile_size = Vector2i(256, 128)
+sources/0 = SubResource("TileSetAtlasSource_6a2xk")
+sources/1 = SubResource("TileSetAtlasSource_eqly0")
+sources/2 = SubResource("TileSetAtlasSource_sfoi5")
+sources/3 = SubResource("TileSetAtlasSource_m48ax")
+sources/4 = SubResource("TileSetAtlasSource_155n5")
+sources/5 = SubResource("TileSetAtlasSource_2bw8u")
+sources/6 = SubResource("TileSetAtlasSource_on5u1")
+sources/7 = SubResource("TileSetAtlasSource_oqifw")
 
 [node name="TilesBlocking" type="Node2D"]
 y_sort_enabled = true
@@ -11,4 +79,11 @@ tile_set = ExtResource("1_57s0s")
 format = 2
 layer_0/name = "base"
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(-1, 1, 0, -65537, 1, 0, -262144, 1, 0, -65536, 1, 0, -262145, 1, 0, -262143, 1, 0, 131072, 1, 0, -65535, 1, 0, 131073, 1, 0, 131070, 1, 0, 196607, 1, 0, 196606, 0, 0, 262142, 0, 0, 262143, 0, 0, 327679, 0, 0, 262144, 0, 0, 327678, 0, 0, 393214, 0, 0, 458751, 0, 0, 393215, 0, 0, 393216, 0, 0, 327680, 0, 0, 196608, 0, 0, 262145, 0, 0, 196609, 0, 0, 131074, 0, 0, 65537, 0, 0, 2, 0, 0, 65538, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, 327681, 0, 0, 393217, 0, 0, 458752, 0, 0, 524288, 0, 0, 524287, 0, 0, 524286, 0, 0, 458750, 0, 0, 262141, 0, 0, 196605, 0, 0, 131069, 0, 0, 65534, 1, 0, -2, 0, 0, -131074, 1, 0, -65538, 0, 0, -3, 1, 0, 65533, 0, 0, 131068, 0, 0, -65534, 0, 0, -131070, 0, 0, -196606, 0, 0, -262142, 0, 0, -327679, 0, 0, -393214, 0, 0, -458751, 0, 0, -524287, 0, 0, -458752, 1, 0, -524288, 1, 0, -524289, 0, 0, -458753, 1, 0, -393218, 0, 0, -327681, 0, 0, -327682, 0, 0, -262147, 0, 0, -196610, 1, 0, -131075, 0, 0, -65539, 0, 0, -131076, 0, 0, -196611, 0, 0, -262148, 0, 0, -327683, 0, 0, -393219, 0, 0, -458754, 0, 0, -524290, 0, 0, -589825, 0, 0, -655360, 1, 0, -589824, 0, 0, -327678, 0, 0, -262141, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 262147, 0, 0, 393218, 0, 0, 458753, 0, 0, 524289, 0, 0, 589824, 0, 0, 655359, 0, 0, 720895, 0, 0, 655358, 0, 0, 589822, 0, 0, 393213, 0, 0, 327677, 0, 0, 262140, 0, 0, 458749, 0, 0, 524285, 0, 0, 589823, 0, 0, -262146, 1, 0, -655361, 1, 0, -196609, 1, 0, -65540, 0, 0, -131077, 0, 0, -196612, 0, 0, -5, 0, 0, 65532, 0, 0, -4, 0, 0, -720896, 0, 0, -655359, 0, 0, -589823, 0, 0, -524286, 0, 0, -458750, 0, 0, -393213, 0, 0, -327677, 0, 0, -196605, 0, 0, -393216, 1, 0, -393217, 1, 0)
+layer_0/tile_data = PackedInt32Array(-1, 1, 0, -65537, 1, 0, -262144, 1, 0, -65536, 1, 0, -262145, 1, 0, -262143, 1, 0, 131072, 1, 0, -65535, 1, 0, 131073, 1, 0, 131070, 1, 0, 196607, 1, 0, 196606, 0, 0, 262142, 0, 0, 262143, 0, 0, 327679, 0, 0, 262144, 0, 0, 327678, 0, 0, 393214, 0, 0, 458751, 0, 0, 393215, 0, 0, 393216, 0, 0, 327680, 0, 0, 196608, 0, 0, 262145, 0, 0, 196609, 0, 0, 131074, 0, 0, 65537, 0, 0, 2, 0, 0, 65538, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, 327681, 0, 0, 393217, 0, 0, 458752, 0, 0, 524288, 0, 0, 524287, 0, 0, 262141, 0, 0, 196605, 0, 0, 131069, 0, 0, 65534, 1, 0, -2, 0, 0, -131074, 1, 0, -65538, 0, 0, -3, 1, 0, 65533, 0, 0, 131068, 0, 0, -65534, 0, 0, -131070, 0, 0, -196606, 0, 0, -262142, 0, 0, -327679, 0, 0, -393214, 0, 0, -458751, 0, 0, -524287, 0, 0, -458752, 1, 0, -524288, 1, 0, -524289, 0, 0, -458753, 1, 0, -393218, 0, 0, -327681, 0, 0, -327682, 0, 0, -262147, 0, 0, -196610, 1, 0, -131075, 0, 0, -65539, 0, 0, -131076, 0, 0, -196611, 0, 0, -262148, 0, 0, -327683, 0, 0, -393219, 0, 0, -458754, 0, 0, -524290, 0, 0, -589825, 0, 0, -655360, 1, 0, -589824, 0, 0, -327678, 0, 0, -262141, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 262147, 0, 0, 393218, 0, 0, 458753, 0, 0, 524289, 0, 0, 589824, 0, 0, -262146, 1, 0, -655361, 1, 0, -196609, 1, 0, -65540, 0, 0, -131077, 0, 0, -196612, 0, 0, -5, 0, 0, 65532, 0, 0, -4, 0, 0, -720896, 0, 0, -655359, 0, 0, -589823, 0, 0, -524286, 0, 0, -458750, 0, 0, -393213, 0, 0, -327677, 0, 0, -196605, 0, 0, -393216, 1, 0, -393217, 1, 0, -65541, 0, 0, -65542, 2, 0, -131078, 5, 0, -196613, 5, 0, -262149, 5, 0, -327684, 5, 0, -393220, 5, 0, -458755, 5, 0, -6, 4, 0, 65531, 0, 0, 131067, 0, 0, 196604, 0, 0, 655361, 6, 0, 720896, 3, 0, 262140, 4, 0, 327677, 0, 0, 393213, 0, 0, 458750, 0, 0, 524286, 0, 0, 589823, 0, 0, 655359, 4, 0, 655360, 4, 0, 589825, 6, 0, 524290, 6, 0, 458754, 6, 0, 393219, 6, 0, 327683, 6, 0, 196611, 0, 0, 131076, 0, 0, 65540, 0, 0, 4, 0, 0, -65532, 0, 0, -131067, 0, 0, -262140, 0, 0, -196604, 0, 0, -65531, 0, 0, 5, 0, 0, -131068, 0, 0, -786431, 0, 0, -720895, 0, 0, -655358, 0, 0, -589822, 0, 0, -524285, 0, 0, -458749, 0, 0, -393212, 0, 0, -327676, 0, 0, -262139, 0, 0, -196603, 0, 0, -131066, 0, 0, -851968, 0, 0, 262148, 6, 0, 196612, 6, 0, 131077, 6, 0, 65541, 6, 0, 6, 6, 0, -65530, 6, 0, -196602, 7, 0, -262138, 7, 0, -327675, 7, 0, -393211, 7, 0, -458748, 7, 0, -524291, 5, 0, -589826, 5, 0, -655362, 5, 0, -720897, 5, 0, -786433, 5, 0, -917504, 5, 0, -524284, 7, 0, -589821, 7, 0, -655357, 7, 0, -720894, 7, 0, -786430, 7, 0, -851967, 7, 0, -917503, 7, 0, -983040, 9, 0, 458749, 0, 0, 524285, 0, 0, 589822, 0, 0, 589821, 0, 0, 393212, 2, 0, 655358, 3, 0, 655357, 3, 0, 524284, 2, 0, 655356, 4, 0, 196603, 0, 0, 262139, 4, 0, 262138, 4, 0)
+
+[node name="TileMap2" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_f4ra4")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(655356, 0, 0, 524284, 1, 0, 393212, 1, 0, 262140, 0, 0, 655357, 2, 0, 655358, 2, 0, 720893, 7, 0, 458748, 7, 0, 589820, 7, 0, 327676, 7, 0, 262139, 0, 0, 262138, 0, 0)
