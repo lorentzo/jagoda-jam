@@ -2,22 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://skug4byiu4ca" path="res://Assets/Tiles/TilesBlocking/Textures/tile_plane.png" id="1_a21is"]
 [ext_resource type="Texture2D" uid="uid://bn83tmu6q2dht" path="res://Assets/Tiles/TilesBlocking/Textures/tile_volume.png" id="2_ntb51"]
-[ext_resource type="Texture2D" uid="uid://bk6v4pkgow8jv" path="res://Assets/Tiles/TilesBlocking/Textures/seaB.png" id="3_qfgqt"]
-[ext_resource type="Texture2D" uid="uid://dl5smb01bsxjb" path="res://Assets/Tiles/TilesBlocking/Textures/landBL_blocking.png" id="3_uvt8e"]
-[ext_resource type="Texture2D" uid="uid://xfbxy0ymruwk" path="res://Assets/Tiles/TilesBlocking/Textures/landBR_blocking.png" id="4_d4sy8"]
-[ext_resource type="Texture2D" uid="uid://cay1eo3270rki" path="res://Assets/Tiles/TilesBlocking/Textures/seaBL.png" id="4_v2heu"]
-[ext_resource type="Texture2D" uid="uid://dndua42cbm8dp" path="res://Assets/Tiles/TilesBlocking/Textures/seaBR.png" id="5_7tddd"]
-[ext_resource type="Texture2D" uid="uid://de7alfbcd0u0q" path="res://Assets/Tiles/TilesBlocking/Textures/landB_blocking.png" id="5_ji1uq"]
-[ext_resource type="Texture2D" uid="uid://cnp675iofmfd4" path="res://Assets/Tiles/TilesBlocking/Textures/seaL.png" id="6_2sghx"]
-[ext_resource type="Texture2D" uid="uid://bsub0ho04ttlb" path="res://Assets/Tiles/TilesBlocking/Textures/landL_blocking.png" id="6_mdvmy"]
-[ext_resource type="Texture2D" uid="uid://b7opkhfilnhp4" path="res://Assets/Tiles/TilesBlocking/Textures/landR_blocking.png" id="7_a5fiw"]
-[ext_resource type="Texture2D" uid="uid://28c84215br65" path="res://Assets/Tiles/TilesBlocking/Textures/seaR.png" id="7_bi475"]
-[ext_resource type="Texture2D" uid="uid://bk5rprhshsyjl" path="res://Assets/Tiles/TilesBlocking/Textures/landTL_blocking.png" id="8_2lhop"]
-[ext_resource type="Texture2D" uid="uid://bwofaovxrs200" path="res://Assets/Tiles/TilesBlocking/Textures/seaT.png" id="8_5cm5x"]
-[ext_resource type="Texture2D" uid="uid://bxiicw74u1abr" path="res://Assets/Tiles/TilesBlocking/Textures/landTR_blocking.png" id="9_1esu3"]
-[ext_resource type="Texture2D" uid="uid://dealu8lpv6ive" path="res://Assets/Tiles/TilesBlocking/Textures/seaTL.png" id="9_k2no0"]
-[ext_resource type="Texture2D" uid="uid://b66f6rcko0q0l" path="res://Assets/Tiles/TilesBlocking/Textures/landT_blocking.png" id="10_1vkbn"]
-[ext_resource type="Texture2D" uid="uid://dev0wf452wmgu" path="res://Assets/Tiles/TilesBlocking/Textures/seaTR.png" id="10_xyn5v"]
+[ext_resource type="Texture2D" uid="uid://fdp6aqoxhcpv" path="res://Assets/Tiles/TilesBlocking/Textures/land1.png" id="3_h5143"]
+[ext_resource type="Texture2D" uid="uid://c6wh3r30sngxc" path="res://Assets/Tiles/TilesBlocking/Textures/land2.png" id="4_nlhtu"]
+[ext_resource type="Texture2D" uid="uid://cmimfvj047mws" path="res://Assets/Tiles/TilesBlocking/Textures/land3.png" id="5_3vrlm"]
+[ext_resource type="Texture2D" uid="uid://cyah4rg5swqhe" path="res://Assets/Tiles/TilesBlocking/Textures/land4.png" id="6_7v7hs"]
+[ext_resource type="Texture2D" uid="uid://dqti53q2b2fhg" path="res://Assets/Tiles/TilesBlocking/Textures/land5.png" id="7_2c5uu"]
+[ext_resource type="Texture2D" uid="uid://cw0jr54ofhx4r" path="res://Assets/Tiles/TilesBlocking/Textures/land6.png" id="8_1ldi6"]
+[ext_resource type="Texture2D" uid="uid://b8g2k5fe3yifx" path="res://Assets/Tiles/TilesBlocking/Textures/land7.png" id="9_f4nni"]
+[ext_resource type="Texture2D" uid="uid://ccfu0bwfooxs8" path="res://Assets/Tiles/TilesBlocking/Textures/land8.png" id="10_rxtcp"]
+[ext_resource type="Texture2D" uid="uid://bb3r3tcujlb5u" path="res://Assets/Tiles/TilesBlocking/Textures/land9.png" id="11_p8b7r"]
+[ext_resource type="Texture2D" uid="uid://dash7vose7iik" path="res://Assets/Tiles/TilesBlocking/Textures/land10.png" id="12_f6ut6"]
+[ext_resource type="Texture2D" uid="uid://ca4xdxftlxocr" path="res://Assets/Tiles/TilesBlocking/Textures/land11.png" id="13_pf7wn"]
+[ext_resource type="Texture2D" uid="uid://cpk3oxkwxsxw0" path="res://Assets/Tiles/TilesBlocking/Textures/land12.png" id="14_kp35i"]
+[ext_resource type="Texture2D" uid="uid://b2ne56mwpqx5m" path="res://Assets/Tiles/TilesBlocking/Textures/land13.png" id="15_b8acs"]
+[ext_resource type="Texture2D" uid="uid://r3pwccp8ky4b" path="res://Assets/Tiles/TilesBlocking/Textures/land14.png" id="16_1ih73"]
+[ext_resource type="Texture2D" uid="uid://c0h68mxxwpsr3" path="res://Assets/Tiles/TilesBlocking/Textures/land15.png" id="17_5oamj"]
+[ext_resource type="Texture2D" uid="uid://sijd0yo3xfnm" path="res://Assets/Tiles/TilesBlocking/Textures/land16.png" id="18_5m4g1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mafu7"]
 resource_name = "tile_plane"
@@ -42,129 +42,113 @@ use_texture_padding = false
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-123, -65.5, -124, 65.5, -10.5, 128.5, 123, 62, 125.5, -65.5, 2, -130)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfi5m"]
-resource_name = "seaB"
-texture = ExtResource("3_qfgqt")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umxmb"]
+texture = ExtResource("3_h5143")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4aolt"]
-resource_name = "seaBL"
-texture = ExtResource("4_v2heu")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46whq"]
+texture = ExtResource("4_nlhtu")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xyco5"]
-resource_name = "seaBR"
-texture = ExtResource("5_7tddd")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wbmya"]
+texture = ExtResource("5_3vrlm")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwatg"]
-resource_name = "seaL"
-texture = ExtResource("6_2sghx")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qx4mx"]
+texture = ExtResource("6_7v7hs")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l0q2k"]
-resource_name = "seaR"
-texture = ExtResource("7_bi475")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ce43j"]
+texture = ExtResource("7_2c5uu")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jp6o8"]
-resource_name = "seaT"
-texture = ExtResource("8_5cm5x")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pl5lv"]
+texture = ExtResource("8_1ldi6")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eio54"]
-resource_name = "seaTL"
-texture = ExtResource("9_k2no0")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iw7gd"]
+texture = ExtResource("9_f4nni")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n4gga"]
-resource_name = "seaTR"
-texture = ExtResource("10_xyn5v")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_feapl"]
+texture = ExtResource("10_rxtcp")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k25gv"]
-resource_name = "landBL"
-texture = ExtResource("3_uvt8e")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1y65"]
+texture = ExtResource("11_p8b7r")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdv0h"]
-resource_name = "landBR"
-texture = ExtResource("4_d4sy8")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_auw75"]
+texture = ExtResource("12_f6ut6")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xq55"]
-resource_name = "landB"
-texture = ExtResource("5_ji1uq")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtxx4"]
+texture = ExtResource("13_pf7wn")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0d3hw"]
-resource_name = "landL"
-texture = ExtResource("6_mdvmy")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6y2a8"]
+texture = ExtResource("14_kp35i")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4dgml"]
-resource_name = "landR"
-texture = ExtResource("7_a5fiw")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ixvr"]
+texture = ExtResource("15_b8acs")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_seywe"]
-resource_name = "lanTL"
-texture = ExtResource("8_2lhop")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_55cbf"]
+texture = ExtResource("16_1ih73")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1ydi"]
-resource_name = "landTR"
-texture = ExtResource("9_1esu3")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qp4dw"]
+texture = ExtResource("17_5oamj")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8yth"]
-resource_name = "landT"
-texture = ExtResource("10_1vkbn")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ccjqh"]
+texture = ExtResource("18_5m4g1")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -175,21 +159,21 @@ tile_shape = 1
 tile_size = Vector2i(256, 128)
 occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_mafu7")
 sources/1 = SubResource("TileSetAtlasSource_7xa12")
-sources/2 = SubResource("TileSetAtlasSource_k25gv")
-sources/3 = SubResource("TileSetAtlasSource_wdv0h")
-sources/4 = SubResource("TileSetAtlasSource_4xq55")
-sources/5 = SubResource("TileSetAtlasSource_0d3hw")
-sources/6 = SubResource("TileSetAtlasSource_4dgml")
-sources/7 = SubResource("TileSetAtlasSource_seywe")
-sources/8 = SubResource("TileSetAtlasSource_t1ydi")
-sources/9 = SubResource("TileSetAtlasSource_y8yth")
-sources/10 = SubResource("TileSetAtlasSource_tfi5m")
-sources/11 = SubResource("TileSetAtlasSource_4aolt")
-sources/12 = SubResource("TileSetAtlasSource_xyco5")
-sources/13 = SubResource("TileSetAtlasSource_dwatg")
-sources/14 = SubResource("TileSetAtlasSource_l0q2k")
-sources/15 = SubResource("TileSetAtlasSource_jp6o8")
-sources/16 = SubResource("TileSetAtlasSource_eio54")
-sources/17 = SubResource("TileSetAtlasSource_n4gga")
+sources/0 = SubResource("TileSetAtlasSource_mafu7")
+sources/18 = SubResource("TileSetAtlasSource_umxmb")
+sources/19 = SubResource("TileSetAtlasSource_46whq")
+sources/20 = SubResource("TileSetAtlasSource_wbmya")
+sources/21 = SubResource("TileSetAtlasSource_qx4mx")
+sources/22 = SubResource("TileSetAtlasSource_ce43j")
+sources/23 = SubResource("TileSetAtlasSource_pl5lv")
+sources/24 = SubResource("TileSetAtlasSource_iw7gd")
+sources/25 = SubResource("TileSetAtlasSource_feapl")
+sources/26 = SubResource("TileSetAtlasSource_b1y65")
+sources/27 = SubResource("TileSetAtlasSource_auw75")
+sources/28 = SubResource("TileSetAtlasSource_vtxx4")
+sources/29 = SubResource("TileSetAtlasSource_6y2a8")
+sources/30 = SubResource("TileSetAtlasSource_8ixvr")
+sources/31 = SubResource("TileSetAtlasSource_55cbf")
+sources/32 = SubResource("TileSetAtlasSource_qp4dw")
+sources/33 = SubResource("TileSetAtlasSource_ccjqh")
