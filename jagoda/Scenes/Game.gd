@@ -23,6 +23,14 @@ func _ready():
 		day_changed.connect(plant.on_day_changed)
 
 	day_changed.emit()
+	
+	loading.on_loading_start.connect(self._on_loading_start)
+
+func _on_loading_start():
+	$Player/Camera2D.queue_free()
+	$HUD.hide()
+	$ThemePlayer.stop()
+	self.hide()
 
 func _input(event):
 	if event.is_action_pressed("pause"):
