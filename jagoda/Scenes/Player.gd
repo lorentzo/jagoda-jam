@@ -27,11 +27,18 @@ func _physics_process(delta):
 		walk_velocity.y = 1
 
 	if Input.is_action_pressed("use-item"):
+		if not $WaterParticles.emitting:
+			$WaterParticles.emitting = true
 		for plant in self.visible_plants.keys():
 			plant.refresh(5.0 * delta)
+	else:
+		if $WaterParticles.emitting:
+			$WaterParticles.emitting = false
 
 	if walk_velocity.x != 0:
 		$RefreshArea.scale.x = walk_velocity.x
+		$WaterParticles.position.x = abs($WaterParticles.position.x) * walk_velocity.x
+		$WaterParticles.scale.x = walk_velocity.x
 
 	self.velocity = walk_velocity.normalized() * WALK_SPEED
 	move_and_slide()
