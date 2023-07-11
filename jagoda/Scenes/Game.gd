@@ -24,6 +24,10 @@ func _ready():
 
 	day_changed.emit()
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		self._pause()
+		
 func _process(delta):
 	var day_progress: float = min(time_passed / DAY_LENGTH_SECONDS, 1)
 	var sun_intensity: float = sin(day_progress * PI)
@@ -36,3 +40,6 @@ func _process(delta):
 	if is_equal_approx(day_progress, 1):
 		self.hide()
 		loading.load_scene(MAIN_MENU_SCENE)
+
+func _pause():
+	$HUD/PauseMenu.show()
