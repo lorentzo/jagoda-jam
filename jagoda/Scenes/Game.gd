@@ -18,6 +18,9 @@ signal sun_intensity_changed(sun_intensity)
 signal day_changed
 
 func _ready():
+	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
+	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
+	
 	for plant in get_tree().get_nodes_in_group("plant"):
 		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
 		day_changed.connect(plant.on_day_changed)
@@ -31,6 +34,9 @@ func _on_loading_start():
 	$HUD.hide()
 	$ThemePlayer.stop()
 	self.hide()
+
+func _on_player_freshness_changed(freshness):
+	$HUD/PlayerFreshnessBar.value = freshness
 
 func _input(event):
 	if event.is_action_pressed("pause"):
