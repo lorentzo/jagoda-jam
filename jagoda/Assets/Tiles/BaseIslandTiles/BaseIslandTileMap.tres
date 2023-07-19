@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=69 format=3 uid="uid://dmq0717soltvq"]
+[gd_resource type="TileSet" load_steps=81 format=3 uid="uid://dmq0717soltvq"]
 
 [ext_resource type="Texture2D" uid="uid://c6tyfxx1chcwp" path="res://Assets/Tiles/BaseIslandTiles/Textures/sand1.png" id="1_8hf8a"]
 [ext_resource type="Texture2D" uid="uid://dri24sx8copk8" path="res://Assets/Tiles/BaseIslandTiles/Textures/sand2.png" id="2_w3cwr"]
@@ -20,14 +20,20 @@
 [ext_resource type="Texture2D" uid="uid://dwx0lslixu10n" path="res://Assets/Tiles/BaseIslandTiles/Textures/rock2.png" id="9_0qw85"]
 [ext_resource type="Texture2D" uid="uid://bovqxrp603ep2" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_3.png" id="9_7efc3"]
 [ext_resource type="Texture2D" uid="uid://dsbglmf3yp8fe" path="res://Assets/Tiles/BaseIslandTiles/Textures/land_5.png" id="9_r6iig"]
+[ext_resource type="Texture2D" uid="uid://uyoygeftyjb8" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_0.png" id="10_e37qe"]
 [ext_resource type="Texture2D" uid="uid://b2na5ctb6dt5b" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_4.png" id="10_u27hm"]
+[ext_resource type="Texture2D" uid="uid://ci21qkvxjqjoi" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_1.png" id="11_kwn4f"]
 [ext_resource type="Texture2D" uid="uid://w4nw857apysk" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_5.png" id="11_mqhqi"]
 [ext_resource type="Texture2D" uid="uid://bo82h6ru6gkb0" path="res://Assets/Tiles/BaseIslandTiles/Textures/rock3.png" id="11_qpxxg"]
+[ext_resource type="Texture2D" uid="uid://grtujha1gyre" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_2.png" id="12_pg6r0"]
 [ext_resource type="Texture2D" uid="uid://be7ao1wkj4roj" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_6.png" id="12_yoppd"]
 [ext_resource type="Texture2D" uid="uid://ci8q5nrlytpu7" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_7.png" id="13_kx8ik"]
 [ext_resource type="Texture2D" uid="uid://biw7h5vlt1rmo" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_8.png" id="14_fka1h"]
+[ext_resource type="Texture2D" uid="uid://ce7g0xybaxne8" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_3.png" id="14_xj4dt"]
+[ext_resource type="Texture2D" uid="uid://yvlkjkp52veq" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_4.png" id="15_52xag"]
 [ext_resource type="Texture2D" uid="uid://c1citom23g66j" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_9.png" id="15_65n6p"]
 [ext_resource type="Texture2D" uid="uid://vghty52gtb5r" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_10.png" id="16_rbmx2"]
+[ext_resource type="Texture2D" uid="uid://0ud0gred4g0b" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_5.png" id="16_whfka"]
 [ext_resource type="Texture2D" uid="uid://cs0k4d2nkw7c0" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_11.png" id="17_7tyft"]
 [ext_resource type="Texture2D" uid="uid://h5sgwqor6nbh" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_12.png" id="18_dq055"]
 [ext_resource type="Texture2D" uid="uid://fb7ciiacwmo2" path="res://Assets/Tiles/BaseIslandTiles/Textures/landIN_seaOUT_13.png" id="20_eslf8"]
@@ -101,9 +107,51 @@ texture_region_size = Vector2i(256, 256)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2j1it"]
+texture = ExtResource("10_e37qe")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2bmr"]
+texture = ExtResource("11_kwn4f")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_331gc"]
+texture = ExtResource("12_pg6r0")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h664s"]
 resource_name = "sand3"
 texture = ExtResource("3_g1434")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7g05n"]
+texture = ExtResource("14_xj4dt")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioca2"]
+texture = ExtResource("15_52xag")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2smby"]
+texture = ExtResource("16_whfka")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -323,3 +371,9 @@ sources/13 = SubResource("TileSetAtlasSource_qihbb")
 sources/14 = SubResource("TileSetAtlasSource_408kr")
 sources/15 = SubResource("TileSetAtlasSource_oui3q")
 sources/16 = SubResource("TileSetAtlasSource_hymnh")
+sources/17 = SubResource("TileSetAtlasSource_2j1it")
+sources/18 = SubResource("TileSetAtlasSource_f2bmr")
+sources/19 = SubResource("TileSetAtlasSource_331gc")
+sources/20 = SubResource("TileSetAtlasSource_7g05n")
+sources/21 = SubResource("TileSetAtlasSource_ioca2")
+sources/22 = SubResource("TileSetAtlasSource_2smby")

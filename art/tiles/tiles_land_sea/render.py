@@ -7,7 +7,8 @@ bpy.context.scene.render.use_lock_interface = True
 
 collection_names = [
     #"landIN_seaOUT", 
-    "land"
+    #"land",
+    "sea"
     ]
 
 for collection_name in collection_names:
