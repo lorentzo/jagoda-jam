@@ -1,0 +1,27 @@
+
+import bpy
+import os
+import mathutils
+
+bpy.context.scene.render.use_lock_interface = True
+
+collection_name = "landIN_seaOUT"
+
+# Make sure that all objects are visible to render.
+for obj in bpy.data.collections[collection_name].all_objects:
+    obj.hide_render = False
+
+for obj in bpy.data.collections[collection_name].all_objects:
+    # Store standard location of current object.
+    standard_location = mathutils.Vector(obj.location)
+    # Move current object to camera.
+    obj.location = mathutils.Vector((0,0,0))
+    # Create render path.
+    render_path = os.path.join(os.getcwd(), obj.name)
+    print(render_path)
+    bpy.context.scene.render.filepath = render_path
+    # Render.
+    bpy.context.scene.render.engine = 'BLENDER_EEVEE'
+    bpy.ops.render.render(write_still = True)
+    # Restore object location.
+    obj.location = standard_location
