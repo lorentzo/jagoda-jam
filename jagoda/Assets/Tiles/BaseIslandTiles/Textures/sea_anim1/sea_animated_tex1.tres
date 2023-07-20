@@ -1,0 +1,35 @@
+[gd_resource type="AnimatedTexture" load_steps=11 format=3 uid="uid://cnhwnhm72yndh"]
+
+[ext_resource type="Texture2D" uid="uid://hbxayqqx1ttd" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0001.png" id="1_6c120"]
+[ext_resource type="Texture2D" uid="uid://cuccvfrtsffel" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0002.png" id="2_7h2gb"]
+[ext_resource type="Texture2D" uid="uid://2imxrapgvuml" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0003.png" id="3_u6ivx"]
+[ext_resource type="Texture2D" uid="uid://d0jnhce0k4ujt" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0004.png" id="4_7nvw8"]
+[ext_resource type="Texture2D" uid="uid://b5ikgk0ilsno3" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0005.png" id="5_txqki"]
+[ext_resource type="Texture2D" uid="uid://cieykax8cspi" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0006.png" id="6_dc6xo"]
+[ext_resource type="Texture2D" uid="uid://4qlrgfos0ws2" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0007.png" id="7_t4wuc"]
+[ext_resource type="Texture2D" uid="uid://ddpbau073uxag" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0008.png" id="8_cmg0f"]
+[ext_resource type="Texture2D" uid="uid://t4rah76mb16s" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0009.png" id="9_fu4xs"]
+[ext_resource type="Texture2D" uid="uid://1kstjuv0o281" path="res://Assets/Tiles/BaseIslandTiles/Textures/sea_anim1/sea_anim0010.png" id="10_n7bbj"]
+
+[resource]
+frames = 10
+speed_scale = 10.0
+frame_0/texture = ExtResource("1_6c120")
+frame_1/texture = ExtResource("2_7h2gb")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_u6ivx")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_7nvw8")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_txqki")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_dc6xo")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_t4wuc")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("8_cmg0f")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("9_fu4xs")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("10_n7bbj")
+frame_9/duration = 1.0
