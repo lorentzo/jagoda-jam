@@ -1,0 +1,13 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://lbcx1niifxqo"]
+
+[ext_resource type="Texture2D" uid="uid://gslycf1cy78o" path="res://Assets/Tiles/mountain/mountain.png" id="1_rxw03"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yemhb"]
+texture = ExtResource("1_rxw03")
+texture_region_size = Vector2i(1024, 1024)
+0:0/0 = 0
+
+[resource]
+tile_shape = 1
+tile_size = Vector2i(1024, 512)
+sources/0 = SubResource("TileSetAtlasSource_yemhb")

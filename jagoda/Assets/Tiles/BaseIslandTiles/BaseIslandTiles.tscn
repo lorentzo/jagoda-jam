@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://r3m8483dtdsd"]
+[gd_scene load_steps=4 format=3 uid="uid://r3m8483dtdsd"]
 
 [ext_resource type="TileSet" uid="uid://dmq0717soltvq" path="res://Assets/Tiles/BaseIslandTiles/BaseIslandTileMap.tres" id="1_rrheu"]
 [ext_resource type="TileSet" uid="uid://b40wlrl1aipwy" path="res://Assets/Tiles/Rocks/RocksTileSet.tres" id="2_p8he5"]
+[ext_resource type="TileSet" uid="uid://lbcx1niifxqo" path="res://Assets/Tiles/mountain/MountainTileSet.tres" id="3_e882m"]
 
 [node name="BaseIslandTiles" type="Node2D"]
 
@@ -18,3 +19,10 @@ tile_set = ExtResource("2_p8he5")
 format = 2
 layer_0/y_sort_enabled = true
 layer_0/tile_data = PackedInt32Array(786430, 3, 0, 786431, 3, 0, 851967, 3, 0, 917502, 3, 0, 655358, 1, 0, 720894, 1, 0, 720895, 1, 0, 655360, 1, 0, 655359, 1, 0, 655357, 7, 0, 524285, 7, 0, 655356, 8, 0, 589821, 8, 0, 524284, 8, 0, 458750, 7, 0, 589822, 7, 0, 524287, 6, 0, 393215, 9, 0, 458752, 5, 0, 327680, 9, 0, 327684, 5, 0, 196607, 11, 0, 262143, 11, 0, 131072, 10, 0, 65536, 10, 0, 393217, 10, 0, 262145, 10, 0, 393216, 9, 0, 262144, 9, 0)
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("3_e882m")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-131074, 0, 0, 65537, 0, 0, 131070, 0, 0)
