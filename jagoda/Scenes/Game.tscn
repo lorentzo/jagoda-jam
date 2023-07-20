@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=11 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://dmq0717soltvq" path="res://Assets/Tiles/BaseIslandTiles/BaseIslandTileMap.tres" id="2_mb1pj"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ctkkf7cs18f3e" path="res://Scenes/Plant.tscn" id="5_7g35u"]
 [ext_resource type="Texture2D" uid="uid://dtxdtxlg4c72f" path="res://Assets/sun_shiny.png" id="6_mt8ms"]
 [ext_resource type="PackedScene" uid="uid://2pd28jrfm3b5" path="res://Assets/Plants/Plant1/plant_1.tscn" id="9_4dbvt"]
+[ext_resource type="PackedScene" uid="uid://btly1y8rrpijj" path="res://Assets/Plants/Plant2/plant_2.tscn" id="10_yh0jd"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_fxwml")
@@ -77,4 +78,8 @@ texture = ExtResource("6_mt8ms")
 
 [node name="Plant1" parent="." instance=ExtResource("9_4dbvt")]
 position = Vector2(947, 363)
+scale = Vector2(0.6, 0.6)
+
+[node name="Plant6" parent="." instance=ExtResource("10_yh0jd")]
+position = Vector2(794, 101)
 scale = Vector2(0.6, 0.6)

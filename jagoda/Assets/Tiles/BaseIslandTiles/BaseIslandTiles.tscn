@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://r3m8483dtdsd"]
+[gd_scene load_steps=6 format=3 uid="uid://r3m8483dtdsd"]
 
 [ext_resource type="TileSet" uid="uid://dmq0717soltvq" path="res://Assets/Tiles/BaseIslandTiles/BaseIslandTileMap.tres" id="1_rrheu"]
 [ext_resource type="TileSet" uid="uid://b40wlrl1aipwy" path="res://Assets/Tiles/Rocks/RocksTileSet.tres" id="2_p8he5"]
 [ext_resource type="TileSet" uid="uid://lbcx1niifxqo" path="res://Assets/Tiles/mountain/MountainTileSet.tres" id="3_e882m"]
 [ext_resource type="PackedScene" uid="uid://2pd28jrfm3b5" path="res://Assets/Plants/Plant1/plant_1.tscn" id="4_p3xgb"]
+[ext_resource type="PackedScene" uid="uid://btly1y8rrpijj" path="res://Assets/Plants/Plant2/plant_2.tscn" id="5_6w2jn"]
 
 [node name="BaseIslandTiles" type="Node2D"]
 
@@ -31,3 +32,6 @@ layer_0/tile_data = PackedInt32Array(-131074, 0, 0, 65537, 0, 0, 131070, 0, 0)
 [node name="Plant1" parent="." instance=ExtResource("4_p3xgb")]
 position = Vector2(459, 255)
 scale = Vector2(0.7, 0.6)
+
+[node name="Plant2" parent="." instance=ExtResource("5_6w2jn")]
+position = Vector2(642, 280)
