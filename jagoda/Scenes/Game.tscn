@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=13 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://dmq0717soltvq" path="res://Assets/Tiles/BaseIslandTiles/BaseIslandTileMap.tres" id="2_mb1pj"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://2pd28jrfm3b5" path="res://Assets/Plants/Plant1/plant_1.tscn" id="9_4dbvt"]
 [ext_resource type="PackedScene" uid="uid://btly1y8rrpijj" path="res://Assets/Plants/Plant2/plant_2.tscn" id="10_yh0jd"]
 [ext_resource type="PackedScene" uid="uid://ca2t20p5q2r3n" path="res://Assets/Fridges/Fridge1/fridge1.tscn" id="11_cv74y"]
+[ext_resource type="PackedScene" uid="uid://b5k47xiugccx4" path="res://Assets/Character/character.tscn" id="12_gmaxk"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_fxwml")
@@ -87,3 +88,7 @@ scale = Vector2(0.6, 0.6)
 
 [node name="Node2D" parent="." instance=ExtResource("11_cv74y")]
 position = Vector2(478, 129)
+
+[node name="Character" parent="." instance=ExtResource("12_gmaxk")]
+position = Vector2(644, 433)
+scale = Vector2(0.7, 0.7)
