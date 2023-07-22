@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://r3m8483dtdsd"]
+[gd_scene load_steps=9 format=3 uid="uid://r3m8483dtdsd"]
 
 [ext_resource type="TileSet" uid="uid://dmq0717soltvq" path="res://Assets/Tiles/BaseIslandTiles/BaseIslandTileMap.tres" id="1_rrheu"]
 [ext_resource type="TileSet" uid="uid://b40wlrl1aipwy" path="res://Assets/Tiles/Rocks/RocksTileSet.tres" id="2_p8he5"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://btly1y8rrpijj" path="res://Assets/Plants/Plant2/plant_2.tscn" id="5_6w2jn"]
 [ext_resource type="PackedScene" uid="uid://ca2t20p5q2r3n" path="res://Assets/Fridges/Fridge1/fridge1.tscn" id="6_eu8b3"]
 [ext_resource type="PackedScene" uid="uid://b5k47xiugccx4" path="res://Assets/Character/character.tscn" id="7_y0qgm"]
+[ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Assets/Crib/crib.tscn" id="8_xw60o"]
 
 [node name="BaseIslandTiles" type="Node2D"]
 
@@ -44,3 +45,6 @@ position = Vector2(554, 115)
 [node name="Character" parent="." instance=ExtResource("7_y0qgm")]
 position = Vector2(253, 4)
 scale = Vector2(0.6, 0.6)
+
+[node name="Crib" parent="." instance=ExtResource("8_xw60o")]
+position = Vector2(-40, -79)
