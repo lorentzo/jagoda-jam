@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dqkox40skn8w6"]
+[gd_scene load_steps=12 format=3 uid="uid://dqkox40skn8w6"]
 
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="1_cf83f"]
 [ext_resource type="TileSet" uid="uid://sun3hglykjjh" path="res://Assets/Tiles/Land_Sea/LandSeaTileSet.tres" id="1_nyqs6"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b5k47xiugccx4" path="res://Assets/Character/character.tscn" id="7_lxr4w"]
 [ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Assets/Crib/crib.tscn" id="8_svji7"]
 [ext_resource type="TileSet" uid="uid://cam8iry0q4y8u" path="res://Assets/Tiles/Sea/SeaTileSet.tres" id="10_u52bc"]
+[ext_resource type="PackedScene" uid="uid://cycefkd0euxbc" path="res://Assets/Plants/Plant3/plant_3.tscn" id="11_7c78d"]
 
 [node name="AssetsTest" type="Node2D"]
 
@@ -64,3 +65,6 @@ scale = Vector2(0.6, 0.6)
 
 [node name="Crib" parent="." instance=ExtResource("8_svji7")]
 position = Vector2(-40, -79)
+
+[node name="Plant3" parent="." instance=ExtResource("11_7c78d")]
+position = Vector2(868, 139)
