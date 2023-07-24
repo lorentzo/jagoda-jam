@@ -1,8 +1,8 @@
 extends Node2D
 
 const MAIN_MENU_SCENE = "res://Scenes/MainMenu.tscn"
-const DAY_LENGTH_MINUTES: int = 7
-const DAY_LENGTH_SECONDS: int = DAY_LENGTH_MINUTES * 60
+const DAY_LENGTH_MINUTES: float = 7
+const DAY_LENGTH_SECONDS: float = DAY_LENGTH_MINUTES * 60
 const MIN_LUMINANCE: float = 0.5
 const MAX_LUMINANCE: float = 1.0
 const LUMINANCE_RANGE: float = MAX_LUMINANCE - MIN_LUMINANCE
