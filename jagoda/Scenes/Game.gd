@@ -46,6 +46,7 @@ func _on_player_freshness_changed(freshness):
 	$HUD/PlayerFreshnessBar.value = freshness
 
 func _on_day_changed():
+	self.time_passed = 0
 	self.day += 1
 	$HUD/DayLabel.text = "Day {0} / {1}".format([day, GAME_DAYS])
 
@@ -65,8 +66,7 @@ func _process(delta):
 	time_passed += delta
 	
 	if is_equal_approx(day_progress, 1):
-		self.hide()
-		loading.load_scene(MAIN_MENU_SCENE)
+		day_changed.emit()
 
 func _pause():
 	$HUD/PauseMenu.show()
