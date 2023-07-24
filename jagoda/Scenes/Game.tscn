@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=11 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="TileSet" uid="uid://w0c2ecnn5xx8" path="res://Assets/Tiles/TilesBlocking/TilesBlockingTileMap.tres" id="1_0fixn"]
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ctkkf7cs18f3e" path="res://Scenes/Plant.tscn" id="5_7g35u"]
 [ext_resource type="Texture2D" uid="uid://dtxdtxlg4c72f" path="res://Assets/sun_shiny.png" id="6_mt8ms"]
 [ext_resource type="PackedScene" uid="uid://c32dlq6uur6e3" path="res://Scenes/PauseMenu.tscn" id="7_v1sht"]
+[ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="8_574xx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31pxf"]
 bg_color = Color(0, 0, 0, 0)
@@ -90,3 +91,17 @@ step = 1.0
 value = 50.0
 fill_mode = 3
 show_percentage = false
+
+[node name="DayLabel" type="Label" parent="HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 41.0
+offset_right = 68.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme = ExtResource("8_574xx")
+theme_override_font_sizes/font_size = 24
+text = "Day 1 / 7"
+horizontal_alignment = 1

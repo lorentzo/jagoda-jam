@@ -6,12 +6,14 @@ const DAY_LENGTH_SECONDS: int = DAY_LENGTH_MINUTES * 60
 const MIN_LUMINANCE: float = 0.3
 const MAX_LUMINANCE: float = 1.0
 const LUMINANCE_RANGE: float = MAX_LUMINANCE - MIN_LUMINANCE
+const GAME_DAYS: int = 7
 
 @onready var loading = get_node("/root/Loading")
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
 @onready var sun: Sprite2D = $HUD/Sun
 @onready var screen_width = get_viewport().size.x
 
+var day = 0
 var time_passed = 0
 
 signal sun_intensity_changed(sun_intensity)
@@ -20,6 +22,8 @@ signal day_changed
 func _ready():
 	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
+	
+	day_changed.connect(self._on_day_changed)
 	
 	for plant in get_tree().get_nodes_in_group("plant"):
 		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
@@ -36,6 +40,10 @@ func _on_loading_start():
 
 func _on_player_freshness_changed(freshness):
 	$HUD/PlayerFreshnessBar.value = freshness
+
+func _on_day_changed():
+	self.day += 1
+	$HUD/DayLabel.text = "Day {0} / {1}".format([day, GAME_DAYS])
 
 func _input(event):
 	if event.is_action_pressed("pause"):
