@@ -43,6 +43,7 @@ theme = ExtResource("2_xgybe")
 text = "Play"
 
 [node name="ExitButton" type="Button" parent="MainVBox/MenuVBox"]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_xgybe")
 text = "Exit"

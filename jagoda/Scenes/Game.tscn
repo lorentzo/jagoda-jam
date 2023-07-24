@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=8 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="TileSet" uid="uid://w0c2ecnn5xx8" path="res://Assets/Tiles/TilesBlocking/TilesBlockingTileMap.tres" id="1_0fixn"]
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
@@ -6,8 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://cha4kgf62hkx0" path="res://Assets/Sound/theme.ogg" id="4_8ifn4"]
 [ext_resource type="PackedScene" uid="uid://ctkkf7cs18f3e" path="res://Scenes/Plant.tscn" id="5_7g35u"]
 [ext_resource type="Texture2D" uid="uid://dtxdtxlg4c72f" path="res://Assets/sun_shiny.png" id="6_mt8ms"]
+[ext_resource type="PackedScene" uid="uid://c32dlq6uur6e3" path="res://Scenes/PauseMenu.tscn" id="7_v1sht"]
 
 [node name="Game" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_fxwml")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -57,3 +59,20 @@ position = Vector2(896, 545)
 position = Vector2(0, -5)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_mt8ms")
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource("7_v1sht")]
+visible = false
+
+[node name="PlayerFreshnessBar" type="ProgressBar" parent="HUD"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -257.0
+offset_right = 54.0
+offset_bottom = -30.0
+grow_vertical = 0
+step = 1.0
+value = 50.0
+fill_mode = 3
+show_percentage = false

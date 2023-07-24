@@ -1,9 +1,11 @@
-extends Sprite2D
+class_name Plant
+extends Area2D
 
+const MAX_FRESHNESS: float = 100.0
 const MAX_FRESHNESS_LOST_PER_SECOND: float = 0.5
 const DAY_MULTIPLIER_DEVIATION: float = 0.5
 
-var freshness: float = 100
+var freshness: float = MAX_FRESHNESS
 var current_sun_intensity = 0
 var day_multiplier: float = 1.0
 
@@ -19,6 +21,12 @@ func _process(delta):
 
 func _die():
 	queue_free()
+
+func refresh(additional_freshness):
+	self.freshness = min(self.freshness + additional_freshness, MAX_FRESHNESS)
+
+func set_freshness_visible(value: bool):
+	$ProgressBar.visible = value
 
 func on_sun_intensity_changed(sun_intensity):
 	self.current_sun_intensity = sun_intensity

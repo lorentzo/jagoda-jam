@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://c32dlq6uur6e3"]
+
+[ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="1_c48vi"]
+[ext_resource type="Script" path="res://Scenes/PauseMenu.gd" id="1_mpvl5"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mpvl5")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -34.0
+offset_right = 61.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_c48vi")
+theme_override_font_sizes/font_size = 64
+text = "Pause"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_c48vi")
+text = "Resume"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_c48vi")
+text = "Exit"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
