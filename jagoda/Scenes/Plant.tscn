@@ -1,6 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctkkf7cs18f3e"]
+[gd_scene load_steps=6 format=3 uid="uid://ctkkf7cs18f3e"]
 
 [ext_resource type="Script" path="res://Scenes/Plant.gd" id="1_wccxx"]
+[ext_resource type="FontFile" uid="uid://bjonvamqyjdmv" path="res://Fonts/RussoOne.ttf" id="2_t4c7n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i30e"]
+bg_color = Color(0, 0, 0, 0.501961)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i41y"]
+bg_color = Color(0, 0.8, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8daej"]
 radius = 15.0
@@ -29,9 +44,12 @@ offset_right = 35.5
 offset_bottom = -51.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 7
+theme_override_fonts/font = ExtResource("2_t4c7n")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/background = SubResource("StyleBoxFlat_4i30e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4i41y")
 step = 1.0
-value = 100.0
+value = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -24)
