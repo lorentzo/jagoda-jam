@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqkox40skn8w6"]
+[gd_scene load_steps=14 format=3 uid="uid://dqkox40skn8w6"]
 
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="1_cf83f"]
 [ext_resource type="TileSet" uid="uid://sun3hglykjjh" path="res://Assets/Tiles/Land_Sea/LandSeaTileSet.tres" id="1_nyqs6"]
@@ -12,6 +12,7 @@
 [ext_resource type="TileSet" uid="uid://cam8iry0q4y8u" path="res://Assets/Tiles/Sea/SeaTileSet.tres" id="10_u52bc"]
 [ext_resource type="PackedScene" uid="uid://cycefkd0euxbc" path="res://Assets/Plants/Plant3/plant_3.tscn" id="11_7c78d"]
 [ext_resource type="PackedScene" uid="uid://damvd050lcmfx" path="res://Assets/Fridges/Fridge2/fridge_2.tscn" id="12_e4oy5"]
+[ext_resource type="PackedScene" uid="uid://dymief0xuukj7" path="res://Assets/Tiles/Sea/Textures/anim/sea_anim.tscn" id="13_hmgbm"]
 
 [node name="AssetsTest" type="Node2D"]
 
@@ -72,3 +73,6 @@ position = Vector2(868, 139)
 
 [node name="Fridge2" parent="." instance=ExtResource("12_e4oy5")]
 position = Vector2(724, -27)
+
+[node name="Node2D2" parent="." instance=ExtResource("13_hmgbm")]
+position = Vector2(-130, 1601)
