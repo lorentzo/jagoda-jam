@@ -26,7 +26,6 @@ func _ready():
 		day_changed.connect(plant.on_day_changed)
 
 	day_changed.emit()
-	
 	loading.on_loading_start.connect(self._on_loading_start)
 
 func _on_loading_start():
@@ -41,7 +40,7 @@ func _on_player_freshness_changed(freshness):
 func _input(event):
 	if event.is_action_pressed("pause"):
 		self._pause()
-		
+
 func _process(delta):
 	var day_progress: float = min(time_passed / DAY_LENGTH_SECONDS, 1)
 	var sun_intensity: float = sin(day_progress * PI)
