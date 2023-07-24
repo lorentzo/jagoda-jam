@@ -6,12 +6,16 @@ const DAY_LENGTH_SECONDS: int = DAY_LENGTH_MINUTES * 60
 const MIN_LUMINANCE: float = 0.3
 const MAX_LUMINANCE: float = 1.0
 const LUMINANCE_RANGE: float = MAX_LUMINANCE - MIN_LUMINANCE
+const MIN_SATURATION: float = 1.0
+const MAX_SATURATION: float = 0.0
+const SATURATION_RANGE: float = MAX_SATURATION - MIN_SATURATION
 const GAME_DAYS: int = 7
 
 @onready var loading = get_node("/root/Loading")
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
 @onready var sun: Sprite2D = $HUD/Sun
 @onready var screen_width = get_viewport().size.x
+@onready var canvas_hue = canvas_modulate.color.h;
 
 var day = 0
 var time_passed = 0
@@ -55,7 +59,9 @@ func _process(delta):
 	sun_intensity_changed.emit(sun_intensity)
 	
 	sun.position.x = day_progress * screen_width
+	canvas_modulate.color.h = canvas_hue;
 	canvas_modulate.color.v = sun_intensity * LUMINANCE_RANGE + MIN_LUMINANCE
+	canvas_modulate.color.s = sun_intensity * SATURATION_RANGE + MIN_SATURATION
 	time_passed += delta
 	
 	if is_equal_approx(day_progress, 1):
