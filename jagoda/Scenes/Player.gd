@@ -5,8 +5,10 @@ const WALK_SPEED = 150.0
 const MAX_FRESHNESS_LOST_PER_SECOND = 1.0
 
 signal player_freshness_changed(freshness)
+signal player_plant_water_changed(plant_water)
 
 var freshness: float = 100
+var plant_water: float = 100
 var current_sun_intensity = 0
 var visible_plants: Dictionary = {}
 
@@ -26,11 +28,13 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("walk-down"):
 		walk_velocity.y = 1
 
-	if Input.is_action_pressed("use-item"):
+	if Input.is_action_pressed("use-item") and self.plant_water > 0:
 		if not $WaterParticles.emitting:
 			$WaterParticles.emitting = true
 		for plant in self.visible_plants.keys():
 			plant.refresh(5.0 * delta)
+		self.plant_water = max(self.plant_water - 10.0 * delta, 0)
+		self.player_plant_water_changed.emit(self.plant_water)
 	else:
 		if $WaterParticles.emitting:
 			$WaterParticles.emitting = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=12 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="TileSet" uid="uid://w0c2ecnn5xx8" path="res://Assets/Tiles/TilesBlocking/TilesBlockingTileMap.tres" id="1_0fixn"]
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
@@ -15,6 +15,11 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 shadow_size = 3
 shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2npm"]
+bg_color = Color(1, 0.215686, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewus7"]
 bg_color = Color(0, 0.8, 1, 1)
@@ -87,9 +92,25 @@ offset_right = 54.0
 offset_bottom = -30.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o2npm")
+step = 1.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="ItemWaterBar" type="ProgressBar" parent="HUD"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 77.0
+offset_top = -257.0
+offset_right = 101.0
+offset_bottom = -30.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ewus7")
 step = 1.0
-value = 50.0
+value = 100.0
 fill_mode = 3
 show_percentage = false
 
