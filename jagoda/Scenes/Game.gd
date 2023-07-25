@@ -18,11 +18,28 @@ signal sun_intensity_changed(sun_intensity)
 signal day_changed
 
 func _ready():
+	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
+	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
+	
 	for plant in get_tree().get_nodes_in_group("plant"):
 		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
 		day_changed.connect(plant.on_day_changed)
 
 	day_changed.emit()
+	loading.on_loading_start.connect(self._on_loading_start)
+
+func _on_loading_start():
+	$Player/Camera2D.queue_free()
+	$HUD.hide()
+	$ThemePlayer.stop()
+	self.hide()
+
+func _on_player_freshness_changed(freshness):
+	$HUD/PlayerFreshnessBar.value = freshness
+
+func _input(event):
+	if event.is_action_pressed("pause"):
+		self._pause()
 
 func _process(delta):
 	var day_progress: float = min(time_passed / DAY_LENGTH_SECONDS, 1)
@@ -36,3 +53,6 @@ func _process(delta):
 	if is_equal_approx(day_progress, 1):
 		self.hide()
 		loading.load_scene(MAIN_MENU_SCENE)
+
+func _pause():
+	$HUD/PauseMenu.show()
