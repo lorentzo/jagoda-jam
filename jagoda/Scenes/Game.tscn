@@ -38,6 +38,7 @@ corner_radius_top_right = 4
 
 [node name="Game" type="Node2D"]
 process_mode = 1
+y_sort_enabled = true
 script = ExtResource("1_fxwml")
 
 [node name="Land" type="TileMap" parent="."]

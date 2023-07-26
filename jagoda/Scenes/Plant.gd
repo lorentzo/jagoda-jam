@@ -45,7 +45,7 @@ func refresh(additional_freshness):
 	self.freshness = min(self.freshness + additional_freshness, MAX_FRESHNESS)
 
 func set_freshness_visible(value: bool):
-	$ProgressBar.visible = value
+	progress_bar.visible = value
 
 func on_sun_intensity_changed(sun_intensity):
 	self.current_sun_intensity = sun_intensity
