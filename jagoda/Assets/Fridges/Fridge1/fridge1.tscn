@@ -134,17 +134,15 @@ animations = [{
 radius = 88.0
 height = 176.0
 
-[node name="Node2D" type="Node2D"]
+[node name="Fridge1" type="Area2D"]
 script = ExtResource("1_xna1m")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_40ne6")
 animation = &"open_animation"
 frame_progress = 0.980229
 speed_scale = 5.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-14, 4)
 shape = SubResource("CapsuleShape2D_3omdx")
