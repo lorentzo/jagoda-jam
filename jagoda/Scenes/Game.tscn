@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=22 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="2_7b8y8"]
@@ -12,7 +12,6 @@
 [ext_resource type="TileSet" uid="uid://lbcx1niifxqo" path="res://Assets/Tiles/mountain/MountainTileSet.tres" id="6_p5hr4"]
 [ext_resource type="PackedScene" uid="uid://c32dlq6uur6e3" path="res://Scenes/PauseMenu.tscn" id="7_v1sht"]
 [ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="8_574xx"]
-[ext_resource type="PackedScene" uid="uid://b5k47xiugccx4" path="res://Assets/Character/character.tscn" id="12_cvljv"]
 [ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Assets/Crib/crib.tscn" id="13_s1n7e"]
 [ext_resource type="PackedScene" uid="uid://ca2t20p5q2r3n" path="res://Assets/Fridges/Fridge1/fridge1.tscn" id="14_p8ks2"]
 [ext_resource type="PackedScene" uid="uid://damvd050lcmfx" path="res://Assets/Fridges/Fridge2/fridge_2.tscn" id="15_48xlh"]
@@ -73,6 +72,7 @@ color = Color(0.992157, 0.580392, 0, 1)
 position = Vector2(415, 431)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.75, 0.75)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 drag_horizontal_enabled = true
@@ -101,27 +101,29 @@ position = Vector2(969, 526)
 [node name="Plant5" parent="." instance=ExtResource("5_7g35u")]
 position = Vector2(896, 545)
 
-[node name="Character" parent="." instance=ExtResource("12_cvljv")]
-position = Vector2(532, 277)
+[node name="Plant1" parent="." instance=ExtResource("16_conv6")]
+position = Vector2(438, 626)
 scale = Vector2(0.5, 0.5)
 
-[node name="Crib" parent="Character" instance=ExtResource("13_s1n7e")]
-position = Vector2(1140, -284)
+[node name="Plant7" parent="." instance=ExtResource("18_8jjxf")]
+position = Vector2(1056, 538)
+scale = Vector2(0.5, 0.5)
 
-[node name="Node2D" parent="Character/Crib" instance=ExtResource("14_p8ks2")]
-position = Vector2(-880, 886)
+[node name="Plant6" parent="." instance=ExtResource("17_3eb61")]
+position = Vector2(795, 699)
+scale = Vector2(0.5, 0.5)
 
-[node name="Fridge2" parent="Character/Crib/Node2D" instance=ExtResource("15_48xlh")]
-position = Vector2(618, -378)
+[node name="Fridge" parent="." instance=ExtResource("14_p8ks2")]
+position = Vector2(662, 578)
+scale = Vector2(0.5, 0.5)
 
-[node name="Plant1" parent="Character/Crib/Node2D/Fridge2" instance=ExtResource("16_conv6")]
-position = Vector2(-1066, 474)
+[node name="Fridge2" parent="." instance=ExtResource("15_48xlh")]
+position = Vector2(971, 389)
+scale = Vector2(0.5, 0.5)
 
-[node name="Plant2" parent="Character/Crib/Node2D/Fridge2/Plant1" instance=ExtResource("17_3eb61")]
-position = Vector2(714, 146)
-
-[node name="Plant3" parent="Character/Crib/Node2D/Fridge2/Plant1/Plant2" instance=ExtResource("18_8jjxf")]
-position = Vector2(522, -322)
+[node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
+position = Vector2(1102, 135)
+scale = Vector2(0.5, 0.5)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -137,10 +139,10 @@ visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = -257.0
-offset_right = 54.0
-offset_bottom = -30.0
+offset_left = 56.0
+offset_top = -190.0
+offset_right = 80.0
+offset_bottom = -40.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
 theme_override_styles/fill = SubResource("StyleBoxFlat_o2npm")
@@ -153,10 +155,10 @@ show_percentage = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 77.0
-offset_top = -257.0
-offset_right = 101.0
-offset_bottom = -30.0
+offset_left = 100.0
+offset_top = -190.0
+offset_right = 124.0
+offset_bottom = -40.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ewus7")

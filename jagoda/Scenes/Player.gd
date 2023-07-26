@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-const WALK_SPEED = 150.0
+const WALK_SPEED = 200.0
 const MAX_FRESHNESS_LOST_PER_SECOND = 1.0
 
 signal player_freshness_changed(freshness)
@@ -43,6 +43,12 @@ func _physics_process(delta):
 		$RefreshArea.scale.x = walk_velocity.x
 		$WaterParticles.position.x = abs($WaterParticles.position.x) * walk_velocity.x
 		$WaterParticles.scale.x = walk_velocity.x
+		$AnimatedSprite2D.scale.x = abs($AnimatedSprite2D.scale.x) * (-sign(walk_velocity.x))
+
+	if walk_velocity != Vector2.ZERO:
+		$AnimatedSprite2D.play("walk")
+	else:
+		$AnimatedSprite2D.play("idle")
 
 	self.velocity = walk_velocity.normalized() * WALK_SPEED
 	move_and_slide()

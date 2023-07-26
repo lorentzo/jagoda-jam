@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnrnjgb2yen1t"]
 
 [ext_resource type="Script" path="res://Scenes/Player.gd" id="1_6cy7p"]
-[ext_resource type="FontFile" uid="uid://bjonvamqyjdmv" path="res://Fonts/RussoOne.ttf" id="1_b7613"]
+[ext_resource type="SpriteFrames" uid="uid://vse836nyeq6q" path="res://Assets/Character/CharacterSpriteFrames.tres" id="3_dxt4t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pyes3"]
 radius = 22.0
-height = 74.0
+height = 86.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ctm2"]
-size = Vector2(107, 113)
+size = Vector2(82.5, 141)
 
 [sub_resource type="Gradient" id="Gradient_2v5sl"]
 colors = PackedColorArray(0.219608, 0.780392, 1, 1, 0.109804, 1, 1, 0.65098)
@@ -17,45 +17,18 @@ colors = PackedColorArray(0.219608, 0.780392, 1, 1, 0.109804, 1, 1, 0.65098)
 y_sort_enabled = true
 script = ExtResource("1_6cy7p")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -39.5
-offset_right = 22.5
-offset_bottom = 39.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.611328, 0.611328)
+sprite_frames = ExtResource("3_dxt4t")
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_pyes3")
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -37.5
-offset_right = 20.0
-offset_bottom = -20.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_b7613")
-theme_override_font_sizes/font_size = 12
-text = "Player"
-
 [node name="RefreshArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RefreshArea"]
-position = Vector2(63.5, 0)
+position = Vector2(45, 0)
 shape = SubResource("RectangleShape2D_8ctm2")
 
 [node name="WaterParticles" type="CPUParticles2D" parent="."]
