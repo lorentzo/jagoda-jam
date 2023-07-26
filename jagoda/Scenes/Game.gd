@@ -10,6 +10,9 @@ const MIN_SATURATION: float = 1.0
 const MAX_SATURATION: float = 0.0
 const SATURATION_RANGE: float = MAX_SATURATION - MIN_SATURATION
 const GAME_DAYS: int = 7
+const START_TIME_SECONDS: float = 6 * 3600 # 06:00
+const END_TIME_SECONDS: float = 20 * 3600 # 20:00
+const TIME_LABEL_UPDATE_PERIOD_MINUTES: float = 5
 
 @onready var loading = get_node("/root/Loading")
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
@@ -19,6 +22,7 @@ const GAME_DAYS: int = 7
 
 var day = 0
 var time_passed = 0
+var previous_day_time = null
 
 signal sun_intensity_changed(sun_intensity)
 signal day_changed
@@ -55,6 +59,7 @@ func _on_player_plant_water_changed(plant_water):
 func _on_day_changed():
 	self.time_passed = 0
 	self.day += 1
+	self.previous_day_time = null
 	$HUD/DayLabel.text = "Day {0} / {1}".format([day, GAME_DAYS])
 
 func _input(event):
@@ -71,6 +76,13 @@ func _process(delta):
 	canvas_modulate.color.v = sun_intensity * LUMINANCE_RANGE + MIN_LUMINANCE
 	canvas_modulate.color.s = sun_intensity * SATURATION_RANGE + MIN_SATURATION
 	time_passed += delta
+	
+	var day_time = START_TIME_SECONDS + day_progress * (END_TIME_SECONDS - START_TIME_SECONDS)
+	var day_hours = floor(day_time / 3600)
+	var day_minutes = floor((day_time - day_hours * 3600) / 60)
+	if previous_day_time == null or (day_time - previous_day_time) >= TIME_LABEL_UPDATE_PERIOD_MINUTES * 60:
+		$HUD/TimeLabel.text = "%02d:%02d" % [day_hours, day_minutes]
+		previous_day_time = day_time
 	
 	if is_equal_approx(day_progress, 1):
 		day_changed.emit()
