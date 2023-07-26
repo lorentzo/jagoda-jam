@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=3 uid="uid://dqkox40skn8w6"]
+
+[ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="1_cf83f"]
+[ext_resource type="TileSet" uid="uid://sun3hglykjjh" path="res://Assets/Tiles/Land_Sea/LandSeaTileSet.tres" id="1_nyqs6"]
+[ext_resource type="TileSet" uid="uid://b40wlrl1aipwy" path="res://Assets/Tiles/Rocks/RocksTileSet.tres" id="2_y1p0h"]
+[ext_resource type="TileSet" uid="uid://lbcx1niifxqo" path="res://Assets/Tiles/mountain/MountainTileSet.tres" id="3_r3tyc"]
+[ext_resource type="PackedScene" uid="uid://2pd28jrfm3b5" path="res://Assets/Plants/Plant1/plant_1.tscn" id="4_p6q0j"]
+[ext_resource type="PackedScene" uid="uid://btly1y8rrpijj" path="res://Assets/Plants/Plant2/plant_2.tscn" id="5_p3il4"]
+[ext_resource type="PackedScene" uid="uid://ca2t20p5q2r3n" path="res://Assets/Fridges/Fridge1/fridge1.tscn" id="6_6mfmi"]
+[ext_resource type="PackedScene" uid="uid://b5k47xiugccx4" path="res://Assets/Character/character.tscn" id="7_lxr4w"]
+[ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Assets/Crib/crib.tscn" id="8_svji7"]
+[ext_resource type="TileSet" uid="uid://cam8iry0q4y8u" path="res://Assets/Tiles/Sea/SeaTileSet.tres" id="10_u52bc"]
+[ext_resource type="PackedScene" uid="uid://cycefkd0euxbc" path="res://Assets/Plants/Plant3/plant_3.tscn" id="11_7c78d"]
+[ext_resource type="PackedScene" uid="uid://damvd050lcmfx" path="res://Assets/Fridges/Fridge2/fridge_2.tscn" id="12_e4oy5"]
+[ext_resource type="PackedScene" uid="uid://dymief0xuukj7" path="res://Assets/Tiles/Sea/Textures/anim/sea_anim.tscn" id="13_hmgbm"]
+
+[node name="AssetsTest" type="Node2D"]
+
+[node name="Land_Sea" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("1_nyqs6")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(917505, 1, 0, 983040, 14, 0, 917506, 14, 0)
+
+[node name="Land" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("1_cf83f")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-131072, 0, 0, -65536, 0, 0, 1, 0, 0, -65535, 0, 0, -131071, 0, 0, -196608, 0, 0, -1, 1, 0, 0, 1, 0, 65536, 1, 0, 65535, 1, 0, 131071, 1, 0, 131072, 1, 0, 131070, 2, 0, 196607, 2, 0, 262143, 2, 0, 196606, 2, 0, 262142, 2, 0, 327679, 12, 0, 393215, 3, 0, 393216, 3, 0, 458752, 3, 0, 262144, 3, 0, 327680, 3, 0, 393217, 3, 0, 196608, 4, 0, 262145, 4, 0, 327681, 4, 0, 131073, 4, 0, 196609, 4, 0, 262146, 4, 0, 65537, 5, 0, 131074, 5, 0, 196610, 5, 0, 2, 5, 0, 65538, 5, 0, 131075, 5, 0, 524289, 12, 0, 589825, 6, 0, 655362, 6, 0, 458753, 12, 0, 524290, 12, 0, 589826, 6, 0, 262149, 4, 0, 131077, 12, 0, 131076, 5, 0, 262148, 12, 0, 196611, 5, 0, 327685, 4, 0, 196613, 4, 0, 327684, 12, 0, 851967, 12, 0, 917503, 11, 0, 983039, 12, 0, 786430, 11, 0, 786429, 11, 0, 720894, 14, 0, 655357, 15, 0, 720893, 13, 0, 655356, 13, 0, 589821, 15, 0, 524284, 12, 0, 524285, 16, 0, 589822, 16, 0, 655358, 16, 0, 720895, 13, 0, 786431, 11, 0, 917504, 11, 0, 524286, 13, 0, 458749, 12, 0, 458750, 15, 0, 589820, 16, 0, 589823, 13, 0, 524287, 12, 0, 655359, 6, 0, 655360, 12, 0, 786432, 12, 0, -262143, 12, 0, -327679, 12, 0, -196607, 12, 0, -196606, 12, 0, -262142, 12, 0, -131070, 12, 0, -65534, 12, 0, 3, 12, 0, 65539, 12, 0, 4, 12, 0, -65533, 12, 0, -131069, 12, 0, 65540, 12, 0, 196612, 12, 0, 393219, 12, 0, 327682, 12, 0, 458754, 12, 0, 393218, 12, 0, 327683, 12, 0, 262147, 12, 0, 458755, 12, 0, 524291, 12, 0, 589827, 12, 0, 655363, 12, 0, 524292, 12, 0, -4, 12, 0, -65539, 12, 0, -65540, 12, 0, -3, 12, 0, 65534, 12, 0, 131069, 12, 0, -2, 12, 0, -65538, 12, 0, -131074, 12, 0, -196610, 12, 0, -262147, 12, 0, -196611, 12, 0, -131075, 12, 0, -131076, 12, 0, -327683, 12, 0, -393219, 12, 0, -458755, 12, 0, -458754, 12, 0, -393218, 12, 0, -458753, 12, 0, -524290, 12, 0, -524291, 12, 0, 65533, 12, 0, 196605, 12, 0, 262140, 12, 0, 327677, 12, 0, 196604, 12, 0, 131068, 12, 0, 262141, 12, 0, 327678, 12, 0, 393213, 12, 0, 393212, 12, 0, 458748, 12, 0, 327676, 12, 0, 393214, 12, 0, 458751, 12, 0, 524288, 12, 0, 589824, 12, 0, 655361, 12, 0, 720896, 12, 0, 786433, 12, 0, 851969, 12, 0, 851968, 12, 0, 720897, 12, 0)
+
+[node name="Rocks" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("2_y1p0h")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(786430, 5, 0, 786431, 7, 0, 851967, 4, 0, 917502, 4, 0, 655358, 6, 0, 720894, 5, 0, 720895, 6, 0, 655360, 7, 0, 655359, 7, 0, 655357, 7, 0, 524285, 7, 0, 655356, 8, 0, 589821, 8, 0, 524284, 8, 0, 458750, 7, 0, 589822, 7, 0, 524287, 6, 0, 393215, 9, 0, 458752, 5, 0, 327680, 9, 0, 327684, 5, 0, 196607, 11, 0, 262143, 11, 0, 131072, 10, 0, 65536, 10, 0, 393217, 10, 0, 262145, 10, 0, 393216, 9, 0, 262144, 9, 0, 196606, 10, 0, 262142, 1, 0, 327679, 9, 0, 131070, 10, 0)
+
+[node name="Mountains" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("3_r3tyc")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-131074, 4, 0, 65537, 2, 0, 131070, 3, 0, 1, 2, 0, -131071, 1, 0, -196608, 1, 0, -131073, 1, 0)
+
+[node name="Sea" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("10_u52bc")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(1114113, 6, 0, 1048577, 6, 0, 1048578, 6, 0, 983041, 6, 0, 1114114, 6, 0, 1048579, 6, 0, 983042, 6, 0, 917507, 6, 0, 851970, 6, 0, 786434, 6, 0, 786435, 6, 0, 720898, 6, 0, 851971, 6, 0, 786436, 6, 0, 851972, 6, 0, 720900, 6, 0, 655364, 6, 0, 720899, 6, 0, 655365, 6, 0, 589828, 6, 0, 786437, 6, 0, 917508, 6, 0, 983043, 6, 0, 1179651, 4, 0, 1245186, 6, 0, 1310722, 6, 0, 1245185, 6, 0, 1179650, 6, 0, 1179649, 6, 0, 1114112, 5, 0, 1310720, 5, 0, 1310719, 5, 0, 1179648, 5, 0, 1048576, 5, 0, 1048575, 5, 0, 1114111, 5, 0, 1179647, 5, 0, 1245183, 5, 0, 1179646, 5, 0, 1048574, 5, 0, 983038, 5, 0, 1114110, 5, 0, 1245182, 5, 0, 1179645, 5, 0, 1310717, 5, 0, 1376254, 5, 0, 1376255, 5, 0, 1441791, 5, 0, 1441792, 5, 0, 1376256, 5, 0, 1441790, 5, 0, 1310718, 5, 0, 1310721, 5, 0, 1245184, 5, 0, 1507330, 4, 0, 1441795, 4, 0, 1376258, 4, 0, 1441794, 4, 0, 1376257, 4, 0, 1441793, 4, 0, 1507329, 3, 0, 1376259, 3, 0, 1310724, 4, 0, 1310723, 4, 0, 1245187, 4, 0, 1114115, 4, 0, 1114116, 4, 0, 1048580, 4, 0, 983044, 4, 0, 917509, 4, 0, 983045, 4, 0, 1048581, 4, 0, 1179652, 4, 0, 1245188, 4, 0, 1179653, 4, 0, 1114117, 4, 0, 1048582, 4, 0, 983046, 4, 0, 917510, 4, 0, 851973, 4, 0, 1703936, 3, 0, 1638400, 3, 0, 1572864, 3, 0, 1572863, 3, 0, 1507327, 3, 0, 1572862, 3, 0, 1572865, 3, 0, 1638401, 3, 0, 1703938, 3, 0, 1769474, 3, 0, 1703939, 3, 0, 1638402, 3, 0, 1572867, 3, 0, 1769475, 3, 0, 1703940, 3, 0, 1638403, 3, 0, 1507331, 3, 0, 1441796, 3, 0, 1572866, 3, 0)
+
+[node name="Plant1" parent="." instance=ExtResource("4_p6q0j")]
+position = Vector2(459, 255)
+scale = Vector2(0.7, 0.6)
+
+[node name="Plant2" parent="." instance=ExtResource("5_p3il4")]
+position = Vector2(642, 280)
+
+[node name="Node2D" parent="." instance=ExtResource("6_6mfmi")]
+position = Vector2(554, 115)
+
+[node name="Character" parent="." instance=ExtResource("7_lxr4w")]
+position = Vector2(253, 4)
+scale = Vector2(0.6, 0.6)
+
+[node name="Crib" parent="." instance=ExtResource("8_svji7")]
+position = Vector2(-40, -79)
+
+[node name="Plant3" parent="." instance=ExtResource("11_7c78d")]
+position = Vector2(868, 139)
+
+[node name="Fridge2" parent="." instance=ExtResource("12_e4oy5")]
+position = Vector2(724, -27)
+
+[node name="Node2D2" parent="." instance=ExtResource("13_hmgbm")]
+position = Vector2(-130, 1601)
