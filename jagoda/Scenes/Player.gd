@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 const WALK_SPEED = 200.0
-const MAX_FRESHNESS_LOST_PER_SECOND = 10.0
+const MAX_FRESHNESS_LOST_PER_SECOND = 1.0
 const SIGHING_FRESHNESS_THRESHOLD = 50
 const SIGHING_PERIOD = 10.0
 
