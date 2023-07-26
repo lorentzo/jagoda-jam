@@ -18,18 +18,14 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8daej"]
-radius = 15.0
-height = 48.0
+radius = 50.0
+height = 100.0
 
 [node name="Plant" type="Area2D" groups=["plant"]]
 y_sort_enabled = true
 script = ExtResource("1_wccxx")
 
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2(-1.35294, 0.0588231)
-scale = Vector2(0.323529, 0.323529)
-points = PackedVector2Array(4, -4, 30, -33, -6, -36, 6, -50, 23, -53, 20, -67, -26, -74, -4, -50, 35, -49, 56, -78, 41, -103, 29, -102, -2, -102, -8, -85, 28, -114, -16, -120, -22, -92, 28, -93, 49, -123, 29, -140)
-default_color = Color(0, 0.419608, 0.137255, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 visible = false
@@ -52,5 +48,4 @@ step = 1.0
 value = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -24)
 shape = SubResource("CapsuleShape2D_8daej")

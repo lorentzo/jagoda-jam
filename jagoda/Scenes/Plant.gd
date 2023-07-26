@@ -4,6 +4,7 @@ extends Area2D
 const MAX_FRESHNESS: float = 100.0
 const MAX_FRESHNESS_LOST_PER_SECOND: float = 0.5
 const DAY_MULTIPLIER_DEVIATION: float = 0.5
+const PROGRESS_BAR_MARGIN: int = 10
 
 var freshness: float = MAX_FRESHNESS
 var day = 0
@@ -11,7 +12,23 @@ var current_sun_intensity = 0
 var day_multiplier: float = 1.0
 var difficulty_multiplier: float = 1.0
 
+@export var sprite_frames: SpriteFrames = null
 @onready var progress_bar: ProgressBar = $ProgressBar
+
+func _ready():
+	if sprite_frames == null:
+		return
+
+	$AnimatedSprite2D.sprite_frames = sprite_frames
+	$AnimatedSprite2D.play("idle")
+	
+	var collision_shape_size = max($CollisionShape2D.shape.radius * 2, $CollisionShape2D.shape.height)
+	var frame_tex: Texture2D = $AnimatedSprite2D.sprite_frames.get_frame_texture("idle", 0)
+	var scale = collision_shape_size / frame_tex.get_width()
+	$AnimatedSprite2D.scale = Vector2(scale, scale)
+	
+	progress_bar.position.y = -(collision_shape_size / 2 + PROGRESS_BAR_MARGIN)
+
 
 func _process(delta):
 	var freshness_lost_per_second = self.difficulty_multiplier * self.current_sun_intensity * MAX_FRESHNESS_LOST_PER_SECOND * self.day_multiplier
