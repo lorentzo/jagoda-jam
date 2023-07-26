@@ -2,7 +2,9 @@ class_name Player
 extends CharacterBody2D
 
 const WALK_SPEED = 200.0
-const MAX_FRESHNESS_LOST_PER_SECOND = 1.0
+const MAX_FRESHNESS_LOST_PER_SECOND = 10.0
+const SIGHING_FRESHNESS_THRESHOLD = 50
+const SIGHING_PERIOD = 10.0
 
 signal player_freshness_changed(freshness)
 signal player_plant_water_changed(plant_water)
@@ -10,6 +12,7 @@ signal player_plant_water_changed(plant_water)
 var freshness: float = 100
 var plant_water: float = 100
 var current_sun_intensity = 0
+var sighing: bool = false
 var visible_plants: Dictionary = {}
 
 func on_sun_intensity_changed(sun_intensity):
@@ -55,6 +58,10 @@ func _physics_process(delta):
 	
 	var freshness_lost_per_second = self.current_sun_intensity * MAX_FRESHNESS_LOST_PER_SECOND
 	self.freshness = max(self.freshness - freshness_lost_per_second * delta, 0)
+	
+	if not sighing and self.freshness < SIGHING_FRESHNESS_THRESHOLD:
+		self._sigh()	
+	
 	self.player_freshness_changed.emit(self.freshness)
 
 func _on_refresh_area_area_entered(area):
@@ -65,3 +72,15 @@ func _on_refresh_area_area_entered(area):
 func _on_refresh_area_area_exited(area):
 	if self.visible_plants.erase(area):
 		area.set_freshness_visible(false)
+
+func _sigh():
+	if self.freshness >= SIGHING_FRESHNESS_THRESHOLD or is_equal_approx(self.freshness, 0):
+		self.sighing = false
+		return
+	
+	self.sighing = true
+	if not $SighPlayer.playing:
+		$SighPlayer.play()
+		
+	var timer = get_tree().create_timer(SIGHING_PERIOD)
+	timer.timeout.connect(self._sigh)

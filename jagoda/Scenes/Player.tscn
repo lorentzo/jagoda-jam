@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnrnjgb2yen1t"]
+[gd_scene load_steps=7 format=3 uid="uid://dnrnjgb2yen1t"]
 
 [ext_resource type="Script" path="res://Scenes/Player.gd" id="1_6cy7p"]
+[ext_resource type="AudioStream" uid="uid://doacr0e8ll2ma" path="res://Assets/Sound/sigh.ogg" id="3_08swx"]
 [ext_resource type="SpriteFrames" uid="uid://vse836nyeq6q" path="res://Assets/Character/CharacterSpriteFrames.tres" id="3_dxt4t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pyes3"]
@@ -49,6 +50,9 @@ scale_amount_min = 7.0
 scale_amount_max = 10.0
 color = Color(0, 0.419608, 0.756863, 1)
 color_ramp = SubResource("Gradient_2v5sl")
+
+[node name="SighPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_08swx")
 
 [connection signal="area_entered" from="RefreshArea" to="." method="_on_refresh_area_area_entered"]
 [connection signal="area_exited" from="RefreshArea" to="." method="_on_refresh_area_area_exited"]
