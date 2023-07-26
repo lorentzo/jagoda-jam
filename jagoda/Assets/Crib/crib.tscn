@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://w6l2taxwsdcp"]
+[gd_scene load_steps=6 format=3 uid="uid://w6l2taxwsdcp"]
 
 [ext_resource type="Script" path="res://Assets/Crib/crib.gd" id="1_q06da"]
 [ext_resource type="Texture2D" uid="uid://c432tah0h0bvh" path="res://Assets/Crib/Texture/crib_instance.png" id="1_witup"]
 [ext_resource type="AudioStream" uid="uid://cdiiy42slv05" path="res://Assets/Sound/can.ogg" id="2_wbo07"]
+[ext_resource type="AudioStream" uid="uid://c1nebqofns78j" path="res://Assets/Sound/drink.ogg" id="4_5j8s6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r1fh5"]
 radius = 210.0
@@ -23,3 +24,7 @@ shape = SubResource("CapsuleShape2D_r1fh5")
 [node name="CanPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_wbo07")
 volume_db = 5.0
+
+[node name="DrinkPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5j8s6")
+volume_db = -10.0
