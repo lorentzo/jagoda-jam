@@ -41,10 +41,13 @@ func _on_loading_start():
 	$Player/Camera2D.queue_free()
 	$HUD.hide()
 	$ThemePlayer.stop()
+	$HUD.set_process(false)
 	self.hide()
 
 func _on_player_freshness_changed(freshness):
 	$HUD/PlayerFreshnessBar.value = freshness
+	if is_equal_approx(freshness, 0):
+		self._game_over()
 
 func _on_player_plant_water_changed(plant_water):
 	$HUD/ItemWaterBar.value = plant_water
@@ -74,3 +77,6 @@ func _process(delta):
 
 func _pause():
 	$HUD/PauseMenu.show()
+
+func _game_over():
+	$HUD/GameOver.show()

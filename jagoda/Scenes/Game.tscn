@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=23 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="2_7b8y8"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://ca2t20p5q2r3n" path="res://Assets/Fridges/Fridge1/fridge1.tscn" id="14_p8ks2"]
 [ext_resource type="PackedScene" uid="uid://damvd050lcmfx" path="res://Assets/Fridges/Fridge2/fridge_2.tscn" id="15_48xlh"]
 [ext_resource type="SpriteFrames" uid="uid://duodvhyxaabhl" path="res://Assets/Plants/Plant2/Plant2SpriteFrames.tres" id="17_meg80"]
+[ext_resource type="PackedScene" uid="uid://cbcmdbatiwbjn" path="res://Scenes/GameOver.tscn" id="18_7pm05"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31pxf"]
 bg_color = Color(0, 0, 0, 0)
@@ -119,6 +120,9 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_mt8ms")
 
 [node name="PauseMenu" parent="HUD" instance=ExtResource("7_v1sht")]
+visible = false
+
+[node name="GameOver" parent="HUD" instance=ExtResource("18_7pm05")]
 visible = false
 
 [node name="PlayerFreshnessBar" type="ProgressBar" parent="HUD"]
