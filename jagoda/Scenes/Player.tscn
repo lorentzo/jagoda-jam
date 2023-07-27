@@ -53,6 +53,7 @@ color_ramp = SubResource("Gradient_2v5sl")
 
 [node name="SighPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_08swx")
+volume_db = -5.0
 
 [connection signal="area_entered" from="RefreshArea" to="." method="_on_refresh_area_area_entered"]
 [connection signal="area_exited" from="RefreshArea" to="." method="_on_refresh_area_area_exited"]
