@@ -1,38 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctkkf7cs18f3e"]
+[gd_scene load_steps=6 format=3 uid="uid://ctkkf7cs18f3e"]
 
 [ext_resource type="Script" path="res://Scenes/Plant.gd" id="1_wccxx"]
+[ext_resource type="FontFile" uid="uid://bjonvamqyjdmv" path="res://Fonts/RussoOne.ttf" id="2_t4c7n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8daej"]
-radius = 15.0
-height = 48.0
+radius = 50.0
+height = 100.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i30e"]
+bg_color = Color(0, 0, 0, 0.501961)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i41y"]
+bg_color = Color(0.0117647, 0.611765, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Plant" type="Area2D" groups=["plant"]]
 y_sort_enabled = true
 script = ExtResource("1_wccxx")
 
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2(-1.35294, 0.0588231)
-scale = Vector2(0.323529, 0.323529)
-points = PackedVector2Array(4, -4, 30, -33, -6, -36, 6, -50, 23, -53, 20, -67, -26, -74, -4, -50, 35, -49, 56, -78, 41, -103, 29, -102, -2, -102, -8, -85, 28, -114, -16, -120, -22, -92, 28, -93, 49, -123, 29, -140)
-default_color = Color(0, 0.419608, 0.137255, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8daej")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 visible = false
+z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.5
-offset_top = -66.5
-offset_right = 35.5
-offset_bottom = -51.5
+offset_left = -43.5
+offset_top = -75.0
+offset_right = 43.5
+offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 7
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_t4c7n")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/background = SubResource("StyleBoxFlat_4i30e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4i41y")
 step = 1.0
-value = 100.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -24)
-shape = SubResource("CapsuleShape2D_8daej")
+value = 50.0

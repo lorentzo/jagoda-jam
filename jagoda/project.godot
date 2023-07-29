@@ -23,6 +23,7 @@ Loading="*res://Scenes/Loading.tscn"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [input]
 
@@ -61,4 +62,4 @@ use-item={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.266667, 0.705882, 0.847059, 1)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
