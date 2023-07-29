@@ -91,7 +91,7 @@ func _physics_process(delta):
 	else:
 		var animation = "idle"
 		if state == State.CARRY:
-			animation = "_fridge%d" % [self.fridge.get_variant()]
+			animation += "_fridge%d" % [self.fridge.get_variant()]
 		$AnimatedSprite2D.play(animation)
 
 	self.velocity = walk_velocity.normalized() * WALK_SPEED
