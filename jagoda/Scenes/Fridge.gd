@@ -6,9 +6,11 @@ enum State {
 	ACTIVE
 }
 
+const MAX_FRESHNESS: float = 100.0
 const FRESHNESS_USED_PER_SECOND: float = 10.0
 const PROGRESS_BAR_MARGIN: int = 10
 const INDICATOR_MARGIN: int = 20
+const FRESHNESS_GAINED_PER_SECOND: float = 5.0
 
 signal fridge_freshness_changed(freshness)
 
@@ -18,7 +20,7 @@ signal fridge_freshness_changed(freshness)
 @onready var indicator: Polygon2D = $Indicator
 
 var state = State.IDLE
-var freshness: float = 100
+var freshness: float = MAX_FRESHNESS
 
 func _ready():
 	if sprite_frames == null:
@@ -57,6 +59,12 @@ func deactivate():
 
 func set_indicator_visible(value: bool):
 	self.indicator.visible = value
+
+func set_freshness_visible(value: bool):
+	self.progress_bar.visible = value
+
+func refill(delta):
+	self.freshness = min(self.freshness + FRESHNESS_GAINED_PER_SECOND * delta, MAX_FRESHNESS)
 
 func is_empty():
 	return is_equal_approx(self.freshness, 0)
