@@ -18,11 +18,6 @@ colors = PackedColorArray(0.219608, 0.780392, 1, 1, 0.109804, 1, 1, 0.65098)
 y_sort_enabled = true
 script = ExtResource("1_6cy7p")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.611328, 0.611328)
-sprite_frames = ExtResource("3_dxt4t")
-animation = &"walk"
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_pyes3")
 
@@ -54,6 +49,11 @@ color_ramp = SubResource("Gradient_2v5sl")
 [node name="SighPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_08swx")
 volume_db = -5.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.611328, 0.611328)
+sprite_frames = ExtResource("3_dxt4t")
+animation = &"walk"
 
 [connection signal="area_entered" from="RefreshArea" to="." method="_on_refresh_area_area_entered"]
 [connection signal="area_exited" from="RefreshArea" to="." method="_on_refresh_area_area_exited"]
