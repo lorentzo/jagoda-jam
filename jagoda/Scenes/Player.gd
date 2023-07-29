@@ -7,13 +7,17 @@ enum State {
 }
 
 const WALK_SPEED = 200.0
+const MAX_FRESHNESS = 100.0
 const MAX_FRESHNESS_LOST_PER_SECOND = 1.0
+const DRINK_FRESHNESS_GAINED_PERCENTAGE = 0.25
 const SIGHING_FRESHNESS_THRESHOLD = 50
 const SIGHING_PERIOD = 10.0
 
 signal player_freshness_changed(freshness)
 signal player_pick_up_fridge(fridge)
 signal player_drop_fridge(fridge)
+
+@onready var players: Array[AudioStreamPlayer] = [$CanPlayer, $DrinkPlayer]
 
 var state = State.WALK
 var freshness: float = 100
@@ -23,6 +27,7 @@ var sighing: bool = false
 var visible_plants: Dictionary = {}
 var visible_fridges: Dictionary = {}
 var fridge: Fridge = null
+var is_drinking_sound_playing = false
 
 func on_sun_intensity_changed(sun_intensity):
 	self.current_sun_intensity = sun_intensity
@@ -30,7 +35,17 @@ func on_sun_intensity_changed(sun_intensity):
 func set_can_drink(value: bool):
 	self.can_drink = value
 
+func _ready():
+	for player in players:
+		player.finished.connect(self._on_drinking_sound_finished)
+
+func _on_drinking_sound_finished():
+	self.is_drinking_sound_playing = false
+
 func _physics_process(delta):
+	if self.is_drinking_sound_playing:
+		return
+	
 	var walk_velocity = Vector2.ZERO
 	
 	if Input.is_action_pressed("walk-left"):
@@ -69,6 +84,9 @@ func _physics_process(delta):
 				$PickupPlayer.play()
 				state = State.CARRY
 				self._update_fridge_indicators()
+			elif can_drink:
+				self._drink()
+				return
 		elif state == State.CARRY:
 			var fridge = self.fridge
 			self.fridge = null
@@ -159,3 +177,12 @@ func _sigh():
 		
 	var timer = get_tree().create_timer(SIGHING_PERIOD)
 	timer.timeout.connect(self._sigh)
+
+func _drink():
+	self.freshness = min(self.freshness + DRINK_FRESHNESS_GAINED_PERCENTAGE * MAX_FRESHNESS, MAX_FRESHNESS)
+	
+	$AnimatedSprite2D.play("drink")	
+	
+	var player = players[randi() % players.size()]
+	player.play()
+	self.is_drinking_sound_playing = true
