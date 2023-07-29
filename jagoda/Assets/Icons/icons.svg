@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="51.911102mm"
+   height="42.542957mm"
+   viewBox="0 0 51.911102 42.542957"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
@@ -71,20 +71,12 @@
   <g
      inkscape:label="Sloj 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <rect
-       style="fill:#006d9a;fill-opacity:1;stroke:none;stroke-width:4.54922;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3"
-       width="99.967957"
-       height="116.22441"
-       x="5.1225929"
-       y="20.973932"
-       ry="0"
-       rx="0" />
+     id="layer1"
+     transform="translate(-16.430567,-42.399733)">
     <g
        id="g3"
        transform="translate(-59.367774,-1.9184901)"
-       inkscape:export-filename="..\jagoda\Assets\Icons\icons.png"
+       inkscape:export-filename="icons.png"
        inkscape:export-xdpi="125.26029"
        inkscape:export-ydpi="125.26029">
       <rect

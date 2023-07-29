@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=27 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="2_7b8y8"]
@@ -21,9 +21,11 @@
 [ext_resource type="PackedScene" uid="uid://cbcmdbatiwbjn" path="res://Scenes/GameOver.tscn" id="18_7pm05"]
 [ext_resource type="Texture2D" uid="uid://j0jon1p1gvvp" path="res://Assets/Icons/KeySpace.tres" id="20_wt2ok"]
 [ext_resource type="Texture2D" uid="uid://belmepf2gsnp3" path="res://Assets/Icons/KeyE.tres" id="21_wsvmf"]
+[ext_resource type="Texture2D" uid="uid://duompn5fsl2l1" path="res://Assets/Icons/Droplet.tres" id="22_b24xu"]
+[ext_resource type="Texture2D" uid="uid://be1lssj0wbsd0" path="res://Assets/Icons/Sombrero.tres" id="23_s83ng"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31pxf"]
-bg_color = Color(0, 0, 0, 0)
+bg_color = Color(1, 1, 1, 0.392157)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 shadow_size = 3
@@ -133,9 +135,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 56.0
-offset_top = -190.0
+offset_top = -212.0
 offset_right = 80.0
-offset_bottom = -40.0
+offset_bottom = -62.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
 theme_override_styles/fill = SubResource("StyleBoxFlat_o2npm")
@@ -149,9 +151,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 100.0
-offset_top = -190.0
+offset_top = -212.0
 offset_right = 124.0
-offset_bottom = -40.0
+offset_bottom = -62.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ewus7")
@@ -206,9 +208,9 @@ size_flags_vertical = 4
 
 [node name="Space" type="TextureRect" parent="HUD/Control"]
 layout_mode = 2
-offset_left = 18.0
+offset_left = 164.667
 offset_top = 17.0
-offset_right = 183.0
+offset_right = 329.667
 offset_bottom = 92.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_wt2ok")
@@ -216,9 +218,9 @@ stretch_mode = 4
 
 [node name="RefreshLabel" type="Label" parent="HUD/Control"]
 layout_mode = 2
-offset_left = 122.0
+offset_left = 54.0
 offset_top = 22.3333
-offset_right = 218.0
+offset_right = 150.0
 offset_bottom = 53.3333
 grow_horizontal = 2
 grow_vertical = 2
@@ -228,9 +230,9 @@ text = "Refresh"
 
 [node name="E" type="TextureRect" parent="HUD/Control"]
 layout_mode = 2
-offset_left = 59.0
+offset_left = 165.667
 offset_top = 70.0
-offset_right = 142.0
+offset_right = 248.667
 offset_bottom = 147.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("21_wsvmf")
@@ -238,10 +240,26 @@ stretch_mode = 4
 
 [node name="PickUpLabel" type="Label" parent="HUD/Control"]
 layout_mode = 2
-offset_left = 122.0
+offset_left = 56.6667
 offset_top = 76.3333
-offset_right = 214.0
+offset_right = 148.667
 offset_bottom = 107.333
 theme = ExtResource("8_574xx")
 theme_override_font_sizes/font_size = 24
 text = "Pick Up"
+
+[node name="Droplet" type="TextureRect" parent="HUD"]
+offset_left = 104.0
+offset_top = 669.0
+offset_right = 192.0
+offset_bottom = 783.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("22_b24xu")
+
+[node name="Sombrero" type="TextureRect" parent="HUD"]
+offset_left = 50.0
+offset_top = 670.0
+offset_right = 191.0
+offset_bottom = 762.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("23_s83ng")
