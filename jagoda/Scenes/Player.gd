@@ -1,19 +1,28 @@
 class_name Player
 extends CharacterBody2D
 
+enum State {
+	WALK,
+	CARRY
+}
+
 const WALK_SPEED = 200.0
 const MAX_FRESHNESS_LOST_PER_SECOND = 1.0
 const SIGHING_FRESHNESS_THRESHOLD = 50
 const SIGHING_PERIOD = 10.0
 
 signal player_freshness_changed(freshness)
-signal player_plant_water_changed(plant_water)
+signal player_pick_up_fridge(fridge)
+signal player_drop_fridge(fridge)
 
+var state = State.WALK
 var freshness: float = 100
-var plant_water: float = 100
+
 var current_sun_intensity = 0
 var sighing: bool = false
 var visible_plants: Dictionary = {}
+var visible_fridges: Dictionary = {}
+var fridge: Fridge = null
 
 func on_sun_intensity_changed(sun_intensity):
 	self.current_sun_intensity = sun_intensity
@@ -31,27 +40,63 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("walk-down"):
 		walk_velocity.y = 1
 
-	if Input.is_action_pressed("use-item") and self.plant_water > 0:
-		if not $WaterParticles.emitting:
-			$WaterParticles.emitting = true
+	if Input.is_action_just_pressed("use-item"):
+		if state == State.CARRY and not fridge.is_empty():
+			fridge.activate()
+			if not $WaterParticles.emitting:
+				$WaterParticles.emitting = true
+	elif Input.is_action_just_released("use-item"):
+		if state == State.CARRY:
+			fridge.deactivate()
+			if $WaterParticles.emitting:
+				$WaterParticles.emitting = false
+	
+	var refreshing = fridge != null and fridge.is_active()
+	if refreshing:
 		for plant in self.visible_plants.keys():
-			plant.refresh(5.0 * delta)
-		self.plant_water = max(self.plant_water - 10.0 * delta, 0)
-		self.player_plant_water_changed.emit(self.plant_water)
-	else:
-		if $WaterParticles.emitting:
-			$WaterParticles.emitting = false
+			plant.refresh(delta)
+		fridge.process(delta)
+
+	if Input.is_action_just_pressed("main"):
+		if state == State.WALK:
+			if not self.visible_fridges.is_empty():
+				self.fridge = self._get_current_fridge()
+				self.visible_fridges.erase(self.fridge)
+				self.player_pick_up_fridge.emit(self.fridge)
+				$PickupPlayer.play()
+				state = State.CARRY
+				self._update_fridge_indicators()
+		elif state == State.CARRY:
+			var fridge = self.fridge
+			self.fridge = null
+			fridge.deactivate()
+			if $WaterParticles.emitting:
+				$WaterParticles.emitting = false
+			fridge.position = self.position
+			self.player_drop_fridge.emit(fridge)
+			$DropPlayer.play()
+			state = State.WALK
+			self._update_fridge_indicators()
 
 	if walk_velocity.x != 0:
 		$RefreshArea.scale.x = walk_velocity.x
 		$WaterParticles.position.x = abs($WaterParticles.position.x) * walk_velocity.x
 		$WaterParticles.scale.x = walk_velocity.x
-		$AnimatedSprite2D.scale.x = abs($AnimatedSprite2D.scale.x) * (-sign(walk_velocity.x))
+		$AnimatedSprite2D.scale.x = abs($AnimatedSprite2D.scale.x) * sign(walk_velocity.x)
 
 	if walk_velocity != Vector2.ZERO:
-		$AnimatedSprite2D.play("walk")
+		var animation = "walk"
+		if state == State.CARRY:
+			animation += "_fridge%d" % [self.fridge.get_variant()]
+		$AnimatedSprite2D.play(animation)
+	elif refreshing:
+		var animation = "refresh_plants_fridge%d" % [self.fridge.get_variant()]
+		$AnimatedSprite2D.play(animation)
 	else:
-		$AnimatedSprite2D.play("idle")
+		var animation = "idle"
+		if state == State.CARRY:
+			animation += "_fridge%d" % [self.fridge.get_variant()]
+		$AnimatedSprite2D.play(animation)
 
 	self.velocity = walk_velocity.normalized() * WALK_SPEED
 	move_and_slide()
@@ -64,14 +109,41 @@ func _physics_process(delta):
 	
 	self.player_freshness_changed.emit(self.freshness)
 
+func _get_current_fridge() -> Fridge:
+	if self.visible_fridges.is_empty():
+		return null
+	return self.visible_fridges.keys()[0]
+
+func _update_fridge_indicators():
+	if state == State.WALK:
+		var current_fridge = _get_current_fridge()
+		if current_fridge == null:
+			return
+
+		current_fridge.set_indicator_visible(true)
+		for fridge in self.visible_fridges.keys():
+			if fridge != current_fridge:
+				fridge.set_indicator_visible(false)
+	elif state == State.CARRY:
+		for fridge in self.visible_fridges.keys():
+			fridge.set_indicator_visible(false)
+
 func _on_refresh_area_area_entered(area):
 	if area is Plant:
 		area.set_freshness_visible(true)
 		self.visible_plants[area] = true
+	elif area is Fridge:
+		self.visible_fridges[area] = true
+		self._update_fridge_indicators()
 	
 func _on_refresh_area_area_exited(area):
-	if self.visible_plants.erase(area):
-		area.set_freshness_visible(false)
+	if area is Plant:
+		if self.visible_plants.erase(area):
+			area.set_freshness_visible(false)
+	elif area is Fridge:
+		self.visible_fridges.erase(area)
+		area.set_indicator_visible(false)
+		self._update_fridge_indicators()
 
 func _sigh():
 	if self.freshness >= SIGHING_FRESHNESS_THRESHOLD or is_equal_approx(self.freshness, 0):

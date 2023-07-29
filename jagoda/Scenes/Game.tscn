@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=28 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="2_7b8y8"]
@@ -14,15 +14,16 @@
 [ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="8_574xx"]
 [ext_resource type="SpriteFrames" uid="uid://dxtyqa1gar1ac" path="res://Assets/Plants/Plant1/Plant1SpriteFrames.tres" id="10_v8nts"]
 [ext_resource type="SpriteFrames" uid="uid://sycqpbatojp3" path="res://Assets/Plants/Plant3/Plant3SpriteFrames.tres" id="11_wkhbs"]
-[ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Assets/Crib/crib.tscn" id="13_s1n7e"]
-[ext_resource type="PackedScene" uid="uid://ca2t20p5q2r3n" path="res://Assets/Fridges/Fridge1/fridge1.tscn" id="14_p8ks2"]
-[ext_resource type="PackedScene" uid="uid://damvd050lcmfx" path="res://Assets/Fridges/Fridge2/fridge_2.tscn" id="15_48xlh"]
+[ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Scenes/Crib.tscn" id="13_s1n7e"]
 [ext_resource type="SpriteFrames" uid="uid://duodvhyxaabhl" path="res://Assets/Plants/Plant2/Plant2SpriteFrames.tres" id="17_meg80"]
 [ext_resource type="PackedScene" uid="uid://cbcmdbatiwbjn" path="res://Scenes/GameOver.tscn" id="18_7pm05"]
 [ext_resource type="Texture2D" uid="uid://j0jon1p1gvvp" path="res://Assets/Icons/KeySpace.tres" id="20_wt2ok"]
 [ext_resource type="Texture2D" uid="uid://belmepf2gsnp3" path="res://Assets/Icons/KeyE.tres" id="21_wsvmf"]
 [ext_resource type="Texture2D" uid="uid://duompn5fsl2l1" path="res://Assets/Icons/Droplet.tres" id="22_b24xu"]
+[ext_resource type="PackedScene" uid="uid://372d7vwyf8b7" path="res://Scenes/Fridge.tscn" id="22_yue06"]
+[ext_resource type="SpriteFrames" uid="uid://bcj2104swj77d" path="res://Assets/Fridges/Fridge1/Fridge1SpriteFrames.tres" id="23_5nhu3"]
 [ext_resource type="Texture2D" uid="uid://be1lssj0wbsd0" path="res://Assets/Icons/Sombrero.tres" id="23_s83ng"]
+[ext_resource type="SpriteFrames" uid="uid://bwnnqvxfqtvc1" path="res://Assets/Fridges/Fridge2/Fridge2SpriteFrames.tres" id="24_33vom"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31pxf"]
 bg_color = Color(1, 1, 1, 0.392157)
@@ -91,16 +92,8 @@ sprite_frames = ExtResource("17_meg80")
 position = Vector2(751, 825)
 sprite_frames = ExtResource("11_wkhbs")
 
-[node name="Fridge" parent="." instance=ExtResource("14_p8ks2")]
-position = Vector2(662, 578)
-scale = Vector2(0.5, 0.5)
-
-[node name="Fridge2" parent="." instance=ExtResource("15_48xlh")]
-position = Vector2(971, 389)
-scale = Vector2(0.5, 0.5)
-
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
-position = Vector2(1102, 135)
+position = Vector2(1170, 186)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("3_aaoav")]
@@ -141,22 +134,6 @@ offset_bottom = -74.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
 theme_override_styles/fill = SubResource("StyleBoxFlat_o2npm")
-step = 1.0
-value = 100.0
-fill_mode = 3
-show_percentage = false
-
-[node name="ItemWaterBar" type="ProgressBar" parent="HUD"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 121.0
-offset_top = -224.0
-offset_right = 145.0
-offset_bottom = -74.0
-grow_vertical = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
-theme_override_styles/fill = SubResource("StyleBoxFlat_ewus7")
 step = 1.0
 value = 100.0
 fill_mode = 3
@@ -206,8 +183,9 @@ grow_vertical = 0
 scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
 
-[node name="Space" type="TextureRect" parent="HUD/Control"]
-layout_mode = 2
+[node name="Space" type="Node2D" parent="HUD/Control"]
+
+[node name="Icon" type="TextureRect" parent="HUD/Control/Space"]
 offset_left = 164.667
 offset_top = 17.0
 offset_right = 329.667
@@ -216,20 +194,27 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_wt2ok")
 stretch_mode = 4
 
-[node name="RefreshLabel" type="Label" parent="HUD/Control"]
-layout_mode = 2
-offset_left = 54.0
-offset_top = 22.3333
-offset_right = 150.0
-offset_bottom = 53.3333
-grow_horizontal = 2
+[node name="Label" type="Label" parent="HUD/Control/Space"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 55.3334
+offset_top = 20.6667
+offset_right = 151.333
+offset_bottom = 51.6667
+grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("8_574xx")
 theme_override_font_sizes/font_size = 24
 text = "Refresh"
+horizontal_alignment = 2
+vertical_alignment = 1
 
-[node name="E" type="TextureRect" parent="HUD/Control"]
-layout_mode = 2
+[node name="E" type="Node2D" parent="HUD/Control"]
+
+[node name="Icon" type="TextureRect" parent="HUD/Control/E"]
 offset_left = 165.667
 offset_top = 70.0
 offset_right = 248.667
@@ -238,25 +223,23 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("21_wsvmf")
 stretch_mode = 4
 
-[node name="PickUpLabel" type="Label" parent="HUD/Control"]
-layout_mode = 2
-offset_left = 56.6667
-offset_top = 76.3333
-offset_right = 148.667
-offset_bottom = 107.333
+[node name="Label" type="Label" parent="HUD/Control/E"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 57.9999
+offset_top = 74.0
+offset_right = 150.0
+offset_bottom = 105.0
+grow_horizontal = 0
+grow_vertical = 2
 theme = ExtResource("8_574xx")
 theme_override_font_sizes/font_size = 24
 text = "Pick Up"
-
-[node name="Droplet" type="TextureRect" parent="HUD"]
-texture_filter = 6
-offset_left = 121.0
-offset_top = 662.0
-offset_right = 209.0
-offset_bottom = 776.0
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("22_b24xu")
-stretch_mode = 4
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Sombrero" type="TextureRect" parent="HUD"]
 texture_filter = 6
@@ -267,3 +250,39 @@ offset_bottom = 756.0
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("23_s83ng")
 stretch_mode = 4
+
+[node name="Freshness" type="Node2D" parent="HUD"]
+
+[node name="ItemFreshnessBar" type="ProgressBar" parent="HUD/Freshness"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 121.0
+offset_top = 496.0
+offset_right = 145.0
+offset_bottom = 646.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_31pxf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ewus7")
+step = 1.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Droplet" type="TextureRect" parent="HUD/Freshness"]
+texture_filter = 6
+offset_left = 121.0
+offset_top = 662.0
+offset_right = 209.0
+offset_bottom = 776.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("22_b24xu")
+stretch_mode = 4
+
+[node name="Fridge" parent="." instance=ExtResource("22_yue06")]
+position = Vector2(672, 631)
+sprite_frames = ExtResource("23_5nhu3")
+
+[node name="Fridge2" parent="." instance=ExtResource("22_yue06")]
+position = Vector2(1133, 468)
+sprite_frames = ExtResource("24_33vom")
