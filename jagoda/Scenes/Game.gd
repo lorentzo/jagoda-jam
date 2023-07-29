@@ -97,11 +97,15 @@ func _process(delta):
 	var day_hours = floor(day_time / 3600)
 	var day_minutes = floor((day_time - day_hours * 3600) / 60)
 	if previous_day_time == null or (day_time - previous_day_time) >= TIME_LABEL_UPDATE_PERIOD_MINUTES * 60:
-		$HUD/TimeLabel.text = "%02d:%02d" % [day_hours, day_minutes]
+		$HUD/TimeLabel.text = "%02d:%02d" % [day_hours, self._round_step(day_minutes, TIME_LABEL_UPDATE_PERIOD_MINUTES)]
 		previous_day_time = day_time
 	
 	if is_equal_approx(day_progress, 1):
 		day_changed.emit()
+
+func _round_step(number: int, step: int):
+	var times: int = floor(number / step)
+	return times * step
 
 func _pause():
 	$HUD/PauseMenu.show()
