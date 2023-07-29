@@ -1,42 +1,79 @@
-[gd_resource type="SpriteFrames" load_steps=297 format=3 uid="uid://vse836nyeq6q"]
+[gd_resource type="SpriteFrames" load_steps=334 format=3 uid="uid://vse836nyeq6q"]
 
 [ext_resource type="Texture2D" uid="uid://cwpm5rw7mfc2p" path="res://Assets/Character/IdleAnimation/character_idle_0001.png" id="1_bhuph"]
+[ext_resource type="Texture2D" uid="uid://c6heoobe6dfxq" path="res://Assets/Character/DrinkAnimation/character_drink_0001.png" id="1_wwfvp"]
 [ext_resource type="Texture2D" uid="uid://cjrwjpfcdut6l" path="res://Assets/Character/IdleAnimation/character_idle_0002.png" id="2_cbf4u"]
+[ext_resource type="Texture2D" uid="uid://bs114uy45s6jm" path="res://Assets/Character/DrinkAnimation/character_drink_0002.png" id="2_wpud8"]
+[ext_resource type="Texture2D" uid="uid://or50ixxe6su5" path="res://Assets/Character/DrinkAnimation/character_drink_0003.png" id="3_5mbyl"]
 [ext_resource type="Texture2D" uid="uid://bw8w5o1jnbyqo" path="res://Assets/Character/IdleAnimation/character_idle_0003.png" id="3_38uxe"]
+[ext_resource type="Texture2D" uid="uid://lj7wykd4smos" path="res://Assets/Character/DrinkAnimation/character_drink_0004.png" id="4_1kv5f"]
 [ext_resource type="Texture2D" uid="uid://cl0843ma31yu2" path="res://Assets/Character/IdleAnimation/character_idle_0004.png" id="4_6deet"]
+[ext_resource type="Texture2D" uid="uid://bn67hf87tpo1f" path="res://Assets/Character/DrinkAnimation/character_drink_0005.png" id="5_50keq"]
 [ext_resource type="Texture2D" uid="uid://cc02ip7baksax" path="res://Assets/Character/IdleAnimation/character_idle_0005.png" id="5_aett7"]
+[ext_resource type="Texture2D" uid="uid://d17kfuf0hwl2o" path="res://Assets/Character/DrinkAnimation/character_drink_0006.png" id="6_a8wa4"]
 [ext_resource type="Texture2D" uid="uid://b7da4n7f61wip" path="res://Assets/Character/IdleAnimation/character_idle_0006.png" id="6_q1h8t"]
+[ext_resource type="Texture2D" uid="uid://8syjhwtn244m" path="res://Assets/Character/DrinkAnimation/character_drink_0007.png" id="7_37wn3"]
 [ext_resource type="Texture2D" uid="uid://dt4x5eilb8ybx" path="res://Assets/Character/IdleAnimation/character_idle_0007.png" id="7_asm3k"]
+[ext_resource type="Texture2D" uid="uid://brl2bew4ab3io" path="res://Assets/Character/DrinkAnimation/character_drink_0008.png" id="8_5vabb"]
 [ext_resource type="Texture2D" uid="uid://csu28ofr8gmxx" path="res://Assets/Character/IdleAnimation/character_idle_0008.png" id="8_102t8"]
 [ext_resource type="Texture2D" uid="uid://c6053lilqqn2y" path="res://Assets/Character/IdleAnimation/character_idle_0009.png" id="9_44opf"]
+[ext_resource type="Texture2D" uid="uid://cvtxvn46s1oe6" path="res://Assets/Character/DrinkAnimation/character_drink_0009.png" id="9_62wtw"]
+[ext_resource type="Texture2D" uid="uid://dwj0atnfc0j4e" path="res://Assets/Character/DrinkAnimation/character_drink_0010.png" id="10_i7afg"]
 [ext_resource type="Texture2D" uid="uid://50fmepy84a0l" path="res://Assets/Character/IdleAnimation/character_idle_0010.png" id="10_rcgfi"]
+[ext_resource type="Texture2D" uid="uid://8n1y3jjsyoa2" path="res://Assets/Character/DrinkAnimation/character_drink_0011.png" id="11_fpfxk"]
 [ext_resource type="Texture2D" uid="uid://bjmo1c7oqbag6" path="res://Assets/Character/IdleAnimation/character_idle_0011.png" id="11_r8sb1"]
 [ext_resource type="Texture2D" uid="uid://cmstayrwf5m4m" path="res://Assets/Character/IdleAnimation/character_idle_0012.png" id="12_fqrb2"]
+[ext_resource type="Texture2D" uid="uid://bc6hdvg6y2pr1" path="res://Assets/Character/DrinkAnimation/character_drink_0012.png" id="12_ndk0l"]
+[ext_resource type="Texture2D" uid="uid://v81mmfitr2b" path="res://Assets/Character/DrinkAnimation/character_drink_0013.png" id="13_uer6n"]
 [ext_resource type="Texture2D" uid="uid://65a1um4jbgm0" path="res://Assets/Character/IdleAnimation/character_idle_0013.png" id="13_v3fof"]
+[ext_resource type="Texture2D" uid="uid://d2lvvw4obvuxq" path="res://Assets/Character/DrinkAnimation/character_drink_0014.png" id="14_1dhaa"]
 [ext_resource type="Texture2D" uid="uid://bcrc22ahqndgf" path="res://Assets/Character/IdleAnimation/character_idle_0014.png" id="14_rvmes"]
+[ext_resource type="Texture2D" uid="uid://ee5vwdo28hgv" path="res://Assets/Character/DrinkAnimation/character_drink_0015.png" id="15_6g7e6"]
 [ext_resource type="Texture2D" uid="uid://bnd41amkp25t3" path="res://Assets/Character/IdleAnimation/character_idle_0015.png" id="15_h4rf2"]
 [ext_resource type="Texture2D" uid="uid://datg435d7q5is" path="res://Assets/Character/IdleAnimation/character_idle_0016.png" id="16_2mtg2"]
+[ext_resource type="Texture2D" uid="uid://bewxqgudq3e8f" path="res://Assets/Character/DrinkAnimation/character_drink_0016.png" id="16_qg26j"]
 [ext_resource type="Texture2D" uid="uid://4sjoxdxmcy6m" path="res://Assets/Character/IdleAnimation/character_idle_0017.png" id="17_dk5wj"]
+[ext_resource type="Texture2D" uid="uid://1xtugn0cii62" path="res://Assets/Character/DrinkAnimation/character_drink_0017.png" id="17_ysq03"]
 [ext_resource type="Texture2D" uid="uid://0gsewtp475oh" path="res://Assets/Character/IdleAnimation/character_idle_0018.png" id="18_86ahy"]
+[ext_resource type="Texture2D" uid="uid://d0tsvn01imece" path="res://Assets/Character/DrinkAnimation/character_drink_0018.png" id="18_ef8e6"]
 [ext_resource type="Texture2D" uid="uid://cgix0kissmlo7" path="res://Assets/Character/IdleAnimation/character_idle_0019.png" id="19_85ybe"]
+[ext_resource type="Texture2D" uid="uid://dv7gv782ejxbu" path="res://Assets/Character/DrinkAnimation/character_drink_0019.png" id="19_l7sur"]
 [ext_resource type="Texture2D" uid="uid://wr6ljh5y7hjy" path="res://Assets/Character/IdleAnimation/character_idle_0020.png" id="20_i55me"]
+[ext_resource type="Texture2D" uid="uid://di2llpog8ycjr" path="res://Assets/Character/DrinkAnimation/character_drink_0020.png" id="20_srxhg"]
+[ext_resource type="Texture2D" uid="uid://brvi2armhnwsp" path="res://Assets/Character/DrinkAnimation/character_drink_0021.png" id="21_53iyf"]
 [ext_resource type="Texture2D" uid="uid://cx50xu5l5gklr" path="res://Assets/Character/IdleAnimation/character_idle_0021.png" id="21_xdyfk"]
+[ext_resource type="Texture2D" uid="uid://5lvt4oylpo0d" path="res://Assets/Character/DrinkAnimation/character_drink_0022.png" id="22_g8ncd"]
 [ext_resource type="Texture2D" uid="uid://cfscwvuhscmoy" path="res://Assets/Character/IdleAnimation/character_idle_0022.png" id="22_vjcoc"]
+[ext_resource type="Texture2D" uid="uid://dbmybg4gdkrs8" path="res://Assets/Character/DrinkAnimation/character_drink_0023.png" id="23_7jgqa"]
 [ext_resource type="Texture2D" uid="uid://b5f7k3h3vhwcj" path="res://Assets/Character/IdleAnimation/character_idle_0023.png" id="23_lnyns"]
+[ext_resource type="Texture2D" uid="uid://dj2ofkabwxsrj" path="res://Assets/Character/DrinkAnimation/character_drink_0024.png" id="24_h1hku"]
 [ext_resource type="Texture2D" uid="uid://bj8w8dcx0u6cp" path="res://Assets/Character/IdleAnimation/character_idle_0024.png" id="24_owa6x"]
 [ext_resource type="Texture2D" uid="uid://bxkhqi8visffk" path="res://Assets/Character/IdleAnimation/character_idle_0025.png" id="25_5bs5m"]
+[ext_resource type="Texture2D" uid="uid://cs664bumref4v" path="res://Assets/Character/DrinkAnimation/character_drink_0025.png" id="25_5xqds"]
 [ext_resource type="Texture2D" uid="uid://cjp6cg1faq30x" path="res://Assets/Character/IdleAnimation/character_idle_0026.png" id="26_1a463"]
+[ext_resource type="Texture2D" uid="uid://bu7w0nmdqxe33" path="res://Assets/Character/DrinkAnimation/character_drink_0026.png" id="26_uyxm3"]
 [ext_resource type="Texture2D" uid="uid://x52klvv88t8n" path="res://Assets/Character/IdleAnimation/character_idle_0027.png" id="27_f7s23"]
+[ext_resource type="Texture2D" uid="uid://cae1x84nbqj0j" path="res://Assets/Character/DrinkAnimation/character_drink_0027.png" id="27_yhrxp"]
+[ext_resource type="Texture2D" uid="uid://c4u7y3e7rg4kj" path="res://Assets/Character/DrinkAnimation/character_drink_0028.png" id="28_ftj8c"]
 [ext_resource type="Texture2D" uid="uid://b8j0744ihkxge" path="res://Assets/Character/IdleAnimation/character_idle_0028.png" id="28_xildq"]
 [ext_resource type="Texture2D" uid="uid://1ioibp5peout" path="res://Assets/Character/IdleAnimation/character_idle_0029.png" id="29_g4wbl"]
+[ext_resource type="Texture2D" uid="uid://bwnxqtl6qpbb2" path="res://Assets/Character/DrinkAnimation/character_drink_0029.png" id="29_n1mj2"]
+[ext_resource type="Texture2D" uid="uid://d2c5ixsndncvc" path="res://Assets/Character/DrinkAnimation/character_drink_0030.png" id="30_p0nee"]
 [ext_resource type="Texture2D" uid="uid://dx3nbetrpkmsl" path="res://Assets/Character/IdleAnimation/character_idle_0030.png" id="30_vsodl"]
 [ext_resource type="Texture2D" uid="uid://c31t4tmcdj5ec" path="res://Assets/Character/IdleAnimation/character_idle_0031.png" id="31_hcrod"]
+[ext_resource type="Texture2D" uid="uid://d0p32rymdtvx0" path="res://Assets/Character/DrinkAnimation/character_drink_0031.png" id="31_ocqji"]
 [ext_resource type="Texture2D" uid="uid://ddlkyrwj6bfse" path="res://Assets/Character/IdleAnimation/character_idle_0032.png" id="32_6it1s"]
+[ext_resource type="Texture2D" uid="uid://c6vc56xjxpqw4" path="res://Assets/Character/DrinkAnimation/character_drink_0032.png" id="32_i03pl"]
 [ext_resource type="Texture2D" uid="uid://goaqy16f7h1p" path="res://Assets/Character/IdleAnimation/character_idle_0033.png" id="33_2ule6"]
+[ext_resource type="Texture2D" uid="uid://x5mdv3n6fqg8" path="res://Assets/Character/DrinkAnimation/character_drink_0033.png" id="33_q23xv"]
+[ext_resource type="Texture2D" uid="uid://cckaqcqv5iw2h" path="res://Assets/Character/DrinkAnimation/character_drink_0034.png" id="34_mlt1u"]
 [ext_resource type="Texture2D" uid="uid://ypmoa5v2w8pn" path="res://Assets/Character/IdleAnimation/character_idle_0034.png" id="34_x6jsf"]
+[ext_resource type="Texture2D" uid="uid://bwpx6kjs3ht6u" path="res://Assets/Character/DrinkAnimation/character_drink_0035.png" id="35_26em2"]
 [ext_resource type="Texture2D" uid="uid://b5qk4vctecefp" path="res://Assets/Character/IdleAnimation/character_idle_0035.png" id="35_l24kr"]
+[ext_resource type="Texture2D" uid="uid://b16ydkn7ulcnk" path="res://Assets/Character/DrinkAnimation/character_drink_0036.png" id="36_dm1vx"]
 [ext_resource type="Texture2D" uid="uid://cho687t1voukb" path="res://Assets/Character/IdleAnimation/character_idle_0036.png" id="36_kaol0"]
 [ext_resource type="Texture2D" uid="uid://but0ybruldfon" path="res://Assets/Character/IdleAnimation/character_idle_0037.png" id="37_k3sx8"]
+[ext_resource type="Texture2D" uid="uid://dxjajstach7vf" path="res://Assets/Character/DrinkAnimation/character_drink_0037.png" id="37_kpxxq"]
 [ext_resource type="Texture2D" uid="uid://dgdcuwc5bh1a3" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0001.png" id="38_gesnq"]
 [ext_resource type="Texture2D" uid="uid://e6ip70uwx84r" path="res://Assets/Character/WalkAnimation/character_walk_0001.png" id="38_sgxts"]
 [ext_resource type="Texture2D" uid="uid://dniqmhoyb36ga" path="res://Assets/Character/WalkAnimation/character_walk_0002.png" id="39_adpxy"]
@@ -299,6 +336,122 @@
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wwfvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wpud8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5mbyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1kv5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_50keq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a8wa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_37wn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5vabb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_62wtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i7afg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fpfxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ndk0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uer6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1dhaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6g7e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qg26j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ysq03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ef8e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l7sur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_srxhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_53iyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_g8ncd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7jgqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_h1hku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_5xqds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_uyxm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_yhrxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ftj8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_n1mj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_p0nee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ocqji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_i03pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_q23xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_mlt1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_26em2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_dm1vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kpxxq")
+}],
+"loop": true,
+"name": &"drink",
+"speed": 30.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_bhuph")
