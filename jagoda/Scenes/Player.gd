@@ -1,6 +1,11 @@
 class_name Player
 extends CharacterBody2D
 
+enum State {
+	WALK,
+	CARRY
+}
+
 const WALK_SPEED = 200.0
 const MAX_FRESHNESS_LOST_PER_SECOND = 1.0
 const SIGHING_FRESHNESS_THRESHOLD = 50
@@ -8,13 +13,16 @@ const SIGHING_PERIOD = 10.0
 
 signal player_freshness_changed(freshness)
 signal player_plant_water_changed(plant_water)
+signal player_pick_up_fridge(fridge)
 
+var state = State.WALK
 var freshness: float = 100
 var plant_water: float = 100
 var current_sun_intensity = 0
 var sighing: bool = false
 var visible_plants: Dictionary = {}
 var visible_fridges: Dictionary = {}
+var fridge: Fridge = null
 
 func on_sun_intensity_changed(sun_intensity):
 	self.current_sun_intensity = sun_intensity
@@ -32,16 +40,25 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("walk-down"):
 		walk_velocity.y = 1
 
-	if Input.is_action_pressed("use-item") and self.plant_water > 0:
-		if not $WaterParticles.emitting:
-			$WaterParticles.emitting = true
-		for plant in self.visible_plants.keys():
-			plant.refresh(5.0 * delta)
-		self.plant_water = max(self.plant_water - 10.0 * delta, 0)
-		self.player_plant_water_changed.emit(self.plant_water)
+	if Input.is_action_pressed("use-item"):
+		if state == State.CARRY and self.plant_water > 0:
+			if not $WaterParticles.emitting:
+				$WaterParticles.emitting = true
+			for plant in self.visible_plants.keys():
+				plant.refresh(5.0 * delta)
+			self.plant_water = max(self.plant_water - 10.0 * delta, 0)
+			self.player_plant_water_changed.emit(self.plant_water)
 	else:
 		if $WaterParticles.emitting:
 			$WaterParticles.emitting = false
+
+	if Input.is_action_just_released("main"):
+		if state == State.WALK:
+			if not self.visible_fridges.is_empty():
+				self.fridge = self.visible_fridges.keys()[0]
+				self.visible_fridges.erase(self.fridge)
+				self.player_pick_up_fridge.emit(self.fridge)
+				state = State.CARRY
 
 	if walk_velocity.x != 0:
 		$RefreshArea.scale.x = walk_velocity.x

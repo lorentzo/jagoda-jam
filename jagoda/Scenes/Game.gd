@@ -31,6 +31,7 @@ func _ready():
 	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
 	$Player.player_plant_water_changed.connect(self._on_player_plant_water_changed)
+	$Player.player_pick_up_fridge.connect(self._on_player_pick_up_fridge)
 	
 	day_changed.connect(self._on_day_changed)
 	
@@ -55,6 +56,9 @@ func _on_player_freshness_changed(freshness):
 
 func _on_player_plant_water_changed(plant_water):
 	$HUD/ItemWaterBar.value = plant_water
+
+func _on_player_pick_up_fridge(fridge):
+	self.remove_child(fridge)
 
 func _on_day_changed():
 	self.time_passed = 0
