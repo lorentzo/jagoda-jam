@@ -15,13 +15,13 @@
 [ext_resource type="SpriteFrames" uid="uid://dxtyqa1gar1ac" path="res://Assets/Plants/Plant1/Plant1SpriteFrames.tres" id="10_v8nts"]
 [ext_resource type="SpriteFrames" uid="uid://sycqpbatojp3" path="res://Assets/Plants/Plant3/Plant3SpriteFrames.tres" id="11_wkhbs"]
 [ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Assets/Crib/crib.tscn" id="13_s1n7e"]
-[ext_resource type="PackedScene" uid="uid://ca2t20p5q2r3n" path="res://Assets/Fridges/Fridge1/fridge1.tscn" id="14_p8ks2"]
-[ext_resource type="PackedScene" uid="uid://damvd050lcmfx" path="res://Assets/Fridges/Fridge2/fridge_2.tscn" id="15_48xlh"]
 [ext_resource type="SpriteFrames" uid="uid://duodvhyxaabhl" path="res://Assets/Plants/Plant2/Plant2SpriteFrames.tres" id="17_meg80"]
 [ext_resource type="PackedScene" uid="uid://cbcmdbatiwbjn" path="res://Scenes/GameOver.tscn" id="18_7pm05"]
 [ext_resource type="Texture2D" uid="uid://j0jon1p1gvvp" path="res://Assets/Icons/KeySpace.tres" id="20_wt2ok"]
 [ext_resource type="Texture2D" uid="uid://belmepf2gsnp3" path="res://Assets/Icons/KeyE.tres" id="21_wsvmf"]
 [ext_resource type="Texture2D" uid="uid://duompn5fsl2l1" path="res://Assets/Icons/Droplet.tres" id="22_b24xu"]
+[ext_resource type="PackedScene" uid="uid://372d7vwyf8b7" path="res://Scenes/Fridge.tscn" id="22_yue06"]
+[ext_resource type="SpriteFrames" uid="uid://bcj2104swj77d" path="res://Assets/Fridges/Fridge1/Fridge1SpriteFrames.tres" id="23_5nhu3"]
 [ext_resource type="Texture2D" uid="uid://be1lssj0wbsd0" path="res://Assets/Icons/Sombrero.tres" id="23_s83ng"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31pxf"]
@@ -90,14 +90,6 @@ sprite_frames = ExtResource("17_meg80")
 [node name="Plant3" parent="." instance=ExtResource("5_7g35u")]
 position = Vector2(751, 825)
 sprite_frames = ExtResource("11_wkhbs")
-
-[node name="Fridge" parent="." instance=ExtResource("14_p8ks2")]
-position = Vector2(662, 578)
-scale = Vector2(0.5, 0.5)
-
-[node name="Fridge2" parent="." instance=ExtResource("15_48xlh")]
-position = Vector2(971, 389)
-scale = Vector2(0.5, 0.5)
 
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
 position = Vector2(1102, 135)
@@ -267,3 +259,7 @@ offset_bottom = 756.0
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("23_s83ng")
 stretch_mode = 4
+
+[node name="Fridge" parent="." instance=ExtResource("22_yue06")]
+position = Vector2(672, 631)
+sprite_frames = ExtResource("23_5nhu3")
