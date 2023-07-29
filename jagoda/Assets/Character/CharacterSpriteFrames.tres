@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=75 format=3 uid="uid://vse836nyeq6q"]
+[gd_resource type="SpriteFrames" load_steps=112 format=3 uid="uid://vse836nyeq6q"]
 
 [ext_resource type="Texture2D" uid="uid://cwpm5rw7mfc2p" path="res://Assets/Character/IdleAnimation/character_idle_0001.png" id="1_bhuph"]
 [ext_resource type="Texture2D" uid="uid://cjrwjpfcdut6l" path="res://Assets/Character/IdleAnimation/character_idle_0002.png" id="2_cbf4u"]
@@ -37,43 +37,80 @@
 [ext_resource type="Texture2D" uid="uid://b5qk4vctecefp" path="res://Assets/Character/IdleAnimation/character_idle_0035.png" id="35_l24kr"]
 [ext_resource type="Texture2D" uid="uid://cho687t1voukb" path="res://Assets/Character/IdleAnimation/character_idle_0036.png" id="36_kaol0"]
 [ext_resource type="Texture2D" uid="uid://but0ybruldfon" path="res://Assets/Character/IdleAnimation/character_idle_0037.png" id="37_k3sx8"]
+[ext_resource type="Texture2D" uid="uid://dgdcuwc5bh1a3" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0001.png" id="38_gesnq"]
 [ext_resource type="Texture2D" uid="uid://e6ip70uwx84r" path="res://Assets/Character/WalkAnimation/character_walk_0001.png" id="38_sgxts"]
 [ext_resource type="Texture2D" uid="uid://dniqmhoyb36ga" path="res://Assets/Character/WalkAnimation/character_walk_0002.png" id="39_adpxy"]
+[ext_resource type="Texture2D" uid="uid://u05h1y33lcsi" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0002.png" id="39_ey71p"]
+[ext_resource type="Texture2D" uid="uid://bct0i0v0jt881" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0003.png" id="40_3ha1h"]
 [ext_resource type="Texture2D" uid="uid://yp3dla6tt3uj" path="res://Assets/Character/WalkAnimation/character_walk_0003.png" id="40_kj4iv"]
+[ext_resource type="Texture2D" uid="uid://d0sfogl2d7ya7" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0004.png" id="41_2s1ca"]
 [ext_resource type="Texture2D" uid="uid://dpbuydj7jlq78" path="res://Assets/Character/WalkAnimation/character_walk_0004.png" id="41_nc7wg"]
+[ext_resource type="Texture2D" uid="uid://dwfdasprg5dff" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0005.png" id="42_i5qwc"]
 [ext_resource type="Texture2D" uid="uid://brsau22rmdwcu" path="res://Assets/Character/WalkAnimation/character_walk_0005.png" id="42_j4cmc"]
+[ext_resource type="Texture2D" uid="uid://c3j8feday5cat" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0006.png" id="43_nausw"]
 [ext_resource type="Texture2D" uid="uid://fnpu4aksp8xg" path="res://Assets/Character/WalkAnimation/character_walk_0006.png" id="43_q824e"]
+[ext_resource type="Texture2D" uid="uid://c64cxsy8ouj86" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0007.png" id="44_cqfoo"]
 [ext_resource type="Texture2D" uid="uid://cpk1xgkxfyulf" path="res://Assets/Character/WalkAnimation/character_walk_0007.png" id="44_sqxl2"]
 [ext_resource type="Texture2D" uid="uid://du6su1iv41uul" path="res://Assets/Character/WalkAnimation/character_walk_0008.png" id="45_5tht4"]
+[ext_resource type="Texture2D" uid="uid://121oqyi83hmy" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0008.png" id="45_tmeyl"]
 [ext_resource type="Texture2D" uid="uid://cco506wtin2up" path="res://Assets/Character/WalkAnimation/character_walk_0009.png" id="46_2vmoc"]
+[ext_resource type="Texture2D" uid="uid://dl7wwd0n04xlu" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0009.png" id="46_im0ly"]
 [ext_resource type="Texture2D" uid="uid://et6jbnpgbk8y" path="res://Assets/Character/WalkAnimation/character_walk_0010.png" id="47_h2f5u"]
+[ext_resource type="Texture2D" uid="uid://biv82ogtt0gxd" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0010.png" id="47_tttaj"]
 [ext_resource type="Texture2D" uid="uid://chey7k6kujeev" path="res://Assets/Character/WalkAnimation/character_walk_0011.png" id="48_mbipd"]
+[ext_resource type="Texture2D" uid="uid://c7ov3ls30t4hu" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0011.png" id="48_unq5g"]
+[ext_resource type="Texture2D" uid="uid://ddhxgd1iaa2eu" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0012.png" id="49_3lghf"]
 [ext_resource type="Texture2D" uid="uid://i8is48llrndj" path="res://Assets/Character/WalkAnimation/character_walk_0012.png" id="49_s6foa"]
+[ext_resource type="Texture2D" uid="uid://bvvlfh20412s3" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0013.png" id="50_4pd2y"]
 [ext_resource type="Texture2D" uid="uid://ce33ul83xxxbh" path="res://Assets/Character/WalkAnimation/character_walk_0013.png" id="50_j384t"]
+[ext_resource type="Texture2D" uid="uid://7p3m00dyvm23" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0014.png" id="51_rhn1k"]
 [ext_resource type="Texture2D" uid="uid://pq4tyco7v4se" path="res://Assets/Character/WalkAnimation/character_walk_0014.png" id="51_vypuh"]
 [ext_resource type="Texture2D" uid="uid://dyagawgp8i1h6" path="res://Assets/Character/WalkAnimation/character_walk_0015.png" id="52_2yjto"]
+[ext_resource type="Texture2D" uid="uid://ba7plvsh3d3ib" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0015.png" id="52_cvml2"]
+[ext_resource type="Texture2D" uid="uid://dg3x0ypv6hvlw" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0016.png" id="53_d3jei"]
 [ext_resource type="Texture2D" uid="uid://cnv14ae2vjxlg" path="res://Assets/Character/WalkAnimation/character_walk_0016.png" id="53_dy638"]
 [ext_resource type="Texture2D" uid="uid://hlhq23v8ip4j" path="res://Assets/Character/WalkAnimation/character_walk_0017.png" id="54_ej36h"]
+[ext_resource type="Texture2D" uid="uid://drftk6bb2143f" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0017.png" id="54_n7p8t"]
+[ext_resource type="Texture2D" uid="uid://dga78iw553stl" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0018.png" id="55_4i81y"]
 [ext_resource type="Texture2D" uid="uid://uc3uyiqon0wu" path="res://Assets/Character/WalkAnimation/character_walk_0018.png" id="55_53dx5"]
+[ext_resource type="Texture2D" uid="uid://bek48jlxaqldq" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0019.png" id="56_0ew0j"]
 [ext_resource type="Texture2D" uid="uid://la3f8hdcsp87" path="res://Assets/Character/WalkAnimation/character_walk_0019.png" id="56_anjwx"]
 [ext_resource type="Texture2D" uid="uid://bjg1uf16rimpn" path="res://Assets/Character/WalkAnimation/character_walk_0020.png" id="57_jgek7"]
+[ext_resource type="Texture2D" uid="uid://cuy5xvo2rv1cu" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0020.png" id="57_wl3xx"]
+[ext_resource type="Texture2D" uid="uid://cemii34sv87ux" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0021.png" id="58_6o4db"]
 [ext_resource type="Texture2D" uid="uid://bwg8qt6p8moeb" path="res://Assets/Character/WalkAnimation/character_walk_0021.png" id="58_60hf6"]
+[ext_resource type="Texture2D" uid="uid://bodc1w7nqsokh" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0022.png" id="59_5qn4d"]
 [ext_resource type="Texture2D" uid="uid://bqoisih81v1qw" path="res://Assets/Character/WalkAnimation/character_walk_0022.png" id="59_et5q2"]
 [ext_resource type="Texture2D" uid="uid://byv0g2kicbyn1" path="res://Assets/Character/WalkAnimation/character_walk_0023.png" id="60_bpblj"]
+[ext_resource type="Texture2D" uid="uid://bu1lhsa7osr1v" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0023.png" id="60_q3wo3"]
 [ext_resource type="Texture2D" uid="uid://pnjln8bogqtn" path="res://Assets/Character/WalkAnimation/character_walk_0024.png" id="61_8vyru"]
+[ext_resource type="Texture2D" uid="uid://ncbph11bbtwl" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0024.png" id="61_rvs5v"]
 [ext_resource type="Texture2D" uid="uid://dvslg5lradjmu" path="res://Assets/Character/WalkAnimation/character_walk_0025.png" id="62_04ggw"]
+[ext_resource type="Texture2D" uid="uid://qccr3vji1a2y" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0025.png" id="62_ewlhe"]
+[ext_resource type="Texture2D" uid="uid://c0ocdeh3wrxr5" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0026.png" id="63_34wxf"]
 [ext_resource type="Texture2D" uid="uid://lauvlbsedo8q" path="res://Assets/Character/WalkAnimation/character_walk_0026.png" id="63_t57ya"]
+[ext_resource type="Texture2D" uid="uid://0w671ildttdw" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0027.png" id="64_7fww4"]
 [ext_resource type="Texture2D" uid="uid://jc7y0xk0v3fg" path="res://Assets/Character/WalkAnimation/character_walk_0027.png" id="64_yssip"]
 [ext_resource type="Texture2D" uid="uid://mrnkucu1ofej" path="res://Assets/Character/WalkAnimation/character_walk_0028.png" id="65_88c43"]
+[ext_resource type="Texture2D" uid="uid://kwq2vihda4u1" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0028.png" id="65_ohg0m"]
 [ext_resource type="Texture2D" uid="uid://gx8f0tk1t2be" path="res://Assets/Character/WalkAnimation/character_walk_0029.png" id="66_3jcp5"]
+[ext_resource type="Texture2D" uid="uid://nkg8swicjqir" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0029.png" id="66_15tms"]
+[ext_resource type="Texture2D" uid="uid://1ux63xeckwpa" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0030.png" id="67_6cywi"]
 [ext_resource type="Texture2D" uid="uid://claohltwt1wmn" path="res://Assets/Character/WalkAnimation/character_walk_0030.png" id="67_dcj4e"]
+[ext_resource type="Texture2D" uid="uid://vo4vjb2pd4md" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0031.png" id="68_fyows"]
 [ext_resource type="Texture2D" uid="uid://d4f7clyacfodn" path="res://Assets/Character/WalkAnimation/character_walk_0031.png" id="68_ts0s7"]
 [ext_resource type="Texture2D" uid="uid://br7ydrntjm6cm" path="res://Assets/Character/WalkAnimation/character_walk_0032.png" id="69_3sef7"]
+[ext_resource type="Texture2D" uid="uid://yf133hod34lo" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0032.png" id="69_ike7a"]
+[ext_resource type="Texture2D" uid="uid://cgwx7uej00tp8" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0033.png" id="70_1qasp"]
 [ext_resource type="Texture2D" uid="uid://clo2yymy6jr5t" path="res://Assets/Character/WalkAnimation/character_walk_0033.png" id="70_uanwx"]
 [ext_resource type="Texture2D" uid="uid://dd4rs0pevfv4k" path="res://Assets/Character/WalkAnimation/character_walk_0034.png" id="71_bg6ut"]
+[ext_resource type="Texture2D" uid="uid://dsss5rl8y6u7n" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0034.png" id="71_xj8xt"]
+[ext_resource type="Texture2D" uid="uid://hnuyf5qf2v64" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0035.png" id="72_36ta3"]
 [ext_resource type="Texture2D" uid="uid://ba4w58kk03fpd" path="res://Assets/Character/WalkAnimation/character_walk_0035.png" id="72_texvj"]
 [ext_resource type="Texture2D" uid="uid://c71mk1ncmbswd" path="res://Assets/Character/WalkAnimation/character_walk_0036.png" id="73_jdqlk"]
+[ext_resource type="Texture2D" uid="uid://cgedt3n3etmsg" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0036.png" id="73_m2in1"]
 [ext_resource type="Texture2D" uid="uid://bamrwvj3nmjwr" path="res://Assets/Character/WalkAnimation/character_walk_0037.png" id="74_h4elg"]
+[ext_resource type="Texture2D" uid="uid://mtd0u34foxhb" path="res://Assets/Character/IdleFridge1Animation/character_idle_fridge1_0037.png" id="74_mgwap"]
 
 [resource]
 animations = [{
@@ -191,6 +228,122 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_gesnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ey71p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_3ha1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_2s1ca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_i5qwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_nausw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_cqfoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_tmeyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_im0ly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_tttaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_unq5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_3lghf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_4pd2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_rhn1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_cvml2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_d3jei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_n7p8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_4i81y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_0ew0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wl3xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_6o4db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_5qn4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_q3wo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_rvs5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ewlhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_34wxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_7fww4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ohg0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_15tms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_6cywi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_fyows")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ike7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_1qasp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_xj8xt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_36ta3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_m2in1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_mgwap")
+}],
+"loop": true,
+"name": &"idle_fridge1",
 "speed": 20.0
 }, {
 "frames": [{
