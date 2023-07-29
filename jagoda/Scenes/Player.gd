@@ -112,7 +112,7 @@ func _physics_process(delta):
 		if state == State.CARRY:
 			animation += "_fridge%d" % [self.fridge.get_variant()]
 		$AnimatedSprite2D.play(animation)
-	elif refreshing:
+	elif refreshing and state == State.CARRY:
 		var animation = "refresh_plants_fridge%d" % [self.fridge.get_variant()]
 		$AnimatedSprite2D.play(animation)
 	else:
