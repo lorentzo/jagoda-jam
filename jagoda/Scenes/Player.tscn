@@ -6,22 +6,19 @@
 [ext_resource type="AudioStream" uid="uid://bskud4tgw0fpl" path="res://Assets/Sound/pickup.ogg" id="4_fk7se"]
 [ext_resource type="AudioStream" uid="uid://bpfhcrnegjx6p" path="res://Assets/Sound/drop.ogg" id="5_sdc51"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pyes3"]
-radius = 22.0
-height = 86.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ctm2"]
 size = Vector2(82.5, 141)
 
 [sub_resource type="Gradient" id="Gradient_6672y"]
 colors = PackedColorArray(0.219608, 0.780392, 1, 1, 0.109804, 1, 1, 0.65098)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pyes3"]
+radius = 12.0
+height = 34.0
+
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_6cy7p")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_pyes3")
 
 [node name="RefreshArea" type="Area2D" parent="."]
 
@@ -62,6 +59,11 @@ stream = ExtResource("4_fk7se")
 
 [node name="DropPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_sdc51")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 34)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_pyes3")
 
 [connection signal="area_entered" from="RefreshArea" to="." method="_on_refresh_area_area_entered"]
 [connection signal="area_exited" from="RefreshArea" to="." method="_on_refresh_area_area_exited"]

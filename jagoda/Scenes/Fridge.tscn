@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://372d7vwyf8b7"]
+[gd_scene load_steps=5 format=3 uid="uid://372d7vwyf8b7"]
 
 [ext_resource type="Script" path="res://Scenes/Fridge.gd" id="1_dno5w"]
-[ext_resource type="FontFile" uid="uid://bjonvamqyjdmv" path="res://Fonts/RussoOne.ttf" id="2_xvpaf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5258f"]
-size = Vector2(125, 103)
+size = Vector2(90.5, 84.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04don"]
 bg_color = Color(0, 0, 0, 0.501961)
@@ -20,13 +19,6 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6nsr"]
-bg_color = Color(0.0117647, 0.611765, 0, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
 [node name="Fridge" type="Area2D" groups=["fridge"]]
 script = ExtResource("1_dno5w")
 
@@ -34,7 +26,7 @@ script = ExtResource("1_dno5w")
 shape = SubResource("RectangleShape2D_5258f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-animation = &"idle"
+animation = &""
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 z_index = 1
@@ -58,30 +50,8 @@ value = 50.0
 show_percentage = false
 
 [node name="Indicator" type="Polygon2D" parent="."]
+z_index = 1
 position = Vector2(0, -92)
 scale = Vector2(0.51282, 0.512821)
 antialiased = true
 polygon = PackedVector2Array(-30, -15, 30, -15, 0, 15)
-
-[node name="ProgressBar" type="ProgressBar" parent="Indicator"]
-visible = false
-z_index = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -43.5
-offset_top = -75.0
-offset_right = 43.5
-offset_bottom = -53.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("2_xvpaf")
-theme_override_font_sizes/font_size = 18
-theme_override_styles/background = SubResource("StyleBoxFlat_04don")
-theme_override_styles/fill = SubResource("StyleBoxFlat_c6nsr")
-step = 1.0
-value = 50.0
