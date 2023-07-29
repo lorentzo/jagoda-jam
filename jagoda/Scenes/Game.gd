@@ -35,9 +35,11 @@ func _ready():
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
 	$Player.player_pick_up_fridge.connect(self._on_player_pick_up_fridge)
 	$Player.player_drop_fridge.connect(self._on_player_drop_fridge)
-	
+
+	$Crib.crib_set_drinking_enabled.connect($Player.set_can_drink)
+
 	day_changed.connect(self._on_day_changed)
-	
+
 	for plant in tree.get_nodes_in_group("plant"):
 		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
 		day_changed.connect(plant.on_day_changed)

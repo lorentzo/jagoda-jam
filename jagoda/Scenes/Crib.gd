@@ -1,8 +1,10 @@
 extends Node2D
 
-@onready var players: Array[AudioStreamPlayer] = [$CanPlayer, $DrinkPlayer]
-var playing = false
+signal crib_set_drinking_enabled(enabled: bool)
 
+@onready var players: Array[AudioStreamPlayer] = [$CanPlayer, $DrinkPlayer]
+
+var playing = false
 var fridges: Dictionary = {}
 
 func _ready():
@@ -21,13 +23,11 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body is Player:
-		# TODO Enable drinking
-		pass
+		self.crib_set_drinking_enabled.emit(true)
 
 func _on_body_exited(body):
 	if body is Player:
-		# TODO Disable drinking
-		pass
+		self.crib_set_drinking_enabled.emit(false)
 
 func _on_area_entered(area):
 	if area is Fridge:

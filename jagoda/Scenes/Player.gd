@@ -17,7 +17,7 @@ signal player_drop_fridge(fridge)
 
 var state = State.WALK
 var freshness: float = 100
-
+var can_drink: bool = false
 var current_sun_intensity = 0
 var sighing: bool = false
 var visible_plants: Dictionary = {}
@@ -26,6 +26,9 @@ var fridge: Fridge = null
 
 func on_sun_intensity_changed(sun_intensity):
 	self.current_sun_intensity = sun_intensity
+
+func set_can_drink(value: bool):
+	self.can_drink = value
 
 func _physics_process(delta):
 	var walk_velocity = Vector2.ZERO
