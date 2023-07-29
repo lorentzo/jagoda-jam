@@ -11,7 +11,7 @@ height = 86.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ctm2"]
 size = Vector2(82.5, 141)
 
-[sub_resource type="Gradient" id="Gradient_2v5sl"]
+[sub_resource type="Gradient" id="Gradient_6672y"]
 colors = PackedColorArray(0.219608, 0.780392, 1, 1, 0.109804, 1, 1, 0.65098)
 
 [node name="Player" type="CharacterBody2D"]
@@ -28,7 +28,7 @@ position = Vector2(45, 0)
 shape = SubResource("RectangleShape2D_8ctm2")
 
 [node name="WaterParticles" type="CPUParticles2D" parent="."]
-position = Vector2(41, 8)
+position = Vector2(51, 11)
 emitting = false
 amount = 32
 lifetime = 0.6
@@ -44,7 +44,7 @@ initial_velocity_max = 50.0
 scale_amount_min = 7.0
 scale_amount_max = 10.0
 color = Color(0, 0.419608, 0.756863, 1)
-color_ramp = SubResource("Gradient_2v5sl")
+color_ramp = SubResource("Gradient_6672y")
 
 [node name="SighPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_08swx")

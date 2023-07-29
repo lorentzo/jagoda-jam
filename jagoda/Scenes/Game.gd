@@ -29,6 +29,8 @@ signal sun_intensity_changed(sun_intensity)
 signal day_changed
 
 func _ready():
+	$HUD/Freshness.visible = false
+	
 	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
 	$Player.player_pick_up_fridge.connect(self._on_player_pick_up_fridge)
@@ -59,12 +61,15 @@ func _on_player_freshness_changed(freshness):
 		self._game_over()
 
 func _on_fridge_freshness_changed(freshness):
-	$HUD/ItemWaterBar.value = freshness
+	$HUD/Freshness/ItemFreshnessBar.value = freshness
 
 func _on_player_pick_up_fridge(fridge):
+	$HUD/Freshness/ItemFreshnessBar.value = fridge.freshness
+	$HUD/Freshness.visible = true
 	self.remove_child(fridge)
 
 func _on_player_drop_fridge(fridge):
+	$HUD/Freshness.visible = false
 	self.add_child(fridge)
 
 func _on_day_changed():
