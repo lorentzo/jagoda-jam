@@ -59,11 +59,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("main"):
 		if state == State.WALK:
 			if not self.visible_fridges.is_empty():
-				self.fridge = self.visible_fridges.keys()[0]
+				self.fridge = self._get_current_fridge()
 				self.visible_fridges.erase(self.fridge)
 				self.player_pick_up_fridge.emit(self.fridge)
 				$PickupPlayer.play()
 				state = State.CARRY
+				self._update_fridge_indicators()
 		elif state == State.CARRY:
 			var fridge = self.fridge
 			self.fridge = null
@@ -74,6 +75,7 @@ func _physics_process(delta):
 			self.player_drop_fridge.emit(fridge)
 			$DropPlayer.play()
 			state = State.WALK
+			self._update_fridge_indicators()
 
 	if walk_velocity.x != 0:
 		$RefreshArea.scale.x = walk_velocity.x
@@ -97,12 +99,32 @@ func _physics_process(delta):
 	
 	self.player_freshness_changed.emit(self.freshness)
 
+func _get_current_fridge() -> Fridge:
+	if self.visible_fridges.is_empty():
+		return null
+	return self.visible_fridges.keys()[0]
+
+func _update_fridge_indicators():
+	if state == State.WALK:
+		var current_fridge = _get_current_fridge()
+		if current_fridge == null:
+			return
+
+		current_fridge.set_indicator_visible(true)
+		for fridge in self.visible_fridges.keys():
+			if fridge != current_fridge:
+				fridge.set_indicator_visible(false)
+	elif state == State.CARRY:
+		for fridge in self.visible_fridges.keys():
+			fridge.set_indicator_visible(false)
+
 func _on_refresh_area_area_entered(area):
 	if area is Plant:
 		area.set_freshness_visible(true)
 		self.visible_plants[area] = true
 	elif area is Fridge:
 		self.visible_fridges[area] = true
+		self._update_fridge_indicators()
 	
 func _on_refresh_area_area_exited(area):
 	if area is Plant:
@@ -110,6 +132,8 @@ func _on_refresh_area_area_exited(area):
 			area.set_freshness_visible(false)
 	elif area is Fridge:
 		self.visible_fridges.erase(area)
+		area.set_indicator_visible(false)
+		self._update_fridge_indicators()
 
 func _sigh():
 	if self.freshness >= SIGHING_FRESHNESS_THRESHOLD or is_equal_approx(self.freshness, 0):
