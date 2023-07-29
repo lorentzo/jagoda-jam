@@ -81,12 +81,18 @@ func _physics_process(delta):
 		$RefreshArea.scale.x = walk_velocity.x
 		$WaterParticles.position.x = abs($WaterParticles.position.x) * walk_velocity.x
 		$WaterParticles.scale.x = walk_velocity.x
-		$AnimatedSprite2D.scale.x = abs($AnimatedSprite2D.scale.x) * (-sign(walk_velocity.x))
+		$AnimatedSprite2D.scale.x = abs($AnimatedSprite2D.scale.x) * sign(walk_velocity.x)
 
 	if walk_velocity != Vector2.ZERO:
-		$AnimatedSprite2D.play("walk")
+		var animation = "walk"
+		if state == State.CARRY:
+			animation += "_fridge%d" % [self.fridge.get_variant()]
+		$AnimatedSprite2D.play(animation)
 	else:
-		$AnimatedSprite2D.play("idle")
+		var animation = "idle"
+		if state == State.CARRY:
+			animation = "_fridge%d" % [self.fridge.get_variant()]
+		$AnimatedSprite2D.play(animation)
 
 	self.velocity = walk_velocity.normalized() * WALK_SPEED
 	move_and_slide()

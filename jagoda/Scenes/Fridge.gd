@@ -11,6 +11,10 @@ const FRESHNESS_USED_PER_SECOND: float = 10.0
 const PROGRESS_BAR_MARGIN: int = 10
 const INDICATOR_MARGIN: int = 20
 const FRESHNESS_GAINED_PER_SECOND: float = 5.0
+const VARIANT: Dictionary = {
+	"res://Assets/Fridges/Fridge1/Fridge1SpriteFrames.tres": 1,
+	"res://Assets/Fridges/Fridge2/Fridge2SpriteFrames.tres": 2
+}
 
 signal fridge_freshness_changed(freshness)
 
@@ -71,3 +75,8 @@ func is_empty():
 
 func is_active():
 	return state == State.ACTIVE
+
+func get_variant():
+	if sprite_frames == null:
+		return null
+	return VARIANT[sprite_frames.resource_path]
