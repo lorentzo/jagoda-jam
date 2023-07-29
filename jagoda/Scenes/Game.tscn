@@ -183,8 +183,9 @@ grow_vertical = 0
 scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
 
-[node name="Space" type="TextureRect" parent="HUD/Control"]
-layout_mode = 2
+[node name="Space" type="Node2D" parent="HUD/Control"]
+
+[node name="Icon" type="TextureRect" parent="HUD/Control/Space"]
 offset_left = 164.667
 offset_top = 17.0
 offset_right = 329.667
@@ -193,20 +194,27 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_wt2ok")
 stretch_mode = 4
 
-[node name="RefreshLabel" type="Label" parent="HUD/Control"]
-layout_mode = 2
-offset_left = 54.0
-offset_top = 22.3333
-offset_right = 150.0
-offset_bottom = 53.3333
-grow_horizontal = 2
+[node name="Label" type="Label" parent="HUD/Control/Space"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 55.3334
+offset_top = 20.6667
+offset_right = 151.333
+offset_bottom = 51.6667
+grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("8_574xx")
 theme_override_font_sizes/font_size = 24
 text = "Refresh"
+horizontal_alignment = 2
+vertical_alignment = 1
 
-[node name="E" type="TextureRect" parent="HUD/Control"]
-layout_mode = 2
+[node name="E" type="Node2D" parent="HUD/Control"]
+
+[node name="Icon" type="TextureRect" parent="HUD/Control/E"]
 offset_left = 165.667
 offset_top = 70.0
 offset_right = 248.667
@@ -215,15 +223,23 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("21_wsvmf")
 stretch_mode = 4
 
-[node name="PickUpLabel" type="Label" parent="HUD/Control"]
-layout_mode = 2
-offset_left = 56.6667
-offset_top = 76.3333
-offset_right = 148.667
-offset_bottom = 107.333
+[node name="Label" type="Label" parent="HUD/Control/E"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 57.9999
+offset_top = 74.0
+offset_right = 150.0
+offset_bottom = 105.0
+grow_horizontal = 0
+grow_vertical = 2
 theme = ExtResource("8_574xx")
 theme_override_font_sizes/font_size = 24
 text = "Pick Up"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Sombrero" type="TextureRect" parent="HUD"]
 texture_filter = 6
