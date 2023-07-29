@@ -63,15 +63,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("use-item"):
 		if state == State.CARRY and not fridge.is_empty():
 			fridge.activate()
-			if not $WaterParticles.emitting:
-				$WaterParticles.emitting = true
 	elif Input.is_action_just_released("use-item"):
 		if state == State.CARRY:
 			fridge.deactivate()
-			if $WaterParticles.emitting:
-				$WaterParticles.emitting = false
 	
 	var refreshing = fridge != null and fridge.is_active()
+	$WaterParticles.emitting = refreshing
 	if refreshing:
 		for plant in self.visible_plants.keys():
 			plant.refresh(delta)
@@ -93,8 +90,6 @@ func _physics_process(delta):
 			var fridge = self.fridge
 			self.fridge = null
 			fridge.deactivate()
-			if $WaterParticles.emitting:
-				$WaterParticles.emitting = false
 			fridge.position = self.position
 			self.player_drop_fridge.emit(fridge)
 			$DropPlayer.play()
