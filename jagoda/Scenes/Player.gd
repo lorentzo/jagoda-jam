@@ -62,6 +62,7 @@ func _physics_process(delta):
 				self.fridge = self.visible_fridges.keys()[0]
 				self.visible_fridges.erase(self.fridge)
 				self.player_pick_up_fridge.emit(self.fridge)
+				$PickupPlayer.play()
 				state = State.CARRY
 		elif state == State.CARRY:
 			var fridge = self.fridge
@@ -71,6 +72,7 @@ func _physics_process(delta):
 				$WaterParticles.emitting = false
 			fridge.position = self.position
 			self.player_drop_fridge.emit(fridge)
+			$DropPlayer.play()
 			state = State.WALK
 
 	if walk_velocity.x != 0:

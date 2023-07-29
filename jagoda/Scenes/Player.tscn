@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnrnjgb2yen1t"]
+[gd_scene load_steps=9 format=3 uid="uid://dnrnjgb2yen1t"]
 
 [ext_resource type="Script" path="res://Scenes/Player.gd" id="1_6cy7p"]
 [ext_resource type="AudioStream" uid="uid://doacr0e8ll2ma" path="res://Assets/Sound/sigh.ogg" id="3_08swx"]
 [ext_resource type="SpriteFrames" uid="uid://vse836nyeq6q" path="res://Assets/Character/CharacterSpriteFrames.tres" id="3_dxt4t"]
+[ext_resource type="AudioStream" uid="uid://bskud4tgw0fpl" path="res://Assets/Sound/pickup.ogg" id="4_fk7se"]
+[ext_resource type="AudioStream" uid="uid://bpfhcrnegjx6p" path="res://Assets/Sound/drop.ogg" id="5_sdc51"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pyes3"]
 radius = 22.0
@@ -54,6 +56,12 @@ volume_db = -5.0
 scale = Vector2(0.611328, 0.611328)
 sprite_frames = ExtResource("3_dxt4t")
 animation = &"walk"
+
+[node name="PickupPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fk7se")
+
+[node name="DropPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sdc51")
 
 [connection signal="area_entered" from="RefreshArea" to="." method="_on_refresh_area_area_entered"]
 [connection signal="area_exited" from="RefreshArea" to="." method="_on_refresh_area_area_exited"]
