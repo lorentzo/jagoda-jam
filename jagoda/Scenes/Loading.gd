@@ -42,3 +42,4 @@ func load_scene(path):
 	
 	self.show()
 	set_process(true)
+	tree.paused = false
