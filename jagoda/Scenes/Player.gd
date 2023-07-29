@@ -51,7 +51,8 @@ func _physics_process(delta):
 			if $WaterParticles.emitting:
 				$WaterParticles.emitting = false
 	
-	if fridge != null and fridge.is_active():
+	var refreshing = fridge != null and fridge.is_active()
+	if refreshing:
 		for plant in self.visible_plants.keys():
 			plant.refresh(delta)
 		fridge.process(delta)
@@ -87,6 +88,9 @@ func _physics_process(delta):
 		var animation = "walk"
 		if state == State.CARRY:
 			animation += "_fridge%d" % [self.fridge.get_variant()]
+		$AnimatedSprite2D.play(animation)
+	elif refreshing:
+		var animation = "refresh_plants_fridge%d" % [self.fridge.get_variant()]
 		$AnimatedSprite2D.play(animation)
 	else:
 		var animation = "idle"
