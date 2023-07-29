@@ -14,6 +14,7 @@ var plant_water: float = 100
 var current_sun_intensity = 0
 var sighing: bool = false
 var visible_plants: Dictionary = {}
+var visible_fridges: Dictionary = {}
 
 func on_sun_intensity_changed(sun_intensity):
 	self.current_sun_intensity = sun_intensity
@@ -68,10 +69,15 @@ func _on_refresh_area_area_entered(area):
 	if area is Plant:
 		area.set_freshness_visible(true)
 		self.visible_plants[area] = true
+	elif area is Fridge:
+		self.visible_fridges[area] = true
 	
 func _on_refresh_area_area_exited(area):
-	if self.visible_plants.erase(area):
-		area.set_freshness_visible(false)
+	if area is Plant:
+		if self.visible_plants.erase(area):
+			area.set_freshness_visible(false)
+	elif area is Fridge:
+		self.visible_fridges.erase(area)
 
 func _sigh():
 	if self.freshness >= SIGHING_FRESHNESS_THRESHOLD or is_equal_approx(self.freshness, 0):
