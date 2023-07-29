@@ -14,6 +14,7 @@ const SIGHING_PERIOD = 10.0
 signal player_freshness_changed(freshness)
 signal player_plant_water_changed(plant_water)
 signal player_pick_up_fridge(fridge)
+signal player_drop_fridge(fridge)
 
 var state = State.WALK
 var freshness: float = 100
@@ -59,6 +60,12 @@ func _physics_process(delta):
 				self.visible_fridges.erase(self.fridge)
 				self.player_pick_up_fridge.emit(self.fridge)
 				state = State.CARRY
+		elif state == State.CARRY:
+			var fridge = self.fridge
+			self.fridge = null
+			fridge.position = self.position
+			self.player_drop_fridge.emit(fridge)
+			state = State.WALK
 
 	if walk_velocity.x != 0:
 		$RefreshArea.scale.x = walk_velocity.x
