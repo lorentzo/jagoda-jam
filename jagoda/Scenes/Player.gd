@@ -7,7 +7,9 @@ enum State {
 }
 
 const WALK_SPEED = 200.0
+const MAX_FRESHNESS = 100.0
 const MAX_FRESHNESS_LOST_PER_SECOND = 1.0
+const DRINK_FRESHNESS_GAINED_PERCENTAGE = 0.25
 const SIGHING_FRESHNESS_THRESHOLD = 50
 const SIGHING_PERIOD = 10.0
 
@@ -15,19 +17,37 @@ signal player_freshness_changed(freshness)
 signal player_pick_up_fridge(fridge)
 signal player_drop_fridge(fridge)
 
+@onready var players: Array[AudioStreamPlayer] = [$CanPlayer, $DrinkPlayer]
+
 var state = State.WALK
 var freshness: float = 100
-
+var can_drink: bool = false
 var current_sun_intensity = 0
 var sighing: bool = false
 var visible_plants: Dictionary = {}
 var visible_fridges: Dictionary = {}
 var fridge: Fridge = null
+var is_drinking_sound_playing = false
 
 func on_sun_intensity_changed(sun_intensity):
 	self.current_sun_intensity = sun_intensity
 
+func set_can_drink(value: bool):
+	self.can_drink = value
+
+func _ready():
+	randomize()
+	
+	for player in players:
+		player.finished.connect(self._on_drinking_sound_finished)
+
+func _on_drinking_sound_finished():
+	self.is_drinking_sound_playing = false
+
 func _physics_process(delta):
+	if self.is_drinking_sound_playing:
+		return
+	
 	var walk_velocity = Vector2.ZERO
 	
 	if Input.is_action_pressed("walk-left"):
@@ -43,15 +63,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("use-item"):
 		if state == State.CARRY and not fridge.is_empty():
 			fridge.activate()
-			if not $WaterParticles.emitting:
-				$WaterParticles.emitting = true
 	elif Input.is_action_just_released("use-item"):
 		if state == State.CARRY:
 			fridge.deactivate()
-			if $WaterParticles.emitting:
-				$WaterParticles.emitting = false
 	
 	var refreshing = fridge != null and fridge.is_active()
+	$WaterParticles.emitting = refreshing
 	if refreshing:
 		for plant in self.visible_plants.keys():
 			plant.refresh(delta)
@@ -66,12 +83,13 @@ func _physics_process(delta):
 				$PickupPlayer.play()
 				state = State.CARRY
 				self._update_fridge_indicators()
+			elif can_drink:
+				self._drink()
+				return
 		elif state == State.CARRY:
 			var fridge = self.fridge
 			self.fridge = null
 			fridge.deactivate()
-			if $WaterParticles.emitting:
-				$WaterParticles.emitting = false
 			fridge.position = self.position
 			self.player_drop_fridge.emit(fridge)
 			$DropPlayer.play()
@@ -89,7 +107,7 @@ func _physics_process(delta):
 		if state == State.CARRY:
 			animation += "_fridge%d" % [self.fridge.get_variant()]
 		$AnimatedSprite2D.play(animation)
-	elif refreshing:
+	elif refreshing and state == State.CARRY:
 		var animation = "refresh_plants_fridge%d" % [self.fridge.get_variant()]
 		$AnimatedSprite2D.play(animation)
 	else:
@@ -156,3 +174,12 @@ func _sigh():
 		
 	var timer = get_tree().create_timer(SIGHING_PERIOD)
 	timer.timeout.connect(self._sigh)
+
+func _drink():
+	self.freshness = min(self.freshness + DRINK_FRESHNESS_GAINED_PERCENTAGE * MAX_FRESHNESS, MAX_FRESHNESS)
+	
+	$AnimatedSprite2D.play("drink")	
+	
+	var player = players[randi() % players.size()]
+	player.play()
+	self.is_drinking_sound_playing = true

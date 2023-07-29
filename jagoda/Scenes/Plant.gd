@@ -7,6 +7,8 @@ const FRESHNESS_GAINED_PER_SECOND: float = 5.0
 const DAY_MULTIPLIER_DEVIATION: float = 0.5
 const PROGRESS_BAR_MARGIN: int = 10
 
+signal plant_die()
+
 var freshness: float = MAX_FRESHNESS
 var day = 0
 var current_sun_intensity = 0
@@ -41,6 +43,7 @@ func _process(delta):
 
 func _die():
 	queue_free()
+	self.plant_die.emit()
 
 func refresh(delta):
 	self.freshness = min(self.freshness + FRESHNESS_GAINED_PER_SECOND * delta, MAX_FRESHNESS)
