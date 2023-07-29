@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://w6l2taxwsdcp"]
+[gd_scene load_steps=5 format=3 uid="uid://w6l2taxwsdcp"]
 
 [ext_resource type="Script" path="res://Scenes/Crib.gd" id="1_q06da"]
 [ext_resource type="Texture2D" uid="uid://c432tah0h0bvh" path="res://Assets/Crib/Texture/crib_instance.png" id="1_witup"]
 [ext_resource type="AudioStream" uid="uid://cdiiy42slv05" path="res://Assets/Sound/can.ogg" id="2_wbo07"]
 [ext_resource type="AudioStream" uid="uid://c1nebqofns78j" path="res://Assets/Sound/drink.ogg" id="4_5j8s6"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wdio2"]
-radius = 450.0
 
 [node name="Crib" type="Node2D"]
 script = ExtResource("1_q06da")
@@ -23,8 +20,8 @@ polygon = PackedVector2Array(-339, 313, 126, 389, 210, 295, 276, 195, 312, 92, -
 [node name="CribArea" type="Area2D" parent="StaticBody2D/CollisionPolygon2D"]
 position = Vector2(-36, 149)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/CollisionPolygon2D/CribArea"]
-shape = SubResource("CircleShape2D_wdio2")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/CollisionPolygon2D/CribArea"]
+polygon = PackedVector2Array(-467, 266, 308, 372, 567, -190, -346, -341)
 
 [node name="CanPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_wbo07")
