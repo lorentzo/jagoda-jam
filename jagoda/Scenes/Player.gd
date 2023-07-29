@@ -36,6 +36,8 @@ func set_can_drink(value: bool):
 	self.can_drink = value
 
 func _ready():
+	randomize()
+	
 	for player in players:
 		player.finished.connect(self._on_drinking_sound_finished)
 
