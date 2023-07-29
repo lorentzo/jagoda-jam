@@ -14,7 +14,7 @@
 [ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="8_574xx"]
 [ext_resource type="SpriteFrames" uid="uid://dxtyqa1gar1ac" path="res://Assets/Plants/Plant1/Plant1SpriteFrames.tres" id="10_v8nts"]
 [ext_resource type="SpriteFrames" uid="uid://sycqpbatojp3" path="res://Assets/Plants/Plant3/Plant3SpriteFrames.tres" id="11_wkhbs"]
-[ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Assets/Crib/crib.tscn" id="13_s1n7e"]
+[ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Scenes/Crib.tscn" id="13_s1n7e"]
 [ext_resource type="SpriteFrames" uid="uid://duodvhyxaabhl" path="res://Assets/Plants/Plant2/Plant2SpriteFrames.tres" id="17_meg80"]
 [ext_resource type="PackedScene" uid="uid://cbcmdbatiwbjn" path="res://Scenes/GameOver.tscn" id="18_7pm05"]
 [ext_resource type="Texture2D" uid="uid://j0jon1p1gvvp" path="res://Assets/Icons/KeySpace.tres" id="20_wt2ok"]
@@ -93,7 +93,7 @@ position = Vector2(751, 825)
 sprite_frames = ExtResource("11_wkhbs")
 
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
-position = Vector2(1102, 135)
+position = Vector2(1170, 186)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("3_aaoav")]
@@ -284,5 +284,5 @@ position = Vector2(672, 631)
 sprite_frames = ExtResource("23_5nhu3")
 
 [node name="Fridge2" parent="." instance=ExtResource("22_yue06")]
-position = Vector2(1085, 395)
+position = Vector2(1133, 468)
 sprite_frames = ExtResource("24_33vom")
