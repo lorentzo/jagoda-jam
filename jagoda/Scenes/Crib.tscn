@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://w6l2taxwsdcp"]
+
+[ext_resource type="Script" path="res://Scenes/Crib.gd" id="1_q06da"]
+[ext_resource type="Texture2D" uid="uid://c432tah0h0bvh" path="res://Assets/Crib/Texture/crib_instance.png" id="1_witup"]
+[ext_resource type="AudioStream" uid="uid://cdiiy42slv05" path="res://Assets/Sound/can.ogg" id="2_wbo07"]
+[ext_resource type="AudioStream" uid="uid://c1nebqofns78j" path="res://Assets/Sound/drink.ogg" id="4_5j8s6"]
+
+[node name="Crib" type="Node2D"]
+script = ExtResource("1_q06da")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_witup")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-339, 313, 126, 389, 210, 295, 276, 195, 312, 92, -218, -35, -294, 83)
+
+[node name="CribArea" type="Area2D" parent="StaticBody2D/CollisionPolygon2D"]
+position = Vector2(-36, 149)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/CollisionPolygon2D/CribArea"]
+polygon = PackedVector2Array(-467, 266, 308, 372, 567, -190, -346, -341)
+
+[node name="CanPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_wbo07")
+volume_db = 5.0
+
+[node name="DrinkPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5j8s6")
+volume_db = -10.0
+
+[connection signal="area_entered" from="StaticBody2D/CollisionPolygon2D/CribArea" to="." method="_on_area_entered"]
+[connection signal="area_exited" from="StaticBody2D/CollisionPolygon2D/CribArea" to="." method="_on_area_exited"]
+[connection signal="body_entered" from="StaticBody2D/CollisionPolygon2D/CribArea" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="StaticBody2D/CollisionPolygon2D/CribArea" to="." method="_on_body_exited"]

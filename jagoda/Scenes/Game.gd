@@ -19,6 +19,7 @@ const TIME_LABEL_UPDATE_PERIOD_MINUTES: float = 5
 @onready var sun: Sprite2D = $HUD/Sun
 @onready var screen_width = get_viewport().size.x
 @onready var canvas_hue = canvas_modulate.color.h;
+@onready var tree = get_tree()
 
 var day = 0
 var time_passed = 0
@@ -28,15 +29,21 @@ signal sun_intensity_changed(sun_intensity)
 signal day_changed
 
 func _ready():
+	$HUD/Freshness.visible = false
+	
 	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
-	$Player.player_plant_water_changed.connect(self._on_player_plant_water_changed)
+	$Player.player_pick_up_fridge.connect(self._on_player_pick_up_fridge)
+	$Player.player_drop_fridge.connect(self._on_player_drop_fridge)
 	
 	day_changed.connect(self._on_day_changed)
 	
-	for plant in get_tree().get_nodes_in_group("plant"):
+	for plant in tree.get_nodes_in_group("plant"):
 		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
 		day_changed.connect(plant.on_day_changed)
+		
+	for fridge in tree.get_nodes_in_group("fridge"):
+		fridge.fridge_freshness_changed.connect(self._on_fridge_freshness_changed)
 
 	day_changed.emit()
 	loading.on_loading_start.connect(self._on_loading_start)
@@ -53,8 +60,17 @@ func _on_player_freshness_changed(freshness):
 	if is_equal_approx(freshness, 0):
 		self._game_over()
 
-func _on_player_plant_water_changed(plant_water):
-	$HUD/ItemWaterBar.value = plant_water
+func _on_fridge_freshness_changed(freshness):
+	$HUD/Freshness/ItemFreshnessBar.value = freshness
+
+func _on_player_pick_up_fridge(fridge):
+	$HUD/Freshness/ItemFreshnessBar.value = fridge.freshness
+	$HUD/Freshness.visible = true
+	self.remove_child(fridge)
+
+func _on_player_drop_fridge(fridge):
+	$HUD/Freshness.visible = false
+	self.add_child(fridge)
 
 func _on_day_changed():
 	self.time_passed = 0
@@ -81,11 +97,15 @@ func _process(delta):
 	var day_hours = floor(day_time / 3600)
 	var day_minutes = floor((day_time - day_hours * 3600) / 60)
 	if previous_day_time == null or (day_time - previous_day_time) >= TIME_LABEL_UPDATE_PERIOD_MINUTES * 60:
-		$HUD/TimeLabel.text = "%02d:%02d" % [day_hours, day_minutes]
+		$HUD/TimeLabel.text = "%02d:%02d" % [day_hours, self._round_step(day_minutes, TIME_LABEL_UPDATE_PERIOD_MINUTES)]
 		previous_day_time = day_time
 	
 	if is_equal_approx(day_progress, 1):
 		day_changed.emit()
+
+func _round_step(number: int, step: int):
+	var times: int = floor(number / step)
+	return times * step
 
 func _pause():
 	$HUD/PauseMenu.show()

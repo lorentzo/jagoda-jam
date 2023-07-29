@@ -25,10 +25,10 @@ corner_radius_bottom_left = 4
 y_sort_enabled = true
 script = ExtResource("1_wccxx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_8daej")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 visible = false
