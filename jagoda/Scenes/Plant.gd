@@ -3,6 +3,7 @@ extends Area2D
 
 const MAX_FRESHNESS: float = 100.0
 const MAX_FRESHNESS_LOST_PER_SECOND: float = 0.5
+const FRESHNESS_GAINED_PER_SECOND: float = 5.0
 const DAY_MULTIPLIER_DEVIATION: float = 0.5
 const PROGRESS_BAR_MARGIN: int = 10
 
@@ -41,8 +42,8 @@ func _process(delta):
 func _die():
 	queue_free()
 
-func refresh(additional_freshness):
-	self.freshness = min(self.freshness + additional_freshness, MAX_FRESHNESS)
+func refresh(delta):
+	self.freshness = min(self.freshness + FRESHNESS_GAINED_PER_SECOND * delta, MAX_FRESHNESS)
 
 func set_freshness_visible(value: bool):
 	progress_bar.visible = value

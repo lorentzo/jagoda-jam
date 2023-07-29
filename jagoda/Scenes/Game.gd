@@ -19,6 +19,7 @@ const TIME_LABEL_UPDATE_PERIOD_MINUTES: float = 5
 @onready var sun: Sprite2D = $HUD/Sun
 @onready var screen_width = get_viewport().size.x
 @onready var canvas_hue = canvas_modulate.color.h;
+@onready var tree = get_tree()
 
 var day = 0
 var time_passed = 0
@@ -30,15 +31,17 @@ signal day_changed
 func _ready():
 	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
-	$Player.player_plant_water_changed.connect(self._on_player_plant_water_changed)
 	$Player.player_pick_up_fridge.connect(self._on_player_pick_up_fridge)
 	$Player.player_drop_fridge.connect(self._on_player_drop_fridge)
 	
 	day_changed.connect(self._on_day_changed)
 	
-	for plant in get_tree().get_nodes_in_group("plant"):
+	for plant in tree.get_nodes_in_group("plant"):
 		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
 		day_changed.connect(plant.on_day_changed)
+		
+	for fridge in tree.get_nodes_in_group("fridge"):
+		fridge.fridge_freshness_changed.connect(self._on_fridge_freshness_changed)
 
 	day_changed.emit()
 	loading.on_loading_start.connect(self._on_loading_start)
@@ -55,8 +58,8 @@ func _on_player_freshness_changed(freshness):
 	if is_equal_approx(freshness, 0):
 		self._game_over()
 
-func _on_player_plant_water_changed(plant_water):
-	$HUD/ItemWaterBar.value = plant_water
+func _on_fridge_freshness_changed(freshness):
+	$HUD/ItemWaterBar.value = freshness
 
 func _on_player_pick_up_fridge(fridge):
 	self.remove_child(fridge)
