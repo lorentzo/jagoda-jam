@@ -21,7 +21,7 @@ script = ExtResource("1_6cy7p")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.611328, 0.611328)
 sprite_frames = ExtResource("3_dxt4t")
-animation = &"idle"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_pyes3")
