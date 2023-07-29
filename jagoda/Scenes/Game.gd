@@ -24,6 +24,7 @@ const TIME_LABEL_UPDATE_PERIOD_MINUTES: float = 5
 var day = 0
 var time_passed = 0
 var previous_day_time = null
+var plant_count: int = 0
 
 signal sun_intensity_changed(sun_intensity)
 signal day_changed
@@ -40,7 +41,10 @@ func _ready():
 
 	day_changed.connect(self._on_day_changed)
 
-	for plant in tree.get_nodes_in_group("plant"):
+	var plants = tree.get_nodes_in_group("plant")
+	plant_count = plants.size()
+	for plant in plants:
+		plant.plant_die.connect(self._on_plant_die)
 		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
 		day_changed.connect(plant.on_day_changed)
 		
@@ -57,10 +61,15 @@ func _on_loading_start():
 	$HUD.set_process(false)
 	self.hide()
 
+func _on_plant_die():
+	self.plant_count -= 1
+	if self.plant_count == 0:
+		self._game_over("All your plants are dead.")
+
 func _on_player_freshness_changed(freshness):
 	$HUD/PlayerFreshnessBar.value = freshness
 	if is_equal_approx(freshness, 0):
-		self._game_over()
+		self._game_over("You died from dehydration.")
 
 func _on_fridge_freshness_changed(freshness):
 	$HUD/Freshness/ItemFreshnessBar.value = freshness
@@ -112,5 +121,6 @@ func _round_step(number: int, step: int):
 func _pause():
 	$HUD/PauseMenu.show()
 
-func _game_over():
+func _game_over(reason: String):
+	$HUD/GameOver.set_reason(reason)
 	$HUD/GameOver.show()
