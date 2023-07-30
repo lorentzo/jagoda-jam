@@ -6,6 +6,15 @@ const MAX_FRESHNESS_LOST_PER_SECOND: float = 0.5
 const FRESHNESS_GAINED_PER_SECOND: float = 5.0
 const DAY_MULTIPLIER_DEVIATION: float = 0.5
 const PROGRESS_BAR_MARGIN: int = 10
+const SATURATION_MAX: float = 0.0
+const SATURATION_MIN: float = 1.0
+const SATURATION_RANGE: float = SATURATION_MAX - SATURATION_MIN
+const VALUE_MAX: float = 1.0
+const VALUE_MIN: float = 0.6
+const VALUE_RANGE: float = VALUE_MAX - VALUE_MIN
+const HUE: float = 45.0 / 360 # Yellow
+
+signal plant_die()
 
 var freshness: float = MAX_FRESHNESS
 var day = 0
@@ -14,6 +23,7 @@ var day_multiplier: float = 1.0
 var difficulty_multiplier: float = 1.0
 
 @export var sprite_frames: SpriteFrames = null
+
 @onready var progress_bar: ProgressBar = $ProgressBar
 
 func _ready():
@@ -35,12 +45,17 @@ func _process(delta):
 	var freshness_lost_per_second = self.difficulty_multiplier * self.current_sun_intensity * MAX_FRESHNESS_LOST_PER_SECOND * self.day_multiplier
 	self.freshness = max(self.freshness - freshness_lost_per_second * delta, 0)
 	progress_bar.value = round(freshness)
-	
+
+	$AnimatedSprite2D.self_modulate.h = HUE
+	$AnimatedSprite2D.self_modulate.s = self.freshness / MAX_FRESHNESS * SATURATION_RANGE + SATURATION_MIN
+	$AnimatedSprite2D.self_modulate.v = self.freshness / MAX_FRESHNESS * VALUE_RANGE + VALUE_MIN
+
 	if is_equal_approx(self.freshness, 0):
 		_die()
 
 func _die():
 	queue_free()
+	self.plant_die.emit()
 
 func refresh(delta):
 	self.freshness = min(self.freshness + FRESHNESS_GAINED_PER_SECOND * delta, MAX_FRESHNESS)

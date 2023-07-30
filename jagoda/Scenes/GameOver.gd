@@ -5,6 +5,9 @@ const GAME_SCENE: String = "res://Scenes/Game.tscn"
 
 @onready var loading = get_node("/root/Loading")
 
+func set_reason(reason: String):
+	$VBoxContainer2/ReasonLabel.text = reason
+
 func _on_visibility_changed():
 	var tree = get_tree()
 	if tree == null:
