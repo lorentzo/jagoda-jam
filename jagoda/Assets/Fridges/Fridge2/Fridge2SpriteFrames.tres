@@ -1,48 +1,213 @@
-[gd_resource type="SpriteFrames" load_steps=41 format=3 uid="uid://bwnnqvxfqtvc1"]
+[gd_resource type="SpriteFrames" load_steps=81 format=3 uid="uid://bwnnqvxfqtvc1"]
 
+[ext_resource type="Texture2D" uid="uid://mi4a3jhsifdb" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0001.png" id="1_n37rq"]
 [ext_resource type="Texture2D" uid="uid://drbk2ng72hs5p" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0001.png" id="1_x7v40"]
 [ext_resource type="Texture2D" uid="uid://oph2ho7ub5up" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0002.png" id="2_85qov"]
+[ext_resource type="Texture2D" uid="uid://b8m4x7dh33xrx" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0002.png" id="2_vtfo0"]
 [ext_resource type="Texture2D" uid="uid://ivguinhv3tby" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0003.png" id="3_3y8hd"]
+[ext_resource type="Texture2D" uid="uid://bey2t5volaubo" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0003.png" id="3_10abc"]
+[ext_resource type="Texture2D" uid="uid://cogwf1jqoaus8" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0004.png" id="4_6ihn4"]
 [ext_resource type="Texture2D" uid="uid://c6mw6dj0umlhp" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0004.png" id="4_nd6bt"]
 [ext_resource type="Texture2D" uid="uid://b3bok7n2yef5c" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0005.png" id="5_clh6p"]
+[ext_resource type="Texture2D" uid="uid://bafwgtk3lhh3n" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0005.png" id="5_krb3s"]
 [ext_resource type="Texture2D" uid="uid://bv5u7c3d20prj" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0006.png" id="6_awkah"]
+[ext_resource type="Texture2D" uid="uid://1gr8ud0pnl6d" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0006.png" id="6_hc3mq"]
 [ext_resource type="Texture2D" uid="uid://dou2hmm55rwnf" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0007.png" id="7_fbkmg"]
+[ext_resource type="Texture2D" uid="uid://c1ajm5h4y47vo" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0007.png" id="7_kghwv"]
+[ext_resource type="Texture2D" uid="uid://c13gaddv1a17w" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0008.png" id="8_ae1tn"]
 [ext_resource type="Texture2D" uid="uid://ce17cv1qp0uwl" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0008.png" id="8_nxwqi"]
 [ext_resource type="Texture2D" uid="uid://bqi61hovetcew" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0009.png" id="9_jagrw"]
+[ext_resource type="Texture2D" uid="uid://b5dne786sypru" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0009.png" id="9_skq8x"]
+[ext_resource type="Texture2D" uid="uid://dlibnmgbf5tfw" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0010.png" id="10_7evfr"]
 [ext_resource type="Texture2D" uid="uid://dlytyds4a7j85" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0010.png" id="10_eqjnh"]
 [ext_resource type="Texture2D" uid="uid://dmqdhs4tkbcy7" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0011.png" id="11_1dkhj"]
+[ext_resource type="Texture2D" uid="uid://dls6aaqdv6e7k" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0011.png" id="11_km4dj"]
+[ext_resource type="Texture2D" uid="uid://ddgaww2ujw80o" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0012.png" id="12_64ayk"]
 [ext_resource type="Texture2D" uid="uid://cshr8vb1ouhqi" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0012.png" id="12_x7bts"]
 [ext_resource type="Texture2D" uid="uid://drkewsdnjf1x1" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0013.png" id="13_up6i8"]
+[ext_resource type="Texture2D" uid="uid://dpea740vfw80q" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0013.png" id="13_xk4ek"]
+[ext_resource type="Texture2D" uid="uid://c6j1rrnsan5ar" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0014.png" id="14_mhy4k"]
 [ext_resource type="Texture2D" uid="uid://cx7xmud4u50ur" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0014.png" id="14_u3rai"]
+[ext_resource type="Texture2D" uid="uid://c1ryaqco0dpuc" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0015.png" id="15_8qcd3"]
 [ext_resource type="Texture2D" uid="uid://b3pyig65k6oc8" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0015.png" id="15_wc0ai"]
 [ext_resource type="Texture2D" uid="uid://btcxblpev1kh6" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0016.png" id="16_0hp5k"]
+[ext_resource type="Texture2D" uid="uid://hs3nn0rxkc27" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0016.png" id="16_pbqa0"]
 [ext_resource type="Texture2D" uid="uid://cgvyot0yu2uah" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0017.png" id="17_111qj"]
+[ext_resource type="Texture2D" uid="uid://1lbtj3rlwuw2" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0017.png" id="17_kqfex"]
+[ext_resource type="Texture2D" uid="uid://qwe4syk5p87h" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0018.png" id="18_duprj"]
 [ext_resource type="Texture2D" uid="uid://0igv6mxppc3w" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0018.png" id="18_f1beb"]
+[ext_resource type="Texture2D" uid="uid://davojuuvx0hwn" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0019.png" id="19_ebkio"]
 [ext_resource type="Texture2D" uid="uid://dddd64i7gj3lk" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0019.png" id="19_m82jn"]
+[ext_resource type="Texture2D" uid="uid://5xhde0203rxd" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0020.png" id="20_3yvx3"]
 [ext_resource type="Texture2D" uid="uid://bwbk7becrtdl1" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0020.png" id="20_ubqh2"]
+[ext_resource type="Texture2D" uid="uid://f1w0t5o1t210" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0021.png" id="21_ew20d"]
 [ext_resource type="Texture2D" uid="uid://bdl6hhm85mfc5" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0021.png" id="21_xtlnc"]
 [ext_resource type="Texture2D" uid="uid://buvq7v16iafl5" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0022.png" id="22_loicn"]
+[ext_resource type="Texture2D" uid="uid://c0o314odlb7tr" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0022.png" id="22_or6e5"]
+[ext_resource type="Texture2D" uid="uid://cs0ejyol2wocg" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0023.png" id="23_2dnav"]
 [ext_resource type="Texture2D" uid="uid://tg1h8y8nefmk" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0023.png" id="23_ljnuu"]
 [ext_resource type="Texture2D" uid="uid://cgf7k1wmviqx6" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0024.png" id="24_o0fww"]
+[ext_resource type="Texture2D" uid="uid://bj8uk1axewdh7" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0024.png" id="24_p08xj"]
+[ext_resource type="Texture2D" uid="uid://bc41oruhqjkea" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0025.png" id="25_m7rvs"]
 [ext_resource type="Texture2D" uid="uid://dxbryrrs35734" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0025.png" id="25_xljc6"]
 [ext_resource type="Texture2D" uid="uid://dekojytkey0g8" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0026.png" id="26_s08kt"]
+[ext_resource type="Texture2D" uid="uid://cy6alw31i0pb0" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0026.png" id="26_uqj2g"]
 [ext_resource type="Texture2D" uid="uid://c3tperq0wycvv" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0027.png" id="27_4vy1f"]
+[ext_resource type="Texture2D" uid="uid://dgniau8tcvkgp" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0027.png" id="27_7y1ix"]
+[ext_resource type="Texture2D" uid="uid://rmm3jf3kjnhu" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0028.png" id="28_c6ked"]
 [ext_resource type="Texture2D" uid="uid://dhjm60vrcfu51" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0028.png" id="28_lioc8"]
+[ext_resource type="Texture2D" uid="uid://vyjim61d5ylw" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0029.png" id="29_rwqfp"]
 [ext_resource type="Texture2D" uid="uid://juqn8kbf8mhu" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0029.png" id="29_vv8cf"]
+[ext_resource type="Texture2D" uid="uid://55vblvnhosa4" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0030.png" id="30_7kh0b"]
 [ext_resource type="Texture2D" uid="uid://xp2s8l7yxi7t" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0030.png" id="30_agpot"]
 [ext_resource type="Texture2D" uid="uid://8jfwxh08xf35" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0031.png" id="31_i3y6u"]
+[ext_resource type="Texture2D" uid="uid://doc5qrg7anfg2" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0031.png" id="31_nrvcp"]
 [ext_resource type="Texture2D" uid="uid://0hf73fgxcg6q" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0032.png" id="32_5d4g2"]
+[ext_resource type="Texture2D" uid="uid://dvgjag7r5d5tx" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0032.png" id="32_qfbgt"]
 [ext_resource type="Texture2D" uid="uid://q0ie15uv3s5y" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0033.png" id="33_10qk5"]
+[ext_resource type="Texture2D" uid="uid://b5lwsohyervcy" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0033.png" id="33_hxyav"]
 [ext_resource type="Texture2D" uid="uid://d0dkp1u46ihxl" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0034.png" id="34_o3kmb"]
+[ext_resource type="Texture2D" uid="uid://23slqm6n6ex5" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0034.png" id="34_t4syq"]
+[ext_resource type="Texture2D" uid="uid://cajatlcno8bo7" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0035.png" id="35_gh7m7"]
 [ext_resource type="Texture2D" uid="uid://cwnetyn30imoh" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0035.png" id="35_pf7dh"]
 [ext_resource type="Texture2D" uid="uid://ds2hoogeewsrq" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0036.png" id="36_qj57g"]
+[ext_resource type="Texture2D" uid="uid://bcwdpr48ju82y" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0036.png" id="36_ugkpq"]
 [ext_resource type="Texture2D" uid="uid://cufobw6cvv5c0" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0037.png" id="37_c11xg"]
+[ext_resource type="Texture2D" uid="uid://bw4vpon5dnls3" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0037.png" id="37_ff8vb"]
 [ext_resource type="Texture2D" uid="uid://cocmbsw46un4a" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0038.png" id="38_16ysw"]
+[ext_resource type="Texture2D" uid="uid://csnnauruh77ck" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0038.png" id="38_qsyh5"]
 [ext_resource type="Texture2D" uid="uid://dhmccm3sejxrm" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0039.png" id="39_0kj6j"]
+[ext_resource type="Texture2D" uid="uid://d3nxbcqnc7s0r" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0039.png" id="39_a0ejn"]
 [ext_resource type="Texture2D" uid="uid://baeh2etdlumdk" path="res://Assets/Fridges/Fridge2/Textures/Fridge2_open_animation/fridge2_opened_anim_0040.png" id="40_4l471"]
+[ext_resource type="Texture2D" uid="uid://bd6rd8m3uu86g" path="res://Assets/Fridges/Fridge2/fridge2_charging_animation/fridge2_charged_anim_0040.png" id="40_e65ne"]
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n37rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vtfo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_10abc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6ihn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_krb3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hc3mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kghwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ae1tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_skq8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7evfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_km4dj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_64ayk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xk4ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mhy4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8qcd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pbqa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kqfex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_duprj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ebkio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3yvx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ew20d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_or6e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2dnav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_p08xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_m7rvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_uqj2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_7y1ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_c6ked")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rwqfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7kh0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_nrvcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_qfbgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hxyav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_t4syq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_gh7m7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ugkpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ff8vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_qsyh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_a0ejn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_e65ne")
+}],
+"loop": true,
+"name": &"charging",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_x7v40")
