@@ -71,7 +71,7 @@ func _physics_process(delta):
 			fridge.deactivate()
 	
 	var refreshing = fridge != null and fridge.is_active()
-	$WaterParticles.emitting = refreshing
+	$Particles.emitting = refreshing
 	if refreshing:
 		for plant in self.visible_plants.keys():
 			plant.refresh(delta)
@@ -103,8 +103,8 @@ func _physics_process(delta):
 
 	if walk_velocity.x != 0:
 		$RefreshArea.scale.x = walk_velocity.x
-		$WaterParticles.position.x = abs($WaterParticles.position.x) * walk_velocity.x
-		$WaterParticles.scale.x = walk_velocity.x
+		$Particles.position.x = abs($Particles.position.x) * walk_velocity.x
+		$Particles.scale.x = walk_velocity.x
 		$AnimatedSprite2D.scale.x = abs($AnimatedSprite2D.scale.x) * sign(walk_velocity.x)
 
 	if walk_velocity != Vector2.ZERO:

@@ -1,0 +1,2 @@
+class_name Flakes
+extends CPUParticles2D

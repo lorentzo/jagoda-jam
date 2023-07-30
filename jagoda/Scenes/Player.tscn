@@ -7,12 +7,10 @@
 [ext_resource type="AudioStream" uid="uid://bpfhcrnegjx6p" path="res://Assets/Sound/drop.ogg" id="5_sdc51"]
 [ext_resource type="AudioStream" uid="uid://cdiiy42slv05" path="res://Assets/Sound/can.ogg" id="6_up25q"]
 [ext_resource type="AudioStream" uid="uid://c1nebqofns78j" path="res://Assets/Sound/drink.ogg" id="7_rqxh3"]
+[ext_resource type="PackedScene" uid="uid://bxyk2ewdcmfwv" path="res://Scenes/Flakes.tscn" id="8_08mrd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ctm2"]
 size = Vector2(82.5, 141)
-
-[sub_resource type="Gradient" id="Gradient_6672y"]
-colors = PackedColorArray(0.219608, 0.780392, 1, 1, 0.109804, 1, 1, 0.65098)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pyes3"]
 radius = 12.0
@@ -28,24 +26,9 @@ script = ExtResource("1_6cy7p")
 position = Vector2(45, 0)
 shape = SubResource("RectangleShape2D_8ctm2")
 
-[node name="WaterParticles" type="CPUParticles2D" parent="."]
-position = Vector2(51, 11)
+[node name="Particles" parent="." instance=ExtResource("8_08mrd")]
+position = Vector2(49, 14)
 emitting = false
-amount = 32
-lifetime = 0.6
-randomness = 0.5
-lifetime_randomness = 0.1
-fract_delta = false
-emission_shape = 1
-emission_sphere_radius = 20.0
-direction = Vector2(1.5, 1)
-gravity = Vector2(0, 98)
-initial_velocity_min = 5.0
-initial_velocity_max = 50.0
-scale_amount_min = 7.0
-scale_amount_max = 10.0
-color = Color(0, 0.419608, 0.756863, 1)
-color_ramp = SubResource("Gradient_6672y")
 
 [node name="SighPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_08swx")
