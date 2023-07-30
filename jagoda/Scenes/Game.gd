@@ -36,6 +36,8 @@ func _ready():
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
 	$Player.player_pick_up_fridge.connect(self._on_player_pick_up_fridge)
 	$Player.player_drop_fridge.connect(self._on_player_drop_fridge)
+	$Player.player_update_main_action.connect(self._on_player_update_main_action)
+	$Player.player_update_use_action.connect(self._on_player_update_use_action)
 
 	$Crib.crib_set_drinking_enabled.connect($Player.set_can_drink)
 
@@ -53,6 +55,23 @@ func _ready():
 
 	day_changed.emit()
 	loading.on_loading_start.connect(self._on_loading_start)
+
+	$HUD/Control/E.visible = false
+	$HUD/Control/Space.visible = false
+
+func _on_player_update_main_action(text):
+	if text == null:
+		$HUD/Control/E.visible = false
+	else:
+		$HUD/Control/E/Label.text = text
+		$HUD/Control/E.visible = true
+
+func _on_player_update_use_action(text):
+	if text == null:
+		$HUD/Control/Space.visible = false
+	else:
+		$HUD/Control/Space/Label.text = text
+		$HUD/Control/Space.visible = true
 
 func _on_loading_start():
 	$Player/Camera2D.queue_free()

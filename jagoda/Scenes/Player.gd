@@ -16,6 +16,8 @@ const SIGHING_PERIOD = 10.0
 signal player_freshness_changed(freshness)
 signal player_pick_up_fridge(fridge)
 signal player_drop_fridge(fridge)
+signal player_update_main_action(text)
+signal player_update_use_action(text)
 
 @onready var players: Array[AudioStreamPlayer] = [$CanPlayer, $DrinkPlayer]
 
@@ -34,6 +36,7 @@ func on_sun_intensity_changed(sun_intensity):
 
 func set_can_drink(value: bool):
 	self.can_drink = value
+	self._update_actions()
 
 func _ready():
 	randomize()
@@ -83,6 +86,7 @@ func _physics_process(delta):
 				$PickupPlayer.play()
 				state = State.CARRY
 				self._update_fridge_indicators()
+				self._update_actions()				
 			elif can_drink:
 				self._drink()
 				return
@@ -95,6 +99,7 @@ func _physics_process(delta):
 			$DropPlayer.play()
 			state = State.WALK
 			self._update_fridge_indicators()
+			self._update_actions()
 
 	if walk_velocity.x != 0:
 		$RefreshArea.scale.x = walk_velocity.x
@@ -153,6 +158,7 @@ func _on_refresh_area_area_entered(area):
 	elif area is Fridge:
 		self.visible_fridges[area] = true
 		self._update_fridge_indicators()
+		self._update_actions()
 	
 func _on_refresh_area_area_exited(area):
 	if area is Plant:
@@ -162,6 +168,23 @@ func _on_refresh_area_area_exited(area):
 		self.visible_fridges.erase(area)
 		area.set_indicator_visible(false)
 		self._update_fridge_indicators()
+		self._update_actions()
+
+func _update_actions():
+	var main_action = null
+	var use_action = null
+	if state == State.WALK:
+		if self.visible_fridges.is_empty():
+			if self.can_drink:
+				main_action = "Drink"
+		else:
+			main_action = "Pick Up"
+	elif state == State.CARRY:
+		main_action = "Drop"
+		use_action = "Use (hold)"
+
+	self.player_update_main_action.emit(main_action)
+	self.player_update_use_action.emit(use_action)
 
 func _sigh():
 	if self.freshness >= SIGHING_FRESHNESS_THRESHOLD or is_equal_approx(self.freshness, 0):
