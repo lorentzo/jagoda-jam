@@ -184,7 +184,7 @@ func _update_actions():
 			main_action = "Pick Up"
 	elif state == State.CARRY:
 		main_action = "Drop"
-		use_action = "Use (hold)"
+		use_action = "Use (Hold)"
 
 	self.player_update_main_action.emit(main_action)
 	self.player_update_use_action.emit(use_action)

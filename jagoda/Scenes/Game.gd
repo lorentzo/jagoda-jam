@@ -16,7 +16,7 @@ const TIME_LABEL_UPDATE_PERIOD_MINUTES: float = 5
 
 @onready var loading = get_node("/root/Loading")
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
-@onready var sun: Sprite2D = $HUD/Sun
+@onready var sun: AnimatedSprite2D = $HUD/Sun
 @onready var screen_width = get_viewport().size.x
 @onready var canvas_hue = canvas_modulate.color.h;
 @onready var tree = get_tree()
