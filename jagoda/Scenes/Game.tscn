@@ -8,13 +8,13 @@
 [ext_resource type="TileSet" uid="uid://cam8iry0q4y8u" path="res://Assets/Tiles/Sea/SeaTileSet.tres" id="4_owr44"]
 [ext_resource type="PackedScene" uid="uid://ctkkf7cs18f3e" path="res://Scenes/Plant.tscn" id="5_7g35u"]
 [ext_resource type="TileSet" uid="uid://b40wlrl1aipwy" path="res://Assets/Tiles/Rocks/RocksTileSet.tres" id="5_himxs"]
-[ext_resource type="Texture2D" uid="uid://dtxdtxlg4c72f" path="res://Assets/sun_shiny.png" id="6_mt8ms"]
 [ext_resource type="TileSet" uid="uid://lbcx1niifxqo" path="res://Assets/Tiles/mountain/MountainTileSet.tres" id="6_p5hr4"]
 [ext_resource type="PackedScene" uid="uid://c32dlq6uur6e3" path="res://Scenes/PauseMenu.tscn" id="7_v1sht"]
 [ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="8_574xx"]
 [ext_resource type="SpriteFrames" uid="uid://dxtyqa1gar1ac" path="res://Assets/Plants/Plant1/Plant1SpriteFrames.tres" id="10_v8nts"]
 [ext_resource type="SpriteFrames" uid="uid://sycqpbatojp3" path="res://Assets/Plants/Plant3/Plant3SpriteFrames.tres" id="11_wkhbs"]
 [ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Scenes/Crib.tscn" id="13_s1n7e"]
+[ext_resource type="SpriteFrames" uid="uid://b04efb1l3w100" path="res://Assets/Sun/SunSpriteFrames.tres" id="14_74iue"]
 [ext_resource type="SpriteFrames" uid="uid://duodvhyxaabhl" path="res://Assets/Plants/Plant2/Plant2SpriteFrames.tres" id="17_meg80"]
 [ext_resource type="PackedScene" uid="uid://cbcmdbatiwbjn" path="res://Scenes/GameOver.tscn" id="18_7pm05"]
 [ext_resource type="Texture2D" uid="uid://j0jon1p1gvvp" path="res://Assets/Icons/KeySpace.tres" id="20_wt2ok"]
@@ -92,6 +92,14 @@ sprite_frames = ExtResource("17_meg80")
 position = Vector2(751, 825)
 sprite_frames = ExtResource("11_wkhbs")
 
+[node name="Fridge" parent="." instance=ExtResource("22_yue06")]
+position = Vector2(672, 631)
+sprite_frames = ExtResource("23_5nhu3")
+
+[node name="Fridge2" parent="." instance=ExtResource("22_yue06")]
+position = Vector2(1133, 468)
+sprite_frames = ExtResource("24_33vom")
+
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
 position = Vector2(1170, 186)
 scale = Vector2(0.5, 0.5)
@@ -112,10 +120,10 @@ drag_bottom_margin = 0.1
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Sun" type="Sprite2D" parent="HUD"]
-position = Vector2(0, -5)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("6_mt8ms")
+[node name="Sun" type="AnimatedSprite2D" parent="HUD"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("14_74iue")
+autoplay = "default"
 
 [node name="PauseMenu" parent="HUD" instance=ExtResource("7_v1sht")]
 visible = false
@@ -242,7 +250,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Sombrero" type="TextureRect" parent="HUD"]
-texture_filter = 6
+texture_filter = 2
 offset_left = 45.0
 offset_top = 664.0
 offset_right = 186.0
@@ -270,19 +278,11 @@ fill_mode = 3
 show_percentage = false
 
 [node name="Droplet" type="TextureRect" parent="HUD/Freshness"]
-texture_filter = 6
-offset_left = 121.0
-offset_top = 662.0
-offset_right = 209.0
-offset_bottom = 776.0
+texture_filter = 2
+offset_left = 117.0
+offset_top = 664.0
+offset_right = 227.0
+offset_bottom = 771.0
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("22_b24xu")
 stretch_mode = 4
-
-[node name="Fridge" parent="." instance=ExtResource("22_yue06")]
-position = Vector2(672, 631)
-sprite_frames = ExtResource("23_5nhu3")
-
-[node name="Fridge2" parent="." instance=ExtResource("22_yue06")]
-position = Vector2(1133, 468)
-sprite_frames = ExtResource("24_33vom")

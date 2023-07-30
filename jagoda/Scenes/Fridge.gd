@@ -67,6 +67,9 @@ func set_indicator_visible(value: bool):
 func set_freshness_visible(value: bool):
 	self.progress_bar.visible = value
 
+func set_animation(name: String):
+	$AnimatedSprite2D.play(name)
+
 func refill(delta):
 	self.freshness = min(self.freshness + FRESHNESS_GAINED_PER_SECOND * delta, MAX_FRESHNESS)
 

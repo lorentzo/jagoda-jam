@@ -16,8 +16,7 @@ const TIME_LABEL_UPDATE_PERIOD_MINUTES: float = 5
 
 @onready var loading = get_node("/root/Loading")
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
-@onready var sun: Sprite2D = $HUD/Sun
-@onready var screen_width = get_viewport().size.x
+@onready var sun: AnimatedSprite2D = $HUD/Sun
 @onready var canvas_hue = canvas_modulate.color.h;
 @onready var tree = get_tree()
 
@@ -36,6 +35,8 @@ func _ready():
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
 	$Player.player_pick_up_fridge.connect(self._on_player_pick_up_fridge)
 	$Player.player_drop_fridge.connect(self._on_player_drop_fridge)
+	$Player.player_update_main_action.connect(self._on_player_update_main_action)
+	$Player.player_update_use_action.connect(self._on_player_update_use_action)
 
 	$Crib.crib_set_drinking_enabled.connect($Player.set_can_drink)
 
@@ -53,6 +54,23 @@ func _ready():
 
 	day_changed.emit()
 	loading.on_loading_start.connect(self._on_loading_start)
+
+	$HUD/Control/E.visible = false
+	$HUD/Control/Space.visible = false
+
+func _on_player_update_main_action(text):
+	if text == null:
+		$HUD/Control/E.visible = false
+	else:
+		$HUD/Control/E/Label.text = text
+		$HUD/Control/E.visible = true
+
+func _on_player_update_use_action(text):
+	if text == null:
+		$HUD/Control/Space.visible = false
+	else:
+		$HUD/Control/Space/Label.text = text
+		$HUD/Control/Space.visible = true
 
 func _on_loading_start():
 	$Player/Camera2D.queue_free()
@@ -98,6 +116,7 @@ func _process(delta):
 	var sun_intensity: float = sin(day_progress * PI)
 	sun_intensity_changed.emit(sun_intensity)
 	
+	var screen_width = get_viewport_rect().size.x
 	sun.position.x = day_progress * screen_width
 	canvas_modulate.color.h = canvas_hue;
 	canvas_modulate.color.v = sun_intensity * LUMINANCE_RANGE + MIN_LUMINANCE
