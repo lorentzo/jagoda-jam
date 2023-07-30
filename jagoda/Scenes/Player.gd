@@ -110,7 +110,10 @@ func _physics_process(delta):
 	if walk_velocity != Vector2.ZERO:
 		var animation = "walk"
 		if state == State.CARRY:
-			animation += "_fridge%d" % [self.fridge.get_variant()]
+			if refreshing:
+				animation += "_refresh_fridge%d" % [self.fridge.get_variant()]
+			else:
+				animation += "_fridge%d" % [self.fridge.get_variant()]
 		$AnimatedSprite2D.play(animation)
 	elif refreshing and state == State.CARRY:
 		var animation = "refresh_plants_fridge%d" % [self.fridge.get_variant()]
