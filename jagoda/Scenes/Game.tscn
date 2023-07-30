@@ -92,6 +92,14 @@ sprite_frames = ExtResource("17_meg80")
 position = Vector2(751, 825)
 sprite_frames = ExtResource("11_wkhbs")
 
+[node name="Fridge" parent="." instance=ExtResource("22_yue06")]
+position = Vector2(672, 631)
+sprite_frames = ExtResource("23_5nhu3")
+
+[node name="Fridge2" parent="." instance=ExtResource("22_yue06")]
+position = Vector2(1133, 468)
+sprite_frames = ExtResource("24_33vom")
+
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
 position = Vector2(1170, 186)
 scale = Vector2(0.5, 0.5)
@@ -278,11 +286,3 @@ offset_bottom = 771.0
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("22_b24xu")
 stretch_mode = 4
-
-[node name="Fridge" parent="." instance=ExtResource("22_yue06")]
-position = Vector2(672, 631)
-sprite_frames = ExtResource("23_5nhu3")
-
-[node name="Fridge2" parent="." instance=ExtResource("22_yue06")]
-position = Vector2(1133, 468)
-sprite_frames = ExtResource("24_33vom")

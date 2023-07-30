@@ -17,7 +17,6 @@ const TIME_LABEL_UPDATE_PERIOD_MINUTES: float = 5
 @onready var loading = get_node("/root/Loading")
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
 @onready var sun: AnimatedSprite2D = $HUD/Sun
-@onready var screen_width = get_viewport().size.x
 @onready var canvas_hue = canvas_modulate.color.h;
 @onready var tree = get_tree()
 
@@ -117,6 +116,7 @@ func _process(delta):
 	var sun_intensity: float = sin(day_progress * PI)
 	sun_intensity_changed.emit(sun_intensity)
 	
+	var screen_width = get_viewport_rect().size.x
 	sun.position.x = day_progress * screen_width
 	canvas_modulate.color.h = canvas_hue;
 	canvas_modulate.color.v = sun_intensity * LUMINANCE_RANGE + MIN_LUMINANCE
