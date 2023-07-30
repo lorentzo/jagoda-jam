@@ -77,16 +77,16 @@
        id="rect3"
        width="99.967957"
        height="116.22441"
-       x="95.922836"
-       y="10.483068"
+       x="6.5696096"
+       y="10.121314"
        ry="0"
        rx="0" />
     <g
        id="g3"
        transform="translate(-59.367774,-1.9184901)"
        inkscape:export-filename="..\jagoda\Assets\Icons\icons.png"
-       inkscape:export-xdpi="125.26029"
-       inkscape:export-ydpi="125.26029">
+       inkscape:export-xdpi="62.630146"
+       inkscape:export-ydpi="62.630146">
       <rect
          style="fill:url(#linearGradient2);fill-opacity:1;stroke:#ffffff;stroke-width:1.5;stroke-dasharray:none;stroke-opacity:1"
          id="rect5"
@@ -128,7 +128,7 @@
     </g>
     <g
        id="g5"
-       transform="matrix(0.84769235,0,0,0.84769235,15.508195,79.326624)">
+       transform="matrix(0.84769235,0,0,0.84769235,75.921105,35.916149)">
       <path
          style="fill:#006bc1;fill-opacity:1;stroke:#ffffff;stroke-width:1.5;stroke-dasharray:none;stroke-opacity:1"
          d="m 47.505581,79.312969 c 0,0 1.274497,6.027582 -3.281099,17.617418 -3.54606,9.021493 19.568619,10.540653 19.0522,1.200541 C 62.685788,87.443858 47.505581,79.312969 47.505581,79.312969 Z"
