@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=25 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="2_7b8y8"]
@@ -20,10 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://j0jon1p1gvvp" path="res://Assets/Icons/KeySpace.tres" id="20_wt2ok"]
 [ext_resource type="Texture2D" uid="uid://belmepf2gsnp3" path="res://Assets/Icons/KeyE.tres" id="21_wsvmf"]
 [ext_resource type="Texture2D" uid="uid://duompn5fsl2l1" path="res://Assets/Icons/Droplet.tres" id="22_b24xu"]
-[ext_resource type="PackedScene" uid="uid://372d7vwyf8b7" path="res://Scenes/Fridge.tscn" id="22_yue06"]
-[ext_resource type="SpriteFrames" uid="uid://bcj2104swj77d" path="res://Assets/Fridges/Fridge1/Fridge1SpriteFrames.tres" id="23_5nhu3"]
 [ext_resource type="Texture2D" uid="uid://be1lssj0wbsd0" path="res://Assets/Icons/Sombrero.tres" id="23_s83ng"]
-[ext_resource type="SpriteFrames" uid="uid://bwnnqvxfqtvc1" path="res://Assets/Fridges/Fridge2/Fridge2SpriteFrames.tres" id="24_33vom"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31pxf"]
 bg_color = Color(1, 1, 1, 0.392157)
@@ -91,14 +88,6 @@ sprite_frames = ExtResource("17_meg80")
 [node name="Plant3" parent="." instance=ExtResource("5_7g35u")]
 position = Vector2(751, 825)
 sprite_frames = ExtResource("11_wkhbs")
-
-[node name="Fridge" parent="." instance=ExtResource("22_yue06")]
-position = Vector2(672, 631)
-sprite_frames = ExtResource("23_5nhu3")
-
-[node name="Fridge2" parent="." instance=ExtResource("22_yue06")]
-position = Vector2(1133, 468)
-sprite_frames = ExtResource("24_33vom")
 
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
 position = Vector2(1170, 186)

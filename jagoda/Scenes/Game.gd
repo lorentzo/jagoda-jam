@@ -1,5 +1,12 @@
 extends Node2D
 
+const FRIDGE_PACKED_SCENE = preload("res://Scenes/Fridge.tscn")
+const FRIDGE_SPRITE_FRAMES = [
+	preload("res://Assets/Fridges/Fridge1/Fridge1SpriteFrames.tres"),
+	preload("res://Assets/Fridges/Fridge2/Fridge2SpriteFrames.tres")
+]
+const FRIDGE_SPAWN_X_RANGE: float = 400.0
+const FRIDGE_SPAWN_Y_OFFSET: float = 200.0
 const MAIN_MENU_SCENE = "res://Scenes/MainMenu.tscn"
 const DAY_LENGTH_MINUTES: float = 7
 const DAY_LENGTH_SECONDS: float = DAY_LENGTH_MINUTES * 60
@@ -29,6 +36,8 @@ signal sun_intensity_changed(sun_intensity)
 signal day_changed
 
 func _ready():
+	randomize()
+
 	self._set_freshness_visible(false)
 	
 	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
@@ -110,6 +119,14 @@ func _on_day_changed():
 	self.day += 1
 	self.previous_day_time = null
 	$HUD/DayLabel.text = "Day {0} / {1}".format([day, GAME_DAYS])
+	self._spawn_fridge()
+
+func _spawn_fridge():
+	var fridge = FRIDGE_PACKED_SCENE.instantiate()
+	fridge.sprite_frames = FRIDGE_SPRITE_FRAMES[day % FRIDGE_SPRITE_FRAMES.size()]
+	fridge.position.x = $Crib.position.x + randf_range(-FRIDGE_SPAWN_X_RANGE / 2, FRIDGE_SPAWN_X_RANGE / 2)
+	fridge.position.y = $Crib.position.y + FRIDGE_SPAWN_Y_OFFSET
+	add_child(fridge)
 
 func _input(event):
 	if event.is_action_pressed("pause"):
