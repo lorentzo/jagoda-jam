@@ -52,21 +52,57 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Plant" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(5539, 2862)
+position = Vector2(6955, 2706)
 
 [node name="Plant2" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(5704, 2951)
+position = Vector2(7050, 3129)
 
 [node name="Plant3" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(5435, 3198)
+position = Vector2(5956, 3404)
+
+[node name="Plant4" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(4903, 2709)
+
+[node name="Plant5" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(4939, 3438)
+
+[node name="Plant6" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(5798, 4689)
+
+[node name="Plant7" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(5220, 5049)
+
+[node name="Plant8" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(2812, 1803)
+
+[node name="Plant9" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(2341, 2482)
+
+[node name="Plant10" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(5959, 5048)
+
+[node name="Plant11" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(2731, 2180)
+
+[node name="Plant12" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(3984, 4392)
+
+[node name="Plant13" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(3003, 3386)
+
+[node name="Plant14" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(3417, 2267)
+
+[node name="Plant15" parent="." instance=ExtResource("5_7g35u")]
+position = Vector2(4110, 3276)
 
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
 y_sort_enabled = true
-position = Vector2(5995, 2696)
+position = Vector2(6018, 2681)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("3_aaoav")]
-position = Vector2(4823, 3220)
+position = Vector2(5973, 2919)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.75, 0.75)
