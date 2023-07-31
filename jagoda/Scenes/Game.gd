@@ -177,7 +177,7 @@ func _show_victory_screen():
 	var denominator = 0
 	for m in metrics:
 		denominator += 1 / m
-	var mean = metrics.size() / denominator
+	var mean = metrics.size() / denominator if not is_equal_approx(denominator, 0) else 0
 	var score: int = floor(mean * MAX_SCORE)
 	$HUD/VictoryScreen.set_score(score, MAX_SCORE)
 	$HUD/VictoryScreen.show()
@@ -191,14 +191,24 @@ func _show_day_completed_screen():
 	$HUD/DayCompletedMenu.show()
 
 func _get_avg_plant_freshness():
+	var plants = tree.get_nodes_in_group("plant")
+	if plants.is_empty():
+		return 0
+
 	var avg_plant_freshness = 0
-	for plant in tree.get_nodes_in_group("plant"):
+	for plant in plants:
 		avg_plant_freshness += plant.freshness
 	avg_plant_freshness /= self.plant_count
 	return avg_plant_freshness
 
 func _get_avg_fridge_freshness():
 	var fridges = tree.get_nodes_in_group("fridge")
+	if $Player.fridge != null:
+		fridges.append($Player.fridge)
+
+	if fridges.is_empty():
+		return 0
+
 	var avg_fridge_freshness = 0
 	for fridge in fridges:
 		avg_fridge_freshness += fridge.freshness
