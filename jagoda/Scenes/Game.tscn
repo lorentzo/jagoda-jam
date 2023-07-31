@@ -40,7 +40,8 @@ y_sort_enabled = true
 script = ExtResource("1_fxwml")
 
 [node name="Island" parent="." instance=ExtResource("16_hx4xl")]
-position = Vector2(2147, -198)
+z_index = -1
+position = Vector2(5325, 2883)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.992157, 0.580392, 0, 1)
@@ -51,20 +52,21 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Plant" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(855, 489)
+position = Vector2(5539, 2862)
 
 [node name="Plant2" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(1020, 578)
+position = Vector2(5704, 2951)
 
 [node name="Plant3" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(751, 825)
+position = Vector2(5435, 3198)
 
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
-position = Vector2(1170, 186)
+y_sort_enabled = true
+position = Vector2(5995, 2696)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("3_aaoav")]
-position = Vector2(415, 431)
+position = Vector2(4823, 3220)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.75, 0.75)
