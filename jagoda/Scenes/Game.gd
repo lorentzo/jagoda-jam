@@ -65,8 +65,13 @@ func _ready():
 	day_changed.emit()
 	loading.on_loading_start.connect(self._on_loading_start)
 
+	$HUD/DayCompletedMenu.day_completed_continue.connect(self._on_day_completed_continue)
+
 	$HUD/Control/E.visible = false
 	$HUD/Control/Space.visible = false
+
+func _on_day_completed_continue():
+	day_changed.emit()
 
 func _set_freshness_visible(visible: bool):
 	$HUD/ItemFreshnessBar.visible = visible
@@ -156,7 +161,6 @@ func _process(delta):
 	
 	if is_equal_approx(day_progress, 1):
 		self._show_day_completed_screen()
-		day_changed.emit()
 
 func _show_day_completed_screen():
 	var plants_lost = self.plant_count_previous - self.plant_count
