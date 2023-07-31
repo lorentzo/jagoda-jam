@@ -5,6 +5,7 @@ const FRIDGE_SPRITE_FRAMES = [
 	preload("res://Assets/Fridges/Fridge1/Fridge1SpriteFrames.tres"),
 	preload("res://Assets/Fridges/Fridge2/Fridge2SpriteFrames.tres")
 ]
+const MAX_SCORE: int = 1000
 const FRIDGE_SPAWN_X_RANGE: float = 400.0
 const FRIDGE_SPAWN_Y_OFFSET: float = 200.0
 const MAIN_MENU_SCENE = "res://Scenes/MainMenu.tscn"
@@ -160,23 +161,46 @@ func _process(delta):
 		previous_day_time = day_time
 	
 	if is_equal_approx(day_progress, 1):
-		self._show_day_completed_screen()
+		if self.day == GAME_DAYS:
+			self._show_victory_screen()
+		else:
+			self._show_day_completed_screen()
+
+func _show_victory_screen():
+	var plant_ratio = self.plant_count / self.plant_count_total
+	var avg_plant_freshness = self._get_avg_plant_freshness() / 100
+	var avg_fridge_freshness = self._get_avg_fridge_freshness() / 100
+	var metrics = [plant_ratio, avg_plant_freshness, avg_fridge_freshness]
+	var denominator = 0
+	for m in metrics:
+		denominator += 1 / m
+	var mean = metrics.size() / denominator
+	var score: int = floor(mean * MAX_SCORE)
+	$HUD/VictoryScreen.set_score(score, MAX_SCORE)
+	$HUD/VictoryScreen.show()
 
 func _show_day_completed_screen():
 	var plants_lost = self.plant_count_previous - self.plant_count
-	
-	var avg_plant_freshness = 0
-	for plant in tree.get_nodes_in_group("plant"):
-		avg_plant_freshness += plant.freshness
-	avg_plant_freshness /= plant_count
-	
-	var avg_fridge_freshness = 0
-	for fridge in tree.get_nodes_in_group("fridge"):
-		avg_fridge_freshness += fridge.freshness
-	avg_fridge_freshness /= self.day
+	var avg_plant_freshness = self._get_avg_plant_freshness()
+	var avg_fridge_freshness = self._get_avg_fridge_freshness()
 	
 	$HUD/DayCompletedMenu.set_stats(self.day, plants_lost, plant_count, plant_count_total, avg_plant_freshness, avg_fridge_freshness)
 	$HUD/DayCompletedMenu.show()
+
+func _get_avg_plant_freshness():
+	var avg_plant_freshness = 0
+	for plant in tree.get_nodes_in_group("plant"):
+		avg_plant_freshness += plant.freshness
+	avg_plant_freshness /= self.plant_count
+	return avg_plant_freshness
+
+func _get_avg_fridge_freshness():
+	var fridges = tree.get_nodes_in_group("fridge")
+	var avg_fridge_freshness = 0
+	for fridge in fridges:
+		avg_fridge_freshness += fridge.freshness
+	avg_fridge_freshness /= fridges.size()
+	return avg_fridge_freshness
 
 func _round_step(number: int, step: int):
 	var times: int = floor(number / step)

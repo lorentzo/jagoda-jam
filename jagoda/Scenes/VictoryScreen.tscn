@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=3 uid="uid://brp7hhffeo42u"]
+
+[ext_resource type="Script" path="res://Scenes/Victory.gd" id="1_8lair"]
+[ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="1_84rub"]
+
+[node name="Victory" type="Control"]
+process_mode = 2
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8lair")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MainVBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.5
+offset_top = -98.0
+offset_right = 299.5
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="CongratsLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_84rub")
+theme_override_font_sizes/font_size = 48
+text = "Congratulations!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+theme = ExtResource("1_84rub")
+theme_override_font_sizes/font_size = 20
+text = "You managed to keep the island alive during the heatwave."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+theme = ExtResource("1_84rub")
+theme_override_font_sizes/font_size = 26
+text = "Score: 1000 / 1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Button" type="Button" parent="MainVBox/ButtonLabel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.5
+offset_top = 11.5
+offset_right = 108.5
+offset_bottom = 52.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_84rub")
+text = "Exit"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="MainVBox/ButtonLabel/Button" to="." method="_on_exit_button_pressed"]
