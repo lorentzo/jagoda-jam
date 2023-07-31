@@ -52,49 +52,49 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Plant" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(6955, 2706)
+position = Vector2(7158, 2670)
 
 [node name="Plant2" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(7050, 3129)
+position = Vector2(7107, 3094)
 
 [node name="Plant3" parent="." instance=ExtResource("5_7g35u")]
 position = Vector2(5956, 3404)
 
 [node name="Plant4" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(4903, 2709)
+position = Vector2(4903, 2724)
 
 [node name="Plant5" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(4939, 3438)
+position = Vector2(4358, 4034)
 
 [node name="Plant6" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(5798, 4689)
+position = Vector2(5646, 3129)
 
 [node name="Plant7" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(5220, 5049)
+position = Vector2(4707, 4522)
 
 [node name="Plant8" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(2812, 1803)
+position = Vector2(6638, 2597)
 
 [node name="Plant9" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(2341, 2482)
+position = Vector2(2966, 3374)
 
 [node name="Plant10" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(5959, 5048)
+position = Vector2(4804, 3183)
 
 [node name="Plant11" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(2731, 2180)
+position = Vector2(4154, 4543)
 
 [node name="Plant12" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(3984, 4392)
+position = Vector2(3667, 3455)
 
 [node name="Plant13" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(3003, 3386)
+position = Vector2(4540, 3483)
 
 [node name="Plant14" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(3417, 2267)
+position = Vector2(3110, 3130)
 
 [node name="Plant15" parent="." instance=ExtResource("5_7g35u")]
-position = Vector2(4110, 3276)
+position = Vector2(4118, 3612)
 
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
 y_sort_enabled = true
