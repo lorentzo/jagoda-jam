@@ -20,18 +20,23 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -517.0
-offset_top = -189.0
+offset_top = -292.5
 offset_right = 517.0
-offset_bottom = 189.0
+offset_bottom = 220.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_l7nim")
 theme_override_font_sizes/font_size = 20
-text = "Sit omnis consequuntur blanditiis fuga consequuntur. Quae labore aut eum voluptatem ex architecto iusto. Sapiente quasi aut facilis minima. Accusamus expedita temporibus et est et repellendus eius. Error atque amet omnis illum alias. Voluptates delectus autem non necessitatibus aut sapiente consequatur nulla.
-
-Occaecati ullam consequatur excepturi deserunt provident recusandae et dolor. Aspernatur pariatur expedita repudiandae quis. Dolore aut voluptas nihil odio exercitationem vero ratione. Eum perspiciatis optio qui aspernatur similique voluptatem.
-
-Omnis voluptas totam et et est harum. Assumenda est alias quia quia quod. Vero voluptatem perspiciatis repudiandae non alias. Maxime pariatur hic nisi autem perferendis nostrum quibusdam soluta."
+text = "For the past half a year, you had nothing but stress; all the projects, deadlines, white walls, bright white lights, bright screens and coffee machine. Always the coffee machine... like it would help. 
+You had enough of all of it.
+After long and hard working months, you decided to go somewhere far. Far from everything. Far from everyone. To finally get the deserved rest.
+ 
+A friend of yours, a botanist, just visiting the city (dirty old city) had an offer for you. He said: \"I will lend you my crib on a distant island. It is a beautiful place. Far from everything and everyone. Surrounded by sea and beautiful plants. My beautiful plants (you can see it in his eyes that those plants mean a lot).\"
+He continued: you can have as much as rest and drinks there. But! But only if you take care of my plants. You will have access to my ultra-power-energy-mobile fridges to help you\"
+ 
+Of course you took the offer, why wouldn't you? It doesn't sound hard. Bit of caring for plants, this is nothing - nothing compared to a great holiday far away, far from coffee machines, white walls, bright white lights and screens, pressuring deadlines and projects...
+ 
+It would be nothing hard... but you didn't know about a detail, a small detail that changed everything - the heatwave is coming!"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="."]
@@ -42,9 +47,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -106.5
-offset_top = 187.5
+offset_top = 264.5
 offset_right = 106.5
-offset_bottom = 228.5
+offset_bottom = 305.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_l7nim")
