@@ -44,7 +44,7 @@ z_index = -1
 position = Vector2(5325, 2883)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.992157, 0.580392, 0, 1)
+color = Color(1, 0.960784, 0.721569, 1)
 
 [node name="ThemePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_8ifn4")
