@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=26 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="2_7b8y8"]
@@ -15,6 +15,7 @@
 [ext_resource type="SpriteFrames" uid="uid://sycqpbatojp3" path="res://Assets/Plants/Plant3/Plant3SpriteFrames.tres" id="11_wkhbs"]
 [ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Scenes/Crib.tscn" id="13_s1n7e"]
 [ext_resource type="SpriteFrames" uid="uid://b04efb1l3w100" path="res://Assets/Sun/SunSpriteFrames.tres" id="14_74iue"]
+[ext_resource type="PackedScene" uid="uid://dkh60smnas5vi" path="res://Scenes/DayCompletedScreen.tscn" id="17_47vf0"]
 [ext_resource type="SpriteFrames" uid="uid://duodvhyxaabhl" path="res://Assets/Plants/Plant2/Plant2SpriteFrames.tres" id="17_meg80"]
 [ext_resource type="PackedScene" uid="uid://cbcmdbatiwbjn" path="res://Scenes/GameOver.tscn" id="18_7pm05"]
 [ext_resource type="Texture2D" uid="uid://j0jon1p1gvvp" path="res://Assets/Icons/KeySpace.tres" id="20_wt2ok"]
@@ -118,6 +119,9 @@ autoplay = "default"
 visible = false
 
 [node name="GameOver" parent="HUD" instance=ExtResource("18_7pm05")]
+visible = false
+
+[node name="DayCompletedMenu" parent="HUD" instance=ExtResource("17_47vf0")]
 visible = false
 
 [node name="DayLabel" type="Label" parent="HUD"]

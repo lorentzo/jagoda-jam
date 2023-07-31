@@ -30,7 +30,9 @@ const TIME_LABEL_UPDATE_PERIOD_MINUTES: float = 5
 var day = 0
 var time_passed = 0
 var previous_day_time = null
+var plant_count_previous: int = 0
 var plant_count: int = 0
+var plant_count_total: int = 0
 
 signal sun_intensity_changed(sun_intensity)
 signal day_changed
@@ -53,13 +55,12 @@ func _ready():
 
 	var plants = tree.get_nodes_in_group("plant")
 	plant_count = plants.size()
+	plant_count_previous = plant_count
+	plant_count_total = plant_count
 	for plant in plants:
 		plant.plant_die.connect(self._on_plant_die)
 		sun_intensity_changed.connect(plant.on_sun_intensity_changed)
 		day_changed.connect(plant.on_day_changed)
-		
-	for fridge in tree.get_nodes_in_group("fridge"):
-		fridge.fridge_freshness_changed.connect(self._on_fridge_freshness_changed)
 
 	day_changed.emit()
 	loading.on_loading_start.connect(self._on_loading_start)
@@ -115,6 +116,7 @@ func _on_player_drop_fridge(fridge):
 	self.add_child(fridge)
 
 func _on_day_changed():
+	self.plant_count_previous = self.plant_count
 	self.time_passed = 0
 	self.day += 1
 	self.previous_day_time = null
@@ -126,6 +128,7 @@ func _spawn_fridge():
 	fridge.sprite_frames = FRIDGE_SPRITE_FRAMES[day % FRIDGE_SPRITE_FRAMES.size()]
 	fridge.position.x = $Crib.position.x + randf_range(-FRIDGE_SPAWN_X_RANGE / 2, FRIDGE_SPAWN_X_RANGE / 2)
 	fridge.position.y = $Crib.position.y + FRIDGE_SPAWN_Y_OFFSET
+	fridge.fridge_freshness_changed.connect(self._on_fridge_freshness_changed)
 	add_child(fridge)
 
 func _input(event):
@@ -152,7 +155,24 @@ func _process(delta):
 		previous_day_time = day_time
 	
 	if is_equal_approx(day_progress, 1):
+		self._show_day_completed_screen()
 		day_changed.emit()
+
+func _show_day_completed_screen():
+	var plants_lost = self.plant_count_previous - self.plant_count
+	
+	var avg_plant_freshness = 0
+	for plant in tree.get_nodes_in_group("plant"):
+		avg_plant_freshness += plant.freshness
+	avg_plant_freshness /= plant_count
+	
+	var avg_fridge_freshness = 0
+	for fridge in tree.get_nodes_in_group("fridge"):
+		avg_fridge_freshness += fridge.freshness
+	avg_fridge_freshness /= self.day
+	
+	$HUD/DayCompletedMenu.set_stats(self.day, plants_lost, plant_count, plant_count_total, avg_plant_freshness, avg_fridge_freshness)
+	$HUD/DayCompletedMenu.show()
 
 func _round_step(number: int, step: int):
 	var times: int = floor(number / step)
