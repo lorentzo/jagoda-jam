@@ -25,8 +25,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.7313903"
-     inkscape:cx="42.38503"
-     inkscape:cy="328.8258"
+     inkscape:cx="135.35865"
+     inkscape:cy="513.40577"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
@@ -77,16 +77,16 @@
        id="rect3"
        width="99.967957"
        height="116.22441"
-       x="5.1225929"
-       y="20.973932"
+       x="6.5696096"
+       y="10.121314"
        ry="0"
        rx="0" />
     <g
        id="g3"
        transform="translate(-59.367774,-1.9184901)"
        inkscape:export-filename="..\jagoda\Assets\Icons\icons.png"
-       inkscape:export-xdpi="125.26029"
-       inkscape:export-ydpi="125.26029">
+       inkscape:export-xdpi="62.630146"
+       inkscape:export-ydpi="62.630146">
       <rect
          style="fill:url(#linearGradient2);fill-opacity:1;stroke:#ffffff;stroke-width:1.5;stroke-dasharray:none;stroke-opacity:1"
          id="rect5"
@@ -128,7 +128,7 @@
     </g>
     <g
        id="g5"
-       transform="matrix(0.84769235,0,0,0.84769235,-19.581939,-4.2385397)">
+       transform="matrix(0.84769235,0,0,0.84769235,75.921105,35.916149)">
       <path
          style="fill:#006bc1;fill-opacity:1;stroke:#ffffff;stroke-width:1.5;stroke-dasharray:none;stroke-opacity:1"
          d="m 47.505581,79.312969 c 0,0 1.274497,6.027582 -3.281099,17.617418 -3.54606,9.021493 19.568619,10.540653 19.0522,1.200541 C 62.685788,87.443858 47.505581,79.312969 47.505581,79.312969 Z"
@@ -142,7 +142,7 @@
     </g>
     <g
        id="g10"
-       transform="matrix(0.8806909,0,0,0.8806909,-1.5055349,7.1714097)">
+       transform="matrix(0.8806909,0,0,0.8806909,-1.5055349,6.9499668)">
       <g
          id="g7">
         <path
@@ -175,6 +175,46 @@
          d="m 56.73679,80.417057 9.170259,-0.08507 -0.65568,-4.815849 -7.885106,0.06218 z"
          id="path10"
          sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="g19"
+       transform="translate(-52.029574,-41.032146)">
+      <g
+         id="g18"
+         transform="translate(9.7203496,1.2789934)">
+        <path
+           style="fill:#ffffff;stroke:#ffffff;stroke-width:4.66698;stroke-dasharray:none;stroke-opacity:1"
+           d="m 69.798124,102.35773 v 20"
+           id="path13" />
+        <path
+           style="fill:#ffffff;stroke:#ffffff;stroke-width:4.66698;stroke-dasharray:none;stroke-opacity:1"
+           d="m 79.798124,112.35773 h -20"
+           id="path16" />
+        <path
+           style="fill:#ffffff;stroke:#ffffff;stroke-width:4.66698;stroke-dasharray:none;stroke-opacity:1"
+           d="M 76.869192,105.28666 62.727056,119.4288"
+           id="path17" />
+        <path
+           style="fill:#ffffff;stroke:#ffffff;stroke-width:4.66698;stroke-dasharray:none;stroke-opacity:1"
+           d="M 76.869192,119.4288 62.727056,105.28666"
+           id="path18" />
+      </g>
+      <path
+         style="fill:#00ffff;stroke:#229dff;stroke-width:2.5;stroke-dasharray:none;stroke-opacity:1"
+         d="m 79.518474,104.33951 v 18.59443"
+         id="path1" />
+      <path
+         style="fill:#00ffff;stroke:#229dff;stroke-width:2.5;stroke-dasharray:none;stroke-opacity:1"
+         d="M 70.221256,113.63672 H 88.815692"
+         id="path2" />
+      <path
+         style="fill:#00ffff;stroke:#229dff;stroke-width:2.5;stroke-dasharray:none;stroke-opacity:1"
+         d="m 72.977531,107.02958 13.081885,13.21429"
+         id="path11" />
+      <path
+         style="fill:#00ffff;stroke:#229dff;stroke-width:2.5;stroke-dasharray:none;stroke-opacity:1"
+         d="M 72.964748,120.23119 86.0722,107.04226"
+         id="path12" />
     </g>
   </g>
 </svg>
