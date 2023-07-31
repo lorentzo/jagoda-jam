@@ -1,6 +1,12 @@
 class_name Plant
 extends Area2D
 
+const PLANT_SPRITE_FRAMES = [
+	preload("res://Assets/Plants/Plant1/Plant1SpriteFrames.tres"),
+	preload("res://Assets/Plants/Plant2/Plant2SpriteFrames.tres"),
+	preload("res://Assets/Plants/Plant3/Plant3SpriteFrames.tres"),
+	preload("res://Assets/Plants/Plant4/Plant4SpriteFrames.tres")
+]
 const MAX_FRESHNESS: float = 100.0
 const MAX_FRESHNESS_LOST_PER_SECOND: float = 0.5
 const FRESHNESS_GAINED_PER_SECOND: float = 5.0
@@ -22,15 +28,12 @@ var current_sun_intensity = 0
 var day_multiplier: float = 1.0
 var difficulty_multiplier: float = 1.0
 
-@export var sprite_frames: SpriteFrames = null
-
 @onready var progress_bar: ProgressBar = $ProgressBar
 
 func _ready():
-	if sprite_frames == null:
-		return
+	randomize()
 
-	$AnimatedSprite2D.sprite_frames = sprite_frames
+	$AnimatedSprite2D.sprite_frames = PLANT_SPRITE_FRAMES[randi() % PLANT_SPRITE_FRAMES.size()]
 	$AnimatedSprite2D.play("idle")
 	
 	var collision_shape_size = max($CollisionShape2D.shape.radius * 2, $CollisionShape2D.shape.height)

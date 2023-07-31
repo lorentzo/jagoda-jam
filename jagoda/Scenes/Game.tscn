@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://nh83q11yvjf3"]
+[gd_scene load_steps=24 format=3 uid="uid://nh83q11yvjf3"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_fxwml"]
 [ext_resource type="TileSet" uid="uid://p8y5ouwtt65o" path="res://Assets/Tiles/Land/LandTileSet.tres" id="2_7b8y8"]
@@ -11,12 +11,9 @@
 [ext_resource type="TileSet" uid="uid://lbcx1niifxqo" path="res://Assets/Tiles/mountain/MountainTileSet.tres" id="6_p5hr4"]
 [ext_resource type="PackedScene" uid="uid://c32dlq6uur6e3" path="res://Scenes/PauseMenu.tscn" id="7_v1sht"]
 [ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="8_574xx"]
-[ext_resource type="SpriteFrames" uid="uid://dxtyqa1gar1ac" path="res://Assets/Plants/Plant1/Plant1SpriteFrames.tres" id="10_v8nts"]
-[ext_resource type="SpriteFrames" uid="uid://sycqpbatojp3" path="res://Assets/Plants/Plant3/Plant3SpriteFrames.tres" id="11_wkhbs"]
 [ext_resource type="PackedScene" uid="uid://w6l2taxwsdcp" path="res://Scenes/Crib.tscn" id="13_s1n7e"]
 [ext_resource type="SpriteFrames" uid="uid://b04efb1l3w100" path="res://Assets/Sun/SunSpriteFrames.tres" id="14_74iue"]
 [ext_resource type="PackedScene" uid="uid://dkh60smnas5vi" path="res://Scenes/DayCompletedScreen.tscn" id="17_47vf0"]
-[ext_resource type="SpriteFrames" uid="uid://duodvhyxaabhl" path="res://Assets/Plants/Plant2/Plant2SpriteFrames.tres" id="17_meg80"]
 [ext_resource type="PackedScene" uid="uid://cbcmdbatiwbjn" path="res://Scenes/GameOver.tscn" id="18_7pm05"]
 [ext_resource type="PackedScene" uid="uid://brp7hhffeo42u" path="res://Scenes/VictoryScreen.tscn" id="18_a0om1"]
 [ext_resource type="Texture2D" uid="uid://j0jon1p1gvvp" path="res://Assets/Icons/KeySpace.tres" id="20_wt2ok"]
@@ -81,15 +78,12 @@ autoplay = true
 
 [node name="Plant" parent="." instance=ExtResource("5_7g35u")]
 position = Vector2(855, 489)
-sprite_frames = ExtResource("10_v8nts")
 
 [node name="Plant2" parent="." instance=ExtResource("5_7g35u")]
 position = Vector2(1020, 578)
-sprite_frames = ExtResource("17_meg80")
 
 [node name="Plant3" parent="." instance=ExtResource("5_7g35u")]
 position = Vector2(751, 825)
-sprite_frames = ExtResource("11_wkhbs")
 
 [node name="Crib" parent="." instance=ExtResource("13_s1n7e")]
 position = Vector2(1170, 186)
