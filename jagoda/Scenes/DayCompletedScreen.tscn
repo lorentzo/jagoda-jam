@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkh60smnas5vi"]
+
+[ext_resource type="Script" path="res://Scenes/DayCompletedScreen.gd" id="1_g7yj8"]
+[ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="2_lyfkx"]
+
+[node name="DayCompletedMenu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g7yj8")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -82.0
+offset_right = 242.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_lyfkx")
+theme_override_font_sizes/font_size = 64
+text = "Day 1 Completed!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="PlantsLostLabel" type="Label" parent="VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_lyfkx")
+text = "Plants Lost: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlantsAliveLabel" type="Label" parent="VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_lyfkx")
+text = "Plants Alive: 10 / 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AveragePlantFreshnessLabel" type="Label" parent="VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_lyfkx")
+text = "Avg. Plant Freshness: 50 %"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AverageFridgeFreshnessLabel2" type="Label" parent="VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_lyfkx")
+text = "Avg. Fridge Freshness: 50 %"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonLabel" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer2/ButtonLabel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.5
+offset_top = -20.5
+offset_right = 141.5
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_lyfkx")
+text = "Continue"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="VBoxContainer2/ButtonLabel/ContinueButton" to="." method="_on_continue_button_pressed"]
