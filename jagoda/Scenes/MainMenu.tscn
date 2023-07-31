@@ -37,10 +37,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -149.5
+offset_left = -158.0
 offset_top = -179.0
-offset_right = 149.5
-offset_bottom = 41.0
+offset_right = 158.0
+offset_bottom = 155.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 64
@@ -54,12 +54,17 @@ horizontal_alignment = 1
 
 [node name="MenuVBox" type="VBoxContainer" parent="MainVBox"]
 layout_mode = 2
-size_flags_vertical = 4
+theme_override_constants/separation = 16
 
 [node name="PlayButton" type="Button" parent="MainVBox/MenuVBox"]
 layout_mode = 2
 theme = ExtResource("2_xgybe")
 text = "Play"
+
+[node name="CreditsButton" type="Button" parent="MainVBox/MenuVBox"]
+layout_mode = 2
+theme = ExtResource("2_xgybe")
+text = "Credits"
 
 [node name="ExitButton" type="Button" parent="MainVBox/MenuVBox"]
 visible = false
@@ -68,4 +73,5 @@ theme = ExtResource("2_xgybe")
 text = "Exit"
 
 [connection signal="pressed" from="MainVBox/MenuVBox/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MainVBox/MenuVBox/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MainVBox/MenuVBox/ExitButton" to="." method="_on_exit_button_pressed"]
