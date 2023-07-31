@@ -29,7 +29,7 @@ signal sun_intensity_changed(sun_intensity)
 signal day_changed
 
 func _ready():
-	$HUD/Freshness.visible = false
+	self._set_freshness_visible(false)
 	
 	sun_intensity_changed.connect($Player.on_sun_intensity_changed)
 	$Player.player_freshness_changed.connect(self._on_player_freshness_changed)
@@ -57,6 +57,10 @@ func _ready():
 
 	$HUD/Control/E.visible = false
 	$HUD/Control/Space.visible = false
+
+func _set_freshness_visible(visible: bool):
+	$HUD/ItemFreshnessBar.visible = visible
+	$HUD/Droplet.visible = visible
 
 func _on_player_update_main_action(text):
 	if text == null:
@@ -90,15 +94,15 @@ func _on_player_freshness_changed(freshness):
 		self._game_over("You died from dehydration.")
 
 func _on_fridge_freshness_changed(freshness):
-	$HUD/Freshness/ItemFreshnessBar.value = freshness
+	$HUD/ItemFreshnessBar.value = freshness
 
 func _on_player_pick_up_fridge(fridge):
-	$HUD/Freshness/ItemFreshnessBar.value = fridge.freshness
-	$HUD/Freshness.visible = true
+	$HUD/ItemFreshnessBar.value = fridge.freshness
+	self._set_freshness_visible(true)
 	self.remove_child(fridge)
 
 func _on_player_drop_fridge(fridge):
-	$HUD/Freshness.visible = false
+	self._set_freshness_visible(false)
 	self.add_child(fridge)
 
 func _on_day_changed():
