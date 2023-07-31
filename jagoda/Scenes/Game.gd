@@ -142,6 +142,9 @@ func _input(event):
 		self._pause()
 
 func _process(delta):
+	if not self.visible:
+		return
+
 	var day_progress: float = min(time_passed / DAY_LENGTH_SECONDS, 1)
 	var sun_intensity: float = sin(day_progress * PI)
 	sun_intensity_changed.emit(sun_intensity)
