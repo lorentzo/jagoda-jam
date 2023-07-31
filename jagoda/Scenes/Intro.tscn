@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://mbjq3hgcmlgk"]
+
+[ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="1_l7nim"]
+[ext_resource type="Script" path="res://Scenes/Intro.gd" id="1_lgb8a"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lgb8a")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -517.0
+offset_top = -189.0
+offset_right = 517.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l7nim")
+theme_override_font_sizes/font_size = 20
+text = "Sit omnis consequuntur blanditiis fuga consequuntur. Quae labore aut eum voluptatem ex architecto iusto. Sapiente quasi aut facilis minima. Accusamus expedita temporibus et est et repellendus eius. Error atque amet omnis illum alias. Voluptates delectus autem non necessitatibus aut sapiente consequatur nulla.
+
+Occaecati ullam consequatur excepturi deserunt provident recusandae et dolor. Aspernatur pariatur expedita repudiandae quis. Dolore aut voluptas nihil odio exercitationem vero ratione. Eum perspiciatis optio qui aspernatur similique voluptatem.
+
+Omnis voluptas totam et et est harum. Assumenda est alias quia quia quod. Vero voluptatem perspiciatis repudiandae non alias. Maxime pariatur hic nisi autem perferendis nostrum quibusdam soluta."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.5
+offset_top = 187.5
+offset_right = 106.5
+offset_bottom = 228.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l7nim")
+text = "Let's Go!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
