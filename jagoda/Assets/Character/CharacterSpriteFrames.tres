@@ -1220,7 +1220,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 30.0
+"speed": 50.0
 }, {
 "frames": [{
 "duration": 1.0,

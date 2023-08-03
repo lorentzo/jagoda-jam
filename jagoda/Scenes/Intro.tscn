@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://mbjq3hgcmlgk"]
+
+[ext_resource type="Theme" uid="uid://dh2skylq4em3t" path="res://Themes/MainMenu.tres" id="1_l7nim"]
+[ext_resource type="Script" path="res://Scenes/Intro.gd" id="1_lgb8a"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lgb8a")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -517.0
+offset_top = -292.5
+offset_right = 517.0
+offset_bottom = 220.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l7nim")
+theme_override_font_sizes/font_size = 20
+text = "Projects, deadlines, white walls, bright white lights, bright screens and a coffee machine... You had enough. After long and hard working months, you decided it is time to go somewhere far, far away from everything and everyone.
+ 
+A friend of yours, a botanist, had an offer for you. He said: \"I will lend you my crib on a distant island. It is a beautiful place surrounded by sea and my beautiful plants. You can have as much rest and drinks as you want there. But only if you take care of my plants! You will have access to my ultra-power-energy-mobile fridges to help you. When empty, just drop them next to the crib and they will refill themselves.\"
+ 
+Of course you took the offer, why wouldn't you? Bit of caring for some plants cannot be that hard.
+It would be nothing hard... However, you didn't know about a detail that changed everything - the heatwave was coming!
+
+Stay hydrated and do not lose the plants."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.5
+offset_top = 202.5
+offset_right = 106.5
+offset_bottom = 243.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l7nim")
+text = "Let's Go!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

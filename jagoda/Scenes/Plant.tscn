@@ -4,8 +4,8 @@
 [ext_resource type="FontFile" uid="uid://bjonvamqyjdmv" path="res://Fonts/RussoOne.ttf" id="2_t4c7n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8daej"]
-radius = 50.0
-height = 100.0
+radius = 100.0
+height = 200.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i30e"]
 bg_color = Color(0, 0, 0, 0.501961)
