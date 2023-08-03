@@ -47,7 +47,7 @@ Play it on itch.io: https://lovbos.itch.io/heatwave
 * Godot Engine (https://godotengine.org/) 4.1.1 (Compatibility renderer): Game development
 * Blender (https://www.blender.org/) 3.6.0: Art, Assets, Environment Art, Character and Animation
 * Krita (https://krita.org/) 5.1.5: Textures
-* LMMS: Music
+* LMMS (https://lmms.io/): Music
 
 ## Codename: `jagoda-jam`
 
